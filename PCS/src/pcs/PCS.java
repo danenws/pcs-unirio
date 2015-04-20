@@ -9,7 +9,7 @@ public class PCS {
          String nome;
          nome = sc.next();
          String nome2;
-        
+        // alteração
     }
     
 }
