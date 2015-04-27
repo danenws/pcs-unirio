@@ -48,7 +48,7 @@ public class GUI extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTextPane1);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Gabriel Ramos\\Desktop\\New folder (18)\\pcs-unirio\\PCS\\src\\5.jpg")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/5.jpg"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
