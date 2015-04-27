@@ -19,6 +19,9 @@ public class GUI extends javax.swing.JFrame {
      */
     public GUI() {
         initComponents();
+            Font font1 = new Font("SansSerif", Font.BOLD, 20);
+    jTextPane1.setFont(font1);
+    jTextPane1.setText("Entre seu nome a baixo e depois aperte next(que quer dizer próximo)");
     }
 
     /**
@@ -37,6 +40,7 @@ public class GUI extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(1, 1, 1));
 
         jButton1.setText("Next");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -45,6 +49,7 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
+        jTextPane1.setBackground(new java.awt.Color(240, 240, 240));
         jScrollPane1.setViewportView(jTextPane1);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
@@ -76,11 +81,11 @@ public class GUI extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 517, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -90,7 +95,7 @@ public class GUI extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
     
         
-    if (next == 6){
+    if (next == 5){
         jTextPane1.setText("  Nobody but a real princess could be as sensitive as that.\n" +
 "\n" +
 "     So the prince took her for his wife, for now he knew that he had a real princess; and the pea was put in the museum, where it may still be seen, if no one has stolen it.\n" +
@@ -103,7 +108,7 @@ public class GUI extends javax.swing.JFrame {
         
         
         
-    if (next == 5){
+    if (next == 4){
         jTextPane1.setText("  On this the princess had to lie all night. In the morning she was asked how she had slept.\n" +
 "\n" +
 "     \"Oh, very badly!\" said she. \"I have scarcely closed my eyes all night. Heaven only knows what was in the bed, but I was lying on something hard, so that I am black and blue all over my body. It's horrible!\"\n" +
@@ -115,7 +120,7 @@ public class GUI extends javax.swing.JFrame {
         
         
         
-    if (next == 4){
+    if (next == 3){
         jTextPane1.setText("  It was a princess standing out there in front of the gate. But, good gracious! what a sight the rain and the wind had made her look. The water ran down from her hair and clothes; it ran down into the toes of her shoes and out again at the heels. And yet she said that she was a real princess.\n" +
 "\n" +
 "     Well, we'll soon find that out, thought the old queen. But she said nothing, went into the bed-room, took all the bedding off the bedstead, and laid a pea on the bottom; then she took twenty mattresses and laid them on the pea, and then twenty eider-down beds on top of the mattresses.");
@@ -123,21 +128,21 @@ public class GUI extends javax.swing.JFrame {
     }
         
         
-     if (next == 3){
-        jTextPane1.setText("Once upon a time there was a prince who wanted to marry a princess; but she would have to be a real princess. He travelled all over the world to find one, but nowhere could he get what he wanted. There were princesses enough, but it was difficult to find out whether they were real ones. There was always something about them that was not as it should be. So he came home again and was sad, for he would have liked very much to have a real princess.\n" +
+     if (next == 2){
+        jTextPane1.setText("The Princess and the Pea\n\n"+"Once upon a time there was a prince who wanted to marry a princess; but she would have to be a real princess. He travelled all over the world to find one, but nowhere could he get what he wanted. There were princesses enough, but it was difficult to find out whether they were real ones. There was always something about them that was not as it should be. So he came home again and was sad, for he would have liked very much to have a real princess.\n" +
                 "\n" +"One evening a terrible storm came on; there was thunder and lightning, and the rain poured down in torrents. Suddenly a knocking was heard at the city gate, and the old king went to open it.");
         next++;
     }
         
         
-    if (next == 2){
+    if (next == 1){
         jTextField2.setText("");
         jTextPane1.setText("Escolha um conto e entre com seu número a baixo e aperte next :"+"\n"
                 + " 1 = The Princess and the Pea");
         next++;
     }
         
-    if (next == 1){
+    if (next == 0){
         jTextField2.setText("");
         jTextPane1.setText("Escolha uma dificuldade e entre com seu número a baixo e aperte next :"+"\n"
                 + "1 = fácil"+"\n"
@@ -146,12 +151,6 @@ public class GUI extends javax.swing.JFrame {
         next++;
     }
         
-    if (next == 0){
-    Font font1 = new Font("SansSerif", Font.BOLD, 20);
-    jTextPane1.setFont(font1);
-    jTextPane1.setText("Entre seu nome a baixo e depois aperte next(que quer dizer próximo)");
-    next++;
-    }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
