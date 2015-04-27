@@ -149,7 +149,7 @@ public class GUI extends javax.swing.JFrame {
     if (next == 0){
     Font font1 = new Font("SansSerif", Font.BOLD, 20);
     jTextPane1.setFont(font1);
-    jTextPane1.setText("Entre seu nome a baixo e depois aperte next(que quer dizer proximo)");
+    jTextPane1.setText("Entre seu nome a baixo e depois aperte next(que quer dizer próximo)");
     next++;
     }
     }//GEN-LAST:event_jButton1ActionPerformed
