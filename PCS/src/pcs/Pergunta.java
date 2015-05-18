@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pcs;
+
 /**
  *
  * @author felipequintanilha
@@ -11,19 +11,39 @@ package pcs;
 public class Pergunta {
     
     private String pergunta;
-    private String resposta;
+    private Resposta resposta; //Como criar um vetor de respostas para associar uma pergunta com um numero x de respostas?
     
-    Pergunta(String pergunta, String resposta){
+    public Pergunta(String pergunta, Resposta resposta){
         
+        this.pergunta = pergunta;  
+     //   resposta = new Resposta();
+        
+    }
+
+    public String getPergunta() {
+        return pergunta;
+    }
+
+    public void setPergunta(String pergunta) {
         this.pergunta = pergunta;
-        this.resposta = resposta;
     }
-    boolean corrigir(){
-        return true;
-    }
-    
-    String mostrarResp(){
-        
+
+    public Resposta getResposta() {
         return resposta;
     }
+
+    public void setResposta(Resposta resposta) {
+        this.resposta = resposta;
+    }
+    
+    public boolean corrigir(){
+        
+        if((resposta.getCerta()==true)){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    
 }
