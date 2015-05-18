@@ -13,13 +13,13 @@ public class Conto {
     private int idConto;
     private String nome;
     private String enredo;
-    private Integer dificuldade;
+    private String dificuldade;
 
     public Conto() {
 	super();
     }
 
-    public Conto(String nome, String enredo, Integer dificuldade) {
+    public Conto(String nome, String enredo, String dificuldade) {
 	super();
 	this.nome = nome;
 	this.enredo = enredo;
@@ -34,7 +34,7 @@ public class Conto {
         this.enredo = enredo;
     }
 
-    public void setDificuldade(Integer dificuldade) {
+    public void setDificuldade(String dificuldade) {
         this.dificuldade = dificuldade;
     }
 
@@ -46,7 +46,7 @@ public class Conto {
         return enredo;
     }
 
-    public Integer getDificuldade() {
+    public String getDificuldade() {
         return dificuldade;
     }
 
