@@ -1,14 +1,15 @@
-/*
+ /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 package pcs;
 import java.io.FileWriter;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.awt.Font;
-          
+import java.util.Scanner; 
 /**
  *
  * @author Gabriel Ramos
@@ -203,11 +204,19 @@ public class GUI extends javax.swing.JFrame {
         });        
         FileWriter arq = new FileWriter("usuarios.txt");
         PrintWriter gravarArq = new PrintWriter(arq);
-        String n = "Usuario 1 : Joao";
+        String n = "Joao ||";
         gravarArq.printf("%s", n);
         String i = "        Dificuldade : 1";
         gravarArq.printf("%s", i);
         arq.close();
+        Scanner scanner = new Scanner(new FileReader("usuarios.txt")).useDelimiter("\\||\\n");
+        while (scanner.hasNext()) {
+        String nome = scanner.next();
+        System.out.println(nome);
+        }
+
+        
+        
     }
 
    

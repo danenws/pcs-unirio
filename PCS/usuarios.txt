@@ -1,1 +1,1 @@
-Usuario 1 : Joao        Dificuldade : 1
+Joao ||        Dificuldade : 1
