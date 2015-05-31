@@ -26,6 +26,9 @@ public class Conto {
 	this.dificuldade = dificuldade;
 		
     }
+    
+  
+    
     public void setNome(String nome) {
         this.nome = nome;
     }

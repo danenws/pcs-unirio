@@ -207,6 +207,7 @@ public class GUI extends javax.swing.JFrame {
             }
         });  
         
+        //adicionar novo usuario
         Usuario usr = new Usuario("Dai", "f", "14-05-2014");
         
         
@@ -224,6 +225,7 @@ public class GUI extends javax.swing.JFrame {
         System.out.println(nome);
         }*/
         
+        //adicionar nova linha em historico
         Historico hist = new Historico("Felipe","The Earthen Pot and The Brass"
                 + " Pot", (float) 70.0, "26-05-2015");
         hist.gerarHist();
