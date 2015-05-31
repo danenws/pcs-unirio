@@ -10,6 +10,10 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.awt.Font;
 import java.util.Scanner; 
+
+import pcs.Historico;
+import pcs.Usuario;
+
 /**
  *
  * @author Gabriel Ramos
@@ -201,19 +205,30 @@ public class GUI extends javax.swing.JFrame {
             public void run() {
                 new GUI().setVisible(true);
             }
-        });        
-        FileWriter arq = new FileWriter("usuarios.txt");
+        });  
+        
+        Usuario usr = new Usuario("Dai", "f", "14-05-2014");
+        
+        
+       /* FileWriter arq = new FileWriter("usuarios.txt");
         PrintWriter gravarArq = new PrintWriter(arq);
-        String n = "Joao ||";
+        String n = "Joao|";
         gravarArq.printf("%s", n);
         String i = "        Dificuldade : 1";
         gravarArq.printf("%s", i);
         arq.close();
+        
         Scanner scanner = new Scanner(new FileReader("usuarios.txt")).useDelimiter("\\||\\n");
         while (scanner.hasNext()) {
         String nome = scanner.next();
         System.out.println(nome);
-        }
+        }*/
+        
+        Historico hist = new Historico("Felipe","The Earthen Pot and The Brass"
+                + " Pot", (float) 70.0, "26-05-2015");
+        hist.gerarHist();
+        hist.gerarHistUser("Daiane");
+        
 
         
         

@@ -4,6 +4,9 @@
  * and open the template in the editor.
  */
 package pcs;
+import java.util.*;
+import java.io.*;
+
 
 /**
  *
@@ -11,7 +14,14 @@ package pcs;
  */
 public class Pagina {
     
-    public void Avancar(){       
+    public void Avancar() throws FileNotFoundException{  
+        
+        Scanner scanner = new Scanner(new FileReader("arquivo.txt"))
+                       .useDelimiter("\\*");
+        while (scanner.hasNext()) {
+          String parte = scanner.next();
+          System.out.println(parte);
+        }
     }   
     
     

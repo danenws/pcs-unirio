@@ -5,7 +5,13 @@
  */
 package pcs;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.Date;
+import java.util.Scanner;
 
 /**
  *
@@ -15,18 +21,45 @@ public class Usuario {
     private int idUsuario;
     private String nome;
     private String genero;
-    private java.sql.Date dataNascimento;
-
+    private String dataNascimento;
+    
     public Usuario() {
-	super();
-    }
+		super();
+	}
 
-    public Usuario(String nome, String genero, java.sql.Date dataNascimento) {
-	super();
+    public Usuario(String nome, String genero, String dataNascimento) throws IOException {
+        super();
 	this.nome = nome;
 	this.genero = genero;
 	this.dataNascimento = dataNascimento;
-		
+	
+        try {    //Salvando o novo usuarios no arquivo
+            String n = nome + "|" + genero + "|" + dataNascimento;
+            
+            String file = "usuarios.txt";
+            FileWriter f = new FileWriter(file,true); // true e para adicionar nova linha
+            f.write(n+"\r\n");//Pula uma linha após escrever o texto
+            f.close();
+            
+        } catch (IOException ex) {  
+            ex.printStackTrace();  
+        }  
+       
+    }
+    
+    void mostrarUsers() throws FileNotFoundException{
+        
+        Scanner scanner = new Scanner(new FileReader("usuarios.txt"))
+                       .useDelimiter("\\||\\n");
+        while (scanner.hasNext()) {
+           nome = scanner.next();
+           genero = scanner.next();
+           dataNascimento = scanner.next();
+          System.out.println(nome);
+          System.out.println(genero);
+          System.out.println(dataNascimento);
+        }
+        
     }
 
     public void setNome(String nome) {
@@ -37,7 +70,7 @@ public class Usuario {
         this.genero = genero;
     }
 
-    public void setDataNascimento(Date dataNascimento) {
+    public void setDataNascimento(String dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 
@@ -50,12 +83,11 @@ public class Usuario {
         return genero;
     }
     
-     public Date getDataNascimento() {
+     public String getDataNascimento() {
         return dataNascimento;
     }
     
-     
-    
+   
    
   
 }
