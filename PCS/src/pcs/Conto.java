@@ -14,7 +14,7 @@ public class Conto {
     private String nome;
     private String enredo;
     private String dificuldade;
-
+    
     public Conto() {
 	super();
     }
