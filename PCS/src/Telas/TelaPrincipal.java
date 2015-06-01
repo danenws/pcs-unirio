@@ -70,7 +70,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         getContentPane().add(jButton3);
         jButton3.setBounds(557, 350, 80, 29);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("/Users/felipequintanilha/Documents/pcs-unirio/contos/Imagens/cadastro.jpg")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Telas/cadastro.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 640, 410);
 

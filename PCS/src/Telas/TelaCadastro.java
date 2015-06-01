@@ -100,7 +100,7 @@ public class TelaCadastro extends javax.swing.JFrame {
         getContentPane().add(jButton1);
         jButton1.setBounds(490, 330, 103, 29);
 
-        fundo.setIcon(new javax.swing.ImageIcon("/Users/felipequintanilha/Documents/pcs-unirio/contos/Imagens/cadastro3.jpg")); // NOI18N
+        fundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Telas/cadastro3.jpg"))); // NOI18N
         getContentPane().add(fundo);
         fundo.setBounds(0, 0, 600, 370);
 
