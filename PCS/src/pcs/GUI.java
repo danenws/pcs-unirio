@@ -231,6 +231,15 @@ public class GUI extends javax.swing.JFrame {
         hist.gerarHist();
         hist.gerarHistUser("Daiane");
         
+        //imprimir conto
+        Conto con = new Conto();
+        String [] conton; //criando vetor para receber as paginas com contos. Cada posicao e uma pagina
+        String arquivo = "contos/capitulo1/tepatbp.txt";//onde o arquivo se encontra
+        int flag = con.tamanhoConto(arquivo);
+        conton = con.lerConto(arquivo);
+        for (int i = 0; i < flag; i++) {  
+            System.out.println(conton[i]);
+        }
 
         
         
