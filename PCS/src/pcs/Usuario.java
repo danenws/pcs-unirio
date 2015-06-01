@@ -32,20 +32,34 @@ public class Usuario {
 	this.nome = nome;
 	this.genero = genero;
 	this.dataNascimento = dataNascimento;
-	
-        try {    //Salvando o novo usuarios no arquivo
-            String n = nome + "|" + genero + "|" + dataNascimento;
-            
-            String file = "usuarios.txt";
-            FileWriter f = new FileWriter(file,true); // true e para adicionar nova linha
-            f.write(n+"\r\n");//Pula uma linha após escrever o texto
-            f.close();
-            
-        } catch (IOException ex) {  
-            ex.printStackTrace();  
-        }  
-       
-    }
+        
+        int flag = 0;
+         
+        Scanner scanner = new Scanner(new FileReader("usuarios.txt"))
+                       .useDelimiter("\\||\\n");
+        while (scanner.hasNext()) {
+           String usr = scanner.next();
+           if(usr.equals(nome)){
+               flag = 1;
+           }
+        }
+        
+        
+	if (flag == 0) {
+            try {    //Salvando o novo usuarios no arquivo
+                String n = nome + "|" + genero + "|" + dataNascimento;
+
+                String file = "usuarios.txt";
+                FileWriter f = new FileWriter(file,true); // true e para adicionar nova linha
+                f.write(n+"\r\n");//Pula uma linha após escrever o texto
+                f.close();
+
+            } catch (IOException ex) {  
+                ex.printStackTrace();  
+            }  
+        } 
+  }
+    
     
     void mostrarUsers() throws FileNotFoundException{
         
