@@ -52,6 +52,27 @@ public class Conto {
         return 1;
     }
     
+    public String lerContoPos(int pos, String arquivo) {  
+        try {  
+            int flag = tamanhoConto(arquivo);            
+            Scanner scanner = new Scanner(new FileReader(arquivo))
+                       .useDelimiter("\\*");//usa * como delimitador para quebrar nas posicoes do vetor
+            while (scanner.hasNext()) {
+                cont = new String[flag]; // inicializa o vetor com o tamanho do arquivo  
+                for (int i = 0; i < flag; i++) {  
+                        cont[i]= scanner.next(); 
+                }    
+            }
+            
+            return cont[pos];  
+        } catch (FileNotFoundException ex) { // trata as exceções do tipo FileNotFoundException   
+            ex.printStackTrace();  
+        } catch (IOException ex) { // trata as exceções do tipo IOException   
+            ex.printStackTrace();  
+        }       
+        return null; // só retorna null se der algum erro 
+    }
+    
     // método que retorna o vetor contendo as informações do arquivo    
     public String[] lerConto(String arquivo) {  
        // int flag = 0;

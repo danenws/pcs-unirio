@@ -75,6 +75,20 @@ public class Usuario {
         }
         
     }
+    
+    void mostrarUsersName() throws FileNotFoundException{
+        
+        Scanner scanner = new Scanner(new FileReader("usuarios.txt"))
+                       .useDelimiter("\\||\\n");
+        while (scanner.hasNext()) {
+           nome = scanner.next();
+           genero = scanner.next();
+           dataNascimento = scanner.next();
+          System.out.println(nome);
+          //ver se precisa retornar
+        }
+        
+    }
 
     public void setNome(String nome) {
         this.nome = nome;
