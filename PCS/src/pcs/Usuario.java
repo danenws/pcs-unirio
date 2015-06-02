@@ -23,6 +23,8 @@ public class Usuario {
     private String genero;
     private String dataNascimento;
     
+    private String [] cont;   
+    
     public Usuario() {
 		super();
 	}
@@ -75,6 +77,43 @@ public class Usuario {
         }
         
     }
+   
+    public int contarUsers(String arquivo) throws FileNotFoundException{
+        int cont = 0;
+        Scanner scanner = new Scanner(new FileReader(arquivo))
+                       .useDelimiter("\\n");//ver quantas linhas tem o arquivo
+        while (scanner.hasNext()) {
+           cont++;
+        }
+        return cont;
+        
+    } 
+    
+   
+       public String mostrarUsersName(int pos, String arquivo) {  
+        try {  
+            int flag = contarUsers(arquivo);//qtd de usuarios no arquivo            
+            Scanner scanner = new Scanner(new FileReader(arquivo))
+                       .useDelimiter("\\||\\n");//usa | como delimitador para quebrar nas posicoes do vetor
+            while (scanner.hasNext()) {
+                cont = new String[flag]; // inicializa o vetor com o tamanho do arquivo  
+                for (int i = 0; i < flag; i++) {  
+                    nome = scanner.next();
+                    genero = scanner.next();
+                    dataNascimento = scanner.next();
+                    cont[i]= nome; 
+                }    
+            }
+            
+            return cont[pos];  
+        } catch (FileNotFoundException ex) { // trata as exceções do tipo FileNotFoundException   
+            ex.printStackTrace();  
+        } catch (IOException ex) { // trata as exceções do tipo IOException   
+            ex.printStackTrace();  
+        }       
+        return null; // só retorna null se der algum erro 
+    }     
+      
 
     public void setNome(String nome) {
         this.nome = nome;

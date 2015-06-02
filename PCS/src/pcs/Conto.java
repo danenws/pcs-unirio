@@ -40,7 +40,7 @@ public class Conto {
                 String text = scanner.next();
                 if(text.equals("*")){//conta quantos * tem no arquivo
                     flag++;
-                    System.out.println(flag);
+                    //System.out.println(flag);
                 }
             }
             return flag;
@@ -50,6 +50,27 @@ public class Conto {
             ex.printStackTrace();  
         }     
         return 1;
+    }
+    
+    public String lerContoPos(int pos, String arquivo) {  
+        try {  
+            int flag = tamanhoConto(arquivo);            
+            Scanner scanner = new Scanner(new FileReader(arquivo))
+                       .useDelimiter("\\*");//usa * como delimitador para quebrar nas posicoes do vetor
+            while (scanner.hasNext()) {
+                cont = new String[flag]; // inicializa o vetor com o tamanho do arquivo  
+                for (int i = 0; i < flag; i++) {  
+                        cont[i]= scanner.next(); 
+                }    
+            }
+            
+            return cont[pos];  
+        } catch (FileNotFoundException ex) { // trata as exceções do tipo FileNotFoundException   
+            ex.printStackTrace();  
+        } catch (IOException ex) { // trata as exceções do tipo IOException   
+            ex.printStackTrace();  
+        }       
+        return null; // só retorna null se der algum erro 
     }
     
     // método que retorna o vetor contendo as informações do arquivo    
@@ -66,7 +87,7 @@ public class Conto {
             }*/
             
             int flag = tamanhoConto(arquivo);
-            System.out.println("flag2: " + flag);
+            //System.out.println("flag2: " + flag);
             
             Scanner scanner = new Scanner(new FileReader(arquivo))
                        .useDelimiter("\\*");

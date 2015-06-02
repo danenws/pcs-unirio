@@ -5,6 +5,8 @@
  */
 package Telas;
 
+import Contos.TheAnt;
+
 /**
  *
  * @author felipequintanilha
@@ -78,7 +80,10 @@ public class Dificuldade extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+            // Abre o conto 
+        TheAnt conto = new TheAnt();
+        conto.setVisible(true);
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

@@ -12,6 +12,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import pcs.Usuario;
 
 /**
  *
@@ -49,7 +50,8 @@ public class TelaUsuarios extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         jButton2.setBackground(new java.awt.Color(228, 220, 206));
-        jButton2.setText("jButton1");
+        jButton2.setFont(new java.awt.Font("Lucida Sans", 0, 11)); // NOI18N
+        jButton2.setText("<Nome>");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -64,7 +66,7 @@ public class TelaUsuarios extends javax.swing.JFrame {
         jButton2.setBounds(250, 120, 100, 40);
 
         jButton3.setBackground(new java.awt.Color(228, 220, 206));
-        jButton3.setText("jButton1");
+        jButton3.setText("<Nome>");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -74,7 +76,7 @@ public class TelaUsuarios extends javax.swing.JFrame {
         jButton3.setBounds(250, 180, 100, 40);
 
         jButton5.setBackground(new java.awt.Color(228, 220, 206));
-        jButton5.setText("jButton1");
+        jButton5.setText("<Nome>");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
@@ -84,7 +86,7 @@ public class TelaUsuarios extends javax.swing.JFrame {
         jButton5.setBounds(250, 240, 100, 40);
 
         jButton6.setBackground(new java.awt.Color(228, 220, 206));
-        jButton6.setText("jButton1");
+        jButton6.setText("<Nome>");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
@@ -100,7 +102,7 @@ public class TelaUsuarios extends javax.swing.JFrame {
 
         jButton1.setBackground(new java.awt.Color(228, 220, 206));
         jButton1.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
-        jButton1.setText("jButton1");
+        jButton1.setText("<Nome>");
         jButton1.setBorder(null);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -148,7 +150,13 @@ public class TelaUsuarios extends javax.swing.JFrame {
     private void jButton1PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jButton1PropertyChange
         // Transforma o nome do usuário na label do botão
         
-         BufferedReader r = null;
+        /*Usuario usuario = new Usuario();
+        String nomeusr = null;
+        nomeusr = usuario.mostrarUsersName(0,"contos/capitulo1/tepatbp.txt");
+       
+        jButton1.setText(nomeusr);
+        
+         /*BufferedReader r = null;
         try {
             r = new BufferedReader(new FileReader("usuarios.txt")); //carrega o arquivo para leitura
         } catch (FileNotFoundException ex) {
@@ -159,13 +167,13 @@ public class TelaUsuarios extends javax.swing.JFrame {
             jButton1.setText(r.readLine()); //Lê a primeira linha do arquivo 
         } catch (IOException ex) {
             Logger.getLogger(TelaUsuarios.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        }*/
     }//GEN-LAST:event_jButton1PropertyChange
 
     private void jButton2PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jButton2PropertyChange
         // TODO add your handling code here:
         
-        BufferedReader r = null;
+        /*BufferedReader r = null;
         try {
             r = new BufferedReader(new FileReader("usuarios.txt")); //carrega o arquivo para leitura
         } catch (FileNotFoundException ex) {
@@ -173,10 +181,10 @@ public class TelaUsuarios extends javax.swing.JFrame {
         }
         
         try {
-            jButton1.setText(r.readLine()); //Lê a primeira linha do arquivo 
+            jButton2.setText(r.readLine()); //Lê a primeira linha do arquivo 
         } catch (IOException ex) {
             Logger.getLogger(TelaUsuarios.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        }*/
     }//GEN-LAST:event_jButton2PropertyChange
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
