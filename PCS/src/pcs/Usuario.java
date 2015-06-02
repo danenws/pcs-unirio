@@ -77,6 +77,7 @@ public class Usuario {
         }
         
     }
+<<<<<<< HEAD
    
     public int contarUsers(String arquivo) throws FileNotFoundException{
         int cont = 0;
@@ -114,6 +115,22 @@ public class Usuario {
         return null; // só retorna null se der algum erro 
     }     
       
+=======
+    
+    void mostrarUsersName() throws FileNotFoundException{
+        
+        Scanner scanner = new Scanner(new FileReader("usuarios.txt"))
+                       .useDelimiter("\\||\\n");
+        while (scanner.hasNext()) {
+           nome = scanner.next();
+           genero = scanner.next();
+           dataNascimento = scanner.next();
+          System.out.println(nome);
+          //ver se precisa retornar
+        }
+        
+    }
+>>>>>>> origin/master
 
     public void setNome(String nome) {
         this.nome = nome;
