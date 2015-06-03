@@ -1,13 +1,4 @@
 Dai|f|14-05-2014
-Dai|f|14-05-2014
-Dai|f|14-05-2014
-Dai|f|14-05-2014
-Dai|f|14-05-2014
-Dai|f|14-05-2014
-Dai2|f|14-05-2014
-Dai|f|14-05-2014
-||
-Felipe |Menino|12/13/12
-a|a|
-Felipe|Menino|aaaa
-Isabela|Menina|26/05/1991
+Felipe|f|14-05-2014
+Gabriel|f|14-05-2014
+

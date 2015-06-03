@@ -72,6 +72,11 @@ public class TelaUsuarios extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
+        jButton3.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                jButton3PropertyChange(evt);
+            }
+        });
         getContentPane().add(jButton3);
         jButton3.setBounds(250, 180, 100, 40);
 
@@ -82,6 +87,11 @@ public class TelaUsuarios extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
+        jButton5.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                jButton5PropertyChange(evt);
+            }
+        });
         getContentPane().add(jButton5);
         jButton5.setBounds(250, 240, 100, 40);
 
@@ -90,6 +100,11 @@ public class TelaUsuarios extends javax.swing.JFrame {
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
+            }
+        });
+        jButton6.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                jButton6PropertyChange(evt);
             }
         });
         getContentPane().add(jButton6);
@@ -148,43 +163,61 @@ public class TelaUsuarios extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton1PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jButton1PropertyChange
-        // Transforma o nome do usuário na label do botão
-        
-        /*Usuario usuario = new Usuario();
-        String nomeusr = null;
-        nomeusr = usuario.mostrarUsersName(0,"contos/capitulo1/tepatbp.txt");
-       
-        jButton1.setText(nomeusr);
-        
-         /*BufferedReader r = null;
+        Usuario usuario = new Usuario();
+        String con;
         try {
+            con = usuario.mostrarUsersName(0, "usuarios.txt");
+            jButton1.setText(con);
+           
+// Transforma o nome do usuário na label do botão
+            
+            /*Usuario usuario = new Usuario();
+            String nomeusr = null;
+            nomeusr = usuario.mostrarUsersName(0,"contos/capitulo1/tepatbp.txt");
+            
+            jButton1.setText(nomeusr);
+            
+            /*BufferedReader r = null;
+            try {
             r = new BufferedReader(new FileReader("usuarios.txt")); //carrega o arquivo para leitura
+            } catch (FileNotFoundException ex) {
+            Logger.getLogger(TelaUsuarios.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+            try {
+            jButton1.setText(r.readLine()); //Lê a primeira linha do arquivo
+            } catch (IOException ex) {
+            Logger.getLogger(TelaUsuarios.class.getName()).log(Level.SEVERE, null, ex);
+            }*/
         } catch (FileNotFoundException ex) {
             Logger.getLogger(TelaUsuarios.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-        try {
-            jButton1.setText(r.readLine()); //Lê a primeira linha do arquivo 
-        } catch (IOException ex) {
-            Logger.getLogger(TelaUsuarios.class.getName()).log(Level.SEVERE, null, ex);
-        }*/
     }//GEN-LAST:event_jButton1PropertyChange
 
     private void jButton2PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jButton2PropertyChange
         // TODO add your handling code here:
+        Usuario usuario = new Usuario();
+        String con;
         
-        /*BufferedReader r = null;
         try {
+            con = usuario.mostrarUsersName(1, "usuarios.txt");
+            jButton2.setText(con);
+            /*BufferedReader r = null;
+            try {
             r = new BufferedReader(new FileReader("usuarios.txt")); //carrega o arquivo para leitura
+            } catch (FileNotFoundException ex) {
+            Logger.getLogger(TelaUsuarios.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+            try {
+            jButton2.setText(r.readLine()); //Lê a primeira linha do arquivo
+            } catch (IOException ex) {
+            Logger.getLogger(TelaUsuarios.class.getName()).log(Level.SEVERE, null, ex);
+            }*/
         } catch (FileNotFoundException ex) {
             Logger.getLogger(TelaUsuarios.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        try {
-            jButton2.setText(r.readLine()); //Lê a primeira linha do arquivo 
-        } catch (IOException ex) {
-            Logger.getLogger(TelaUsuarios.class.getName()).log(Level.SEVERE, null, ex);
-        }*/
     }//GEN-LAST:event_jButton2PropertyChange
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -198,6 +231,45 @@ public class TelaUsuarios extends javax.swing.JFrame {
         Dificuldade tela = new Dificuldade();
         tela.setVisible(true);
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton3PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jButton3PropertyChange
+        // TODO add your handling code here:
+        Usuario usuario = new Usuario();
+        String con;
+        
+        try {
+            con = usuario.mostrarUsersName(2, "usuarios.txt");
+            jButton3.setText(con);
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(TelaUsuarios.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton3PropertyChange
+
+    private void jButton5PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jButton5PropertyChange
+        // TODO add your handling code here:
+        Usuario usuario = new Usuario();
+        String con;
+        
+        try {
+            con = usuario.mostrarUsersName(4, "usuarios.txt");
+            jButton5.setText(con);
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(TelaUsuarios.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton5PropertyChange
+
+    private void jButton6PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jButton6PropertyChange
+        // TODO add your handling code here:
+        Usuario usuario = new Usuario();
+        String con;
+        
+        try {
+            con = usuario.mostrarUsersName(5, "usuarios.txt");
+            jButton6.setText(con);
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(TelaUsuarios.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton6PropertyChange
 
     /**
      * @param args the command line arguments

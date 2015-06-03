@@ -41,6 +41,7 @@ public class Conto {
                 if(text.equals("*")){//conta quantos * tem no arquivo
                     flag++;
                     //System.out.println(flag);
+                    System.out.println(cont);
                 }
             }
             return flag;
@@ -61,6 +62,7 @@ public class Conto {
                 cont = new String[flag]; // inicializa o vetor com o tamanho do arquivo  
                 for (int i = 0; i < flag; i++) {  
                         cont[i]= scanner.next(); 
+                        
                 }    
             }
             

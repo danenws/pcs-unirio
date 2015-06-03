@@ -157,8 +157,10 @@ public class TheAnt extends javax.swing.JFrame {
         int tam = c.tamanhoConto("contos/capitulo1/tepatbp.txt"); //Pega o tamanho do vetor do conteúdo do conto
         System.out.println(tam);
         
-        if(cont<tam){
+        if(cont<tam-1){
             cont++;
+            System.out.print("Cont e: ");
+            System.out.print(cont);
             jTextPane1.setText(x[cont]);
 
             System.out.print("Cont e: ");
