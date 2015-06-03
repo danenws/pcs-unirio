@@ -79,14 +79,7 @@ public class Conto {
     public String[] lerConto(String arquivo) {  
        // int flag = 0;
         try {  
-            /*Scanner scanner = new Scanner(new FileReader(arquivo));
-            while (scanner.hasNext()) {
-                String text = scanner.next();
-                if(text.equals("*")){
-                    flag++;
-                    System.out.println(flag);
-                }
-            }*/
+            
             
             int flag = tamanhoConto(arquivo);
             //System.out.println("flag2: " + flag);
@@ -99,14 +92,7 @@ public class Conto {
                         cont[i]= scanner.next(); 
                 }    
             }
-            /*File arq = new File(arquivo);     
-            objeto = new RandomAccessFile(arq , "rw");  
-            cont = new String[flag]; // inicializa o vetor com o tamanho do arquivo  
-            for (int i = 0; i < flag; i++) {  
-                if(objeto.readLine()!= "*"){
-                    cont[i]= objeto.readLine();  
-                }
-            }    */
+            
             
             return cont;  
         } catch (FileNotFoundException ex) { // trata as exceções do tipo FileNotFoundException   
