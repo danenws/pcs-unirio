@@ -166,8 +166,8 @@ public class TelaUsuarios extends javax.swing.JFrame {
         Usuario usuario = new Usuario();
         String con;
         try {
-            con = usuario.mostrarUsersName(0, "usuarios.txt");
-            jButton1.setText(con);
+            con = usuario.mostrarUsersNamePosicao(0);
+             jButton1.setText(con);
            
 // Transforma o nome do usuário na label do botão
             
@@ -201,8 +201,8 @@ public class TelaUsuarios extends javax.swing.JFrame {
         String con;
         
         try {
-            con = usuario.mostrarUsersName(1, "usuarios.txt");
-            jButton2.setText(con);
+            con = usuario.mostrarUsersNamePosicao(1);
+             jButton2.setText(con);
             /*BufferedReader r = null;
             try {
             r = new BufferedReader(new FileReader("usuarios.txt")); //carrega o arquivo para leitura
@@ -238,8 +238,8 @@ public class TelaUsuarios extends javax.swing.JFrame {
         String con;
         
         try {
-            con = usuario.mostrarUsersName(2, "usuarios.txt");
-            jButton3.setText(con);
+            con = usuario.mostrarUsersNamePosicao(2);
+             jButton3.setText(con);
         } catch (FileNotFoundException ex) {
             Logger.getLogger(TelaUsuarios.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -251,8 +251,8 @@ public class TelaUsuarios extends javax.swing.JFrame {
         String con;
         
         try {
-            con = usuario.mostrarUsersName(4, "usuarios.txt");
-            jButton5.setText(con);
+            con = usuario.mostrarUsersNamePosicao(3);
+             jButton5.setText(con);
         } catch (FileNotFoundException ex) {
             Logger.getLogger(TelaUsuarios.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -264,8 +264,8 @@ public class TelaUsuarios extends javax.swing.JFrame {
         String con;
         
         try {
-            con = usuario.mostrarUsersName(5, "usuarios.txt");
-            jButton6.setText(con);
+            con = usuario.mostrarUsersNamePosicao(4);
+             jButton6.setText(con);
         } catch (FileNotFoundException ex) {
             Logger.getLogger(TelaUsuarios.class.getName()).log(Level.SEVERE, null, ex);
         }

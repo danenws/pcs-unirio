@@ -78,59 +78,26 @@ public class Usuario {
         
     }
     
-     public int contarUsers(String arquivo) throws FileNotFoundException{//Ver quantas paginas tera o conto
+     public int contarUsers() throws FileNotFoundException{//Ver quantas paginas tera o conto
         int flag = 0;
         
-        Scanner scanner = new Scanner(new FileReader("usuarios.txt"))
+         Scanner scanner = new Scanner(new FileReader("usuarios.txt"))
                        .useDelimiter("\\||\\n");
         while (scanner.hasNext()) {
            nome = scanner.next();
            genero = scanner.next();
            dataNascimento = scanner.next();
            flag++;
-           System.out.println("flag contada user: " + flag);
+          System.out.println(nome);
+          System.out.println("flag: " + flag);
+          //ver se precisa retornar
         }
         return flag;
-        
-        /*try {  
-            Scanner scanner = new Scanner(new FileReader(arquivo));
-            while (scanner.hasNext()) {
-                String text = scanner.next();
-                if(text.equals("*")){//conta quantos * tem no arquivo
-                    flag++;
-                    System.out.println("flag contada user: " + flag);
-                }
-            }
-            return flag;
-        } catch (FileNotFoundException ex) { // trata as exceções do tipo FileNotFoundException   
-            ex.printStackTrace();  
-        } catch (IOException ex) { // trata as exceções do tipo IOException   
-            ex.printStackTrace();  
-        }     */
     }
-    
-   /* public int contarUsers(String arquivo) throws FileNotFoundException{
-        int flag = 0;
-        System.out.println(flag);
-        System.out.println("oi");
-        Scanner scanner = new Scanner(new FileReader(arquivo))
-                       .useDelimiter("\\*");//ver quantas linhas tem o arquivo
-        System.out.println("oi");
-        while (scanner.hasNext()) {
-            String text = scanner.next();
-                if(text.equals("*")){//conta quantos * tem no arquivo
-                    flag++;
-                    System.out.println(flag);
-                }
-           System.out.println(flag);
-        }
-        return flag;
-        
-    } */
     
      
      public String mostrarUsersName(int pos, String arquivo) throws FileNotFoundException {  
-        int flag = contarUsers(arquivo);    
+        int flag = contarUsers();    
         System.out.println(flag);
         usr = new String[flag]; 
         int i =0;
@@ -205,7 +172,7 @@ public class Usuario {
     }     */
       
     public void mostrarUsersName2(String arquivo) throws FileNotFoundException{
-        int flag = contarUsers(arquivo);    
+        int flag = contarUsers();    
         System.out.println(flag);
         usr = new String[flag]; 
         
@@ -224,6 +191,7 @@ public class Usuario {
         
         Scanner scanner = new Scanner(new FileReader("usuarios.txt"))
                        .useDelimiter("\\||\\n");
+        int flag = contarUsers(); 
         while (scanner.hasNext()) {
            nome = scanner.next();
            genero = scanner.next();
@@ -232,6 +200,34 @@ public class Usuario {
           System.out.println(nome);
           //ver se precisa retornar
         }
+        
+    }
+    
+    public String mostrarUsersNamePosicao(int pos) throws FileNotFoundException{
+        String nom = null;
+        int i = 0;
+        Scanner scanner = new Scanner(new FileReader("usuarios.txt"))
+                       .useDelimiter("\\||\\n");
+        int flag = contarUsers(); 
+        if(pos>flag-1){
+            nom = "<Nome>";
+        } else {
+        
+            while (scanner.hasNext()) {
+                i++;
+               nome = scanner.next();
+               genero = scanner.next();
+               dataNascimento = scanner.next();
+               if(i == flag-1){
+                   nom = nome;
+               }
+
+              System.out.println("nome todos: " + nome);
+              //ver se precisa retornar
+            }
+        }  
+        System.out.println("nome na pos" + nom);
+        return nom;
         
     }
 
