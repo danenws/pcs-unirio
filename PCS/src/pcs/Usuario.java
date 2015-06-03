@@ -88,12 +88,43 @@ public class Usuario {
            genero = scanner.next();
            dataNascimento = scanner.next();
            flag++;
-          System.out.println(nome);
-          System.out.println("flag: " + flag);
+          //System.out.println(nome);
+         // System.out.println("flag: " + flag);
           //ver se precisa retornar
         }
         return flag;
     }
+     
+       public String mostrarUsersNamePosicao(int pos) throws FileNotFoundException{
+        System.out.println("POS ENTRADA: " + pos);
+        String nom = null;
+        int i = 1;
+        Scanner scanner = new Scanner(new FileReader("usuarios.txt"))
+                       .useDelimiter("\\||\\n");
+        int flag = contarUsers(); 
+        if(pos>flag){
+            nom = "<Nome>";
+        } else {
+            while (scanner.hasNext()) {
+               nome = scanner.next();
+               genero = scanner.next();
+               dataNascimento = scanner.next();
+               System.out.println("nome todos: " + nome);
+               if(i == pos){
+                   nom = nome;
+                   break;
+               }
+               i++;
+            }
+        }  
+        System.out.println("nome na pos" + pos + ": "+ nom);
+        return nom;
+        
+    }
+       
+       
+       
+       
     
      
      public String mostrarUsersName(int pos, String arquivo) throws FileNotFoundException {  
@@ -203,33 +234,7 @@ public class Usuario {
         
     }
     
-    public String mostrarUsersNamePosicao(int pos) throws FileNotFoundException{
-        String nom = null;
-        int i = 0;
-        Scanner scanner = new Scanner(new FileReader("usuarios.txt"))
-                       .useDelimiter("\\||\\n");
-        int flag = contarUsers(); 
-        if(pos>flag-1){
-            nom = "<Nome>";
-        } else {
-        
-            while (scanner.hasNext()) {
-                i++;
-               nome = scanner.next();
-               genero = scanner.next();
-               dataNascimento = scanner.next();
-               if(i == flag-1){
-                   nom = nome;
-               }
-
-              System.out.println("nome todos: " + nome);
-              //ver se precisa retornar
-            }
-        }  
-        System.out.println("nome na pos" + nom);
-        return nom;
-        
-    }
+  
 
     public void setNome(String nome) {
         this.nome = nome;

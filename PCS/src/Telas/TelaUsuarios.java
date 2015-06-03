@@ -166,7 +166,7 @@ public class TelaUsuarios extends javax.swing.JFrame {
         Usuario usuario = new Usuario();
         String con;
         try {
-            con = usuario.mostrarUsersNamePosicao(0);
+            con = usuario.mostrarUsersNamePosicao(1);
              jButton1.setText(con);
            
 // Transforma o nome do usuário na label do botão
@@ -201,7 +201,7 @@ public class TelaUsuarios extends javax.swing.JFrame {
         String con;
         
         try {
-            con = usuario.mostrarUsersNamePosicao(1);
+            con = usuario.mostrarUsersNamePosicao(2);
              jButton2.setText(con);
             /*BufferedReader r = null;
             try {
@@ -238,7 +238,7 @@ public class TelaUsuarios extends javax.swing.JFrame {
         String con;
         
         try {
-            con = usuario.mostrarUsersNamePosicao(2);
+            con = usuario.mostrarUsersNamePosicao(3);
              jButton3.setText(con);
         } catch (FileNotFoundException ex) {
             Logger.getLogger(TelaUsuarios.class.getName()).log(Level.SEVERE, null, ex);
@@ -251,7 +251,7 @@ public class TelaUsuarios extends javax.swing.JFrame {
         String con;
         
         try {
-            con = usuario.mostrarUsersNamePosicao(3);
+            con = usuario.mostrarUsersNamePosicao(4);
              jButton5.setText(con);
         } catch (FileNotFoundException ex) {
             Logger.getLogger(TelaUsuarios.class.getName()).log(Level.SEVERE, null, ex);
@@ -264,7 +264,7 @@ public class TelaUsuarios extends javax.swing.JFrame {
         String con;
         
         try {
-            con = usuario.mostrarUsersNamePosicao(4);
+            con = usuario.mostrarUsersNamePosicao(5);
              jButton6.setText(con);
         } catch (FileNotFoundException ex) {
             Logger.getLogger(TelaUsuarios.class.getName()).log(Level.SEVERE, null, ex);
