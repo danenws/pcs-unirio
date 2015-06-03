@@ -171,7 +171,24 @@ public class TelaUsuarios extends javax.swing.JFrame {
            
 // Transforma o nome do usuário na label do botão
             
-           
+            /*Usuario usuario = new Usuario();
+            String nomeusr = null;
+            nomeusr = usuario.mostrarUsersName(0,"contos/capitulo1/tepatbp.txt");
+            
+            jButton1.setText(nomeusr);
+            
+            /*BufferedReader r = null;
+            try {
+            r = new BufferedReader(new FileReader("usuarios.txt")); //carrega o arquivo para leitura
+            } catch (FileNotFoundException ex) {
+            Logger.getLogger(TelaUsuarios.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+            try {
+            jButton1.setText(r.readLine()); //Lê a primeira linha do arquivo
+            } catch (IOException ex) {
+            Logger.getLogger(TelaUsuarios.class.getName()).log(Level.SEVERE, null, ex);
+            }*/
         } catch (FileNotFoundException ex) {
             Logger.getLogger(TelaUsuarios.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -186,7 +203,18 @@ public class TelaUsuarios extends javax.swing.JFrame {
         try {
             con = usuario.mostrarUsersName(1, "usuarios.txt");
             jButton2.setText(con);
-           
+            /*BufferedReader r = null;
+            try {
+            r = new BufferedReader(new FileReader("usuarios.txt")); //carrega o arquivo para leitura
+            } catch (FileNotFoundException ex) {
+            Logger.getLogger(TelaUsuarios.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+            try {
+            jButton2.setText(r.readLine()); //Lê a primeira linha do arquivo
+            } catch (IOException ex) {
+            Logger.getLogger(TelaUsuarios.class.getName()).log(Level.SEVERE, null, ex);
+            }*/
         } catch (FileNotFoundException ex) {
             Logger.getLogger(TelaUsuarios.class.getName()).log(Level.SEVERE, null, ex);
         }

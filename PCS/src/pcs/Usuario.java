@@ -85,28 +85,57 @@ public class Usuario {
                        .useDelimiter("\\||\\n");
         while (scanner.hasNext()) {
            nome = scanner.next();
-           System.out.println("nome: " + nome);
            genero = scanner.next();
            dataNascimento = scanner.next();
            flag++;
-           System.out.println("flag contada user2: " + flag);
+           System.out.println("flag contada user: " + flag);
         }
         return flag;
         
-        
+        /*try {  
+            Scanner scanner = new Scanner(new FileReader(arquivo));
+            while (scanner.hasNext()) {
+                String text = scanner.next();
+                if(text.equals("*")){//conta quantos * tem no arquivo
+                    flag++;
+                    System.out.println("flag contada user: " + flag);
+                }
+            }
+            return flag;
+        } catch (FileNotFoundException ex) { // trata as exceções do tipo FileNotFoundException   
+            ex.printStackTrace();  
+        } catch (IOException ex) { // trata as exceções do tipo IOException   
+            ex.printStackTrace();  
+        }     */
     }
     
-   
+   /* public int contarUsers(String arquivo) throws FileNotFoundException{
+        int flag = 0;
+        System.out.println(flag);
+        System.out.println("oi");
+        Scanner scanner = new Scanner(new FileReader(arquivo))
+                       .useDelimiter("\\*");//ver quantas linhas tem o arquivo
+        System.out.println("oi");
+        while (scanner.hasNext()) {
+            String text = scanner.next();
+                if(text.equals("*")){//conta quantos * tem no arquivo
+                    flag++;
+                    System.out.println(flag);
+                }
+           System.out.println(flag);
+        }
+        return flag;
+        
+    } */
     
      
      public String mostrarUsersName(int pos, String arquivo) throws FileNotFoundException {  
-        System.out.println("oi");
         int flag = contarUsers(arquivo);    
         System.out.println(flag);
         usr = new String[flag]; 
         int i =0;
         if(pos<flag){//se tiver um nome naquela posicao no arquivo, pega o nome
-            Scanner scanner = new Scanner(new FileReader(arquivo))
+            Scanner scanner = new Scanner(new FileReader("usuarios.txt"))
                            .useDelimiter("\\||\\n");
             while (scanner.hasNext()) {
                nome = scanner.next();
@@ -121,10 +150,59 @@ public class Usuario {
             usr[pos] = "<Nome>";
         }
            return usr[pos]; //retorna o nome naquela posicao
-        
+         /*
+        try {  
+            int flag = contarUsers(arquivo);            
+            Scanner scanner = new Scanner(new FileReader(arquivo))
+                       .useDelimiter("\\||\\*");//usa * como delimitador para quebrar nas posicoes do vetor
+            for (int j = 0; j < flag; j++) {
+                System.out.println("flag inicio mostrar:" + flag);
+                usr = new String[flag]; // inicializa o vetor com o tamanho do arquivo  
+                for (int i = 0; i < flag; i++) {  
+                     System.out.println(usr[i]);
+                    nome = scanner.next();
+                    genero = scanner.next();
+                    dataNascimento = scanner.next();
+                    usr[i]= nome; 
+                    System.out.println("flag nome " + usr[i]);
+                        
+                }    
+            }
+            
+            return usr[pos];  
+        } catch (FileNotFoundException ex) { // trata as exceções do tipo FileNotFoundException   
+            ex.printStackTrace();  
+        } catch (IOException ex) { // trata as exceções do tipo IOException   
+            ex.printStackTrace();  
+        }       
+        return null; // só retorna null se der algum erro */
     }
    
-      
+       /*public String mostrarUsersName(int pos, String arquivo) {  
+        try {  
+            int flag = contarUsers(arquivo);//qtd de usuarios no arquivo            
+            Scanner scanner = new Scanner(new FileReader(arquivo))
+                       .useDelimiter("\\||\\n|\\*");//usa | como delimitador para quebrar nas posicoes do vetor
+            while (scanner.hasNext()) {
+                cont = new String[flag]; // inicializa o vetor com o tamanho do arquivo  
+                for (int i = 0; i < flag; i++) {  
+                    nome = scanner.next();
+                    genero = scanner.next();
+                    dataNascimento = scanner.next();
+                    cont[i]= nome; 
+                }    
+            }
+            
+            
+            
+            return cont[pos];  
+        } catch (FileNotFoundException ex) { // trata as exceções do tipo FileNotFoundException   
+            ex.printStackTrace();  
+        } catch (IOException ex) { // trata as exceções do tipo IOException   
+            ex.printStackTrace();  
+        }       
+        return null; // só retorna null se der algum erro 
+    }     */
       
     public void mostrarUsersName2(String arquivo) throws FileNotFoundException{
         int flag = contarUsers(arquivo);    
