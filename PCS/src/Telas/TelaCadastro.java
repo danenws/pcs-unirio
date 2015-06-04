@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package Telas;
-
+import javax.swing.JOptionPane;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -120,7 +120,7 @@ public class TelaCadastro extends javax.swing.JFrame {
                 this.dispose(); //Fecha a tela após criar novo usuário
             }
             else{ //Se algum dos campos não foi preenchido
-                System.out.println("Você deve ter esquecido de preencher alguma coisa...");
+                JOptionPane.showMessageDialog(null,"Você deve ter esquecido de preencher alguma coisa...");
             }
         } catch (IOException ex) {
             Logger.getLogger(TelaCadastro.class.getName()).log(Level.SEVERE, null, ex);

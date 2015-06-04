@@ -45,7 +45,7 @@ public class TheAnt extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(null);
 
         jTextPane1.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
@@ -70,7 +70,7 @@ public class TheAnt extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(510, 300, 94, 29);
+        jButton1.setBounds(510, 300, 73, 23);
 
         jButton3.setBackground(new java.awt.Color(200, 218, 235));
         jButton3.setText("Dica");
@@ -89,7 +89,7 @@ public class TheAnt extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(20, 300, 73, 29);
+        jButton2.setBounds(20, 300, 73, 23);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Telas/theant.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
