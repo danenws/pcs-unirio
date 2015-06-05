@@ -13,7 +13,7 @@ import pcs.Conto;
 import Dicas.TheAntDica;
 import java.awt.Dimension;
 import java.awt.Toolkit;
-
+import Quiz.TheAntQuiz;
 
 /**
  *
@@ -176,7 +176,7 @@ public class TheAnt extends javax.swing.JFrame {
             System.out.print(cont);
             System.out.println("");
              } else {
-             JOptionPane.showMessageDialog(null, "aperta no dica");
+             JOptionPane.showMessageDialog(null, "Você tem uma dica te esperando!!");
              }}
               else {
             cont++;
@@ -189,6 +189,8 @@ public class TheAnt extends javax.swing.JFrame {
         }}else{
         
             System.out.println("Acabou :(");
+            TheAntQuiz quiz = new TheAntQuiz();
+            quiz.setVisible(true);
             this.dispose();
         }
         

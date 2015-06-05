@@ -87,6 +87,7 @@ public class Dificuldade extends javax.swing.JFrame {
             // Abre o conto 
         TheAnt conto = new TheAnt();
         conto.setVisible(true);
+        this.dispose();
         
     }//GEN-LAST:event_jButton1ActionPerformed
 

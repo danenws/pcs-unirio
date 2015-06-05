@@ -34,7 +34,7 @@ public class TheAntDica extends javax.swing.JFrame {
         Dica d = new Dica();
         String  x = null;
         try { 
-            x = d.exibirDica("contos/dicaprefacio/dica1.txt");
+            x = d.exibirDica("Dica/dicaPrefacio/dica1.txt");
         } catch (FileNotFoundException ex) {
             Logger.getLogger(TheAntDica.class.getName()).log(Level.SEVERE, null, ex);
         }
