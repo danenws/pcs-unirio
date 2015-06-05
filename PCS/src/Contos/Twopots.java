@@ -107,49 +107,51 @@ public class Twopots extends javax.swing.JFrame {
         // TODO add your handling code here:
 
         Conto c = new Conto();
-
+       
         jTextPane1.setText(c.lerContoPos(0, "contos/capitulo1/tepatbp.txt"));
         Font font = new Font("Serif", Font.ITALIC, 20);
         jTextPane1.setFont(font);
-        setBackground( new Color(0, 0, 0, 0) );
 
     }//GEN-LAST:event_jTextPane1PropertyChange
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
 
         Conto c = new Conto(); //Cria um objeto do tipo conto
-
+        
         String [] x;
         x = c.lerConto("contos/capitulo1/tepatbp.txt"); //Lê o conteúdo do conto em um arquivo e armazena no vetor x
-
+       
         int tam = c.tamanhoConto("contos/capitulo1/tepatbp.txt"); //Pega o tamanho do vetor do conteúdo do conto
         System.out.println(tam);
+        
+        if(cont<tam-1){
+             if (cont==2){
+             if (dica== 1){
+                 cont++;
+            jTextPane1.setText(x[cont]);
 
-        if(cont<tam){
-            if (cont==2){
-                if (dica== 1){
-                    cont++;
-                    jTextPane1.setText(x[cont]);
+            System.out.print("Cont e: ");
+            System.out.print(cont);
+            System.out.println("");
+             } else {
+             JOptionPane.showMessageDialog(null, "Você tem uma dica te esperando!!");
+             }}
+              else {
+            cont++;
+            jTextPane1.setText(x[cont]);
 
-                    System.out.print("Cont e: ");
-                    System.out.print(cont);
-                    System.out.println("");
-                } else {
-                    JOptionPane.showMessageDialog(null, "aperta no dica");
-                }}
-                else {
-                    cont++;
-                    jTextPane1.setText(x[cont]);
-
-                    System.out.print("Cont e: ");
-                    System.out.print(cont);
-                    System.out.println("");
-
-                }}else{
-
-                    System.out.println("Acabou :(");
-                    this.dispose();
-                }
+            System.out.print("Cont e: ");
+            System.out.print(cont);
+            System.out.println("");
+             
+        }}else{
+        
+            System.out.println("Acabou :(");
+            //TheAntQuiz quiz = new TheAntQuiz();
+            //quiz.setVisible(true);
+            this.dispose();
+        }
+        
 
     }//GEN-LAST:event_jButton1MouseClicked
 

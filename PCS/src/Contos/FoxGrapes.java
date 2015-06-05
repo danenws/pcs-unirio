@@ -80,7 +80,7 @@ public class FoxGrapes extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(20, 380, 73, 29);
+        jButton2.setBounds(20, 320, 73, 23);
 
         jButton1.setText("Avançar");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -94,11 +94,11 @@ public class FoxGrapes extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(520, 380, 94, 29);
+        jButton1.setBounds(520, 320, 73, 23);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Contos/fox2.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 633, 412);
+        jLabel1.setBounds(0, 0, 630, 380);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -111,7 +111,7 @@ public class FoxGrapes extends javax.swing.JFrame {
         jTextPane1.setText(c.lerContoPos(0, "contos/capitulo2/tfatg.txt"));
         Font font = new Font("Serif", Font.ITALIC, 20);
         jTextPane1.setFont(font);
-        setBackground( new Color(0, 0, 0, 0) );
+        //setBackground( new Color(0, 0, 0, 0) );
 
     }//GEN-LAST:event_jTextPane1PropertyChange
 

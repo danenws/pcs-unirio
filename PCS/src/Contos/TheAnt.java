@@ -8,12 +8,12 @@
 package Contos;
 import javax.swing.JOptionPane;
 import java.awt.Font;
+import java.awt.event.MouseEvent;
 import pcs.Conto;
 import Dicas.TheAntDica;
-import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Toolkit;
-
+//import Quiz.TheAntQuiz;
 
 /**
  *
@@ -26,7 +26,6 @@ public class TheAnt extends javax.swing.JFrame {
      * Creates new form TheAnt
      */
     public TheAnt() {
-        initComponents();
         initComponents();
         this.setSize(640, 390);
         this.setResizable(false);
@@ -62,7 +61,7 @@ public class TheAnt extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jTextPane1);
 
         getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(170, 20, 390, 210);
+        jScrollPane2.setBounds(200, 0, 390, 210);
 
         jButton1.setText("Avançar");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -76,7 +75,7 @@ public class TheAnt extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(510, 300, 94, 29);
+        jButton1.setBounds(510, 300, 73, 23);
 
         jButton3.setBackground(new java.awt.Color(200, 218, 235));
         jButton3.setText("Dica");
@@ -86,7 +85,7 @@ public class TheAnt extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(70, 90, 73, 50);
+        jButton3.setBounds(90, 90, 73, 50);
 
         jButton2.setText("Sair");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -95,7 +94,7 @@ public class TheAnt extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(20, 300, 73, 29);
+        jButton2.setBounds(20, 300, 73, 23);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Telas/theant.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
@@ -112,7 +111,6 @@ public class TheAnt extends javax.swing.JFrame {
         jTextPane1.setText(c.lerContoPos(0, "contos/prefacio/taatg.txt"));
         Font font = new Font("Serif", Font.ITALIC, 20);
         jTextPane1.setFont(font);
-        setBackground( new Color(0, 0, 0, 0) );
         
         
     }//GEN-LAST:event_jTextPane1PropertyChange
@@ -168,7 +166,7 @@ public class TheAnt extends javax.swing.JFrame {
         int tam = c.tamanhoConto("contos/prefacio/taatg.txt"); //Pega o tamanho do vetor do conteúdo do conto
         System.out.println(tam);
         
-        if(cont<tam){
+        if(cont<tam-1){
              if (cont==2){
              if (dica== 1){
                  cont++;
@@ -178,7 +176,7 @@ public class TheAnt extends javax.swing.JFrame {
             System.out.print(cont);
             System.out.println("");
              } else {
-             JOptionPane.showMessageDialog(null, "aperta no dica");
+             JOptionPane.showMessageDialog(null, "Você tem uma dica te esperando!!");
              }}
               else {
             cont++;
@@ -191,6 +189,8 @@ public class TheAnt extends javax.swing.JFrame {
         }}else{
         
             System.out.println("Acabou :(");
+            //TheAntQuiz quiz = new TheAntQuiz();
+            //quiz.setVisible(true);
             this.dispose();
         }
         
@@ -198,7 +198,9 @@ public class TheAnt extends javax.swing.JFrame {
             
     }//GEN-LAST:event_jButton1MouseClicked
 
-    
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
