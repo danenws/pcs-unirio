@@ -11,6 +11,8 @@ import java.awt.Font;
 import java.awt.event.MouseEvent;
 import pcs.Conto;
 import Dicas.TheAntDica;
+import java.awt.Dimension;
+import java.awt.Toolkit;
 
 
 /**
@@ -27,6 +29,8 @@ public class TheAnt extends javax.swing.JFrame {
         initComponents();
         this.setSize(640, 390);
         this.setResizable(false);
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
         
     }
 

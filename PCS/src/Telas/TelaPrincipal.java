@@ -5,6 +5,9 @@
  */
 package Telas;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
+
 /**
  *
  * @author felipequintanilha
@@ -18,6 +21,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
         initComponents();
         this.setSize(640, 430);
         this.setResizable(false);
+          Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
         
     }
 

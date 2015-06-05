@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package Telas;
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import javax.swing.JOptionPane;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -23,6 +25,8 @@ public class TelaCadastro extends javax.swing.JFrame {
         initComponents();
         this.setSize(600, 390);
         this.setResizable(false);
+          Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
     }
 
     /**

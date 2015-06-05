@@ -6,7 +6,9 @@
 
 package Dicas;
 
+import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.Toolkit;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -26,7 +28,8 @@ public class TheAntDica extends javax.swing.JFrame {
         initComponents();
         this.setSize(611, 416);
         this.setResizable(false);
-        
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
 
         Dica d = new Dica();
         String  x = null;
