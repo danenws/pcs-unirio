@@ -6,10 +6,11 @@
 
 
 package Contos;
-
+import javax.swing.JOptionPane;
 import java.awt.Font;
 import java.awt.event.MouseEvent;
 import pcs.Conto;
+import Dicas.TheAntDica;
 
 
 /**
@@ -18,7 +19,7 @@ import pcs.Conto;
  */
 public class TheAnt extends javax.swing.JFrame {
     private int cont=0;
-
+    public int dica=0;
     /**
      * Creates new form TheAnt
      */
@@ -144,7 +145,11 @@ public class TheAnt extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+        TheAntDica conto2 = new TheAntDica();
+        conto2.setVisible(true);
+        dica=1;
+        
+  
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
@@ -157,17 +162,27 @@ public class TheAnt extends javax.swing.JFrame {
         int tam = c.tamanhoConto("contos/capitulo1/tepatbp.txt"); //Pega o tamanho do vetor do conteúdo do conto
         System.out.println(tam);
         
-        if(cont<tam-1){
-            cont++;
-            System.out.print("Cont e: ");
-            System.out.print(cont);
+        if(cont<tam){
+             if (cont==2){
+             if (dica== 1){
+                 cont++;
             jTextPane1.setText(x[cont]);
 
             System.out.print("Cont e: ");
             System.out.print(cont);
             System.out.println("");
-        }
-        else{
+             } else {
+             JOptionPane.showMessageDialog(null, "aperta no dica");
+             }}
+              else {
+            cont++;
+            jTextPane1.setText(x[cont]);
+
+            System.out.print("Cont e: ");
+            System.out.print(cont);
+            System.out.println("");
+             
+        }}else{
         
             System.out.println("Acabou :(");
             this.dispose();

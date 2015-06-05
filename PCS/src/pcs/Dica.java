@@ -5,26 +5,34 @@
  */
 package pcs;
 
+
+import javax.swing.*;    
+import java.io.*;     
+import java.util.*;
+
 /**
  *
  * @author Gabriel Ramos
  */
 public class Dica {
     private char palavra;
-    private char dica;
+    private String dica;
     private String descricao;
     
-    public Dica(char palavra, char dica, String descricao) {
+    public Dica(char palavra, String dica, String descricao) {
         this.palavra = palavra;
         this.dica = dica;
         this.descricao = descricao;
+    }
+    
+        public Dica() {
     }
     
     public char getPalavra() {
         return palavra;
     }
 
-    public char getDica() {
+    public String getDica() {
         return dica;
     }
 
@@ -37,7 +45,7 @@ public class Dica {
         this.palavra = palavra;
     }
 
-    public void setDica(char dica) {
+    public void setDica(String dica) {
         this.dica = dica;
     }
 
@@ -45,8 +53,18 @@ public class Dica {
         this.descricao = descricao;
     }
     
-    public void exibirDica(){
-      
-    }
-
+    public String exibirDica(String arquivo) throws FileNotFoundException{        
+        String dica21 = null; 
+        try{
+            Scanner scanner = new Scanner(new FileReader(arquivo)).useDelimiter("\\*");
+            dica21=scanner.next(); 
+            return dica21;  
+            }catch (FileNotFoundException ex) { // trata as exceções do tipo FileNotFoundException   
+            ex.printStackTrace();  
+        } catch (IOException ex) { // trata as exceções do tipo IOException   
+            ex.printStackTrace();  
+        } 
+        return dica21;  
 }
+}
+    
