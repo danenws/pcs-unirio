@@ -1,0 +1,23 @@
+<html><body
+<p>The verb be is used in the following patterns:</p>
+<p>1. with a noun:</p>
+<p>My mother is a teacher.</p>
+<p>Bill Clinton was the president of the US.</p>
+
+<p>2. with an adjective:</p>
+<p>This soup is very tasty.</p>
+<p>The children were good.</p>
+
+<p>2.1 with the -ing form to make the continuous aspect</p>
+<p>We were walking down the street.</p>
+<p>Everything was wet. It had been raining for hours.</p>
+
+<p>2.2 with the -ed form to make the passive voice</p>
+<p>The house was built in 1890.</p>
+<p>The street is called Montagu Street.</p>
+<p>This car was made in Japan.</p>
+
+<p>3. with a prepositional phrase:</p>
+<p>John and his wife are from Manchester.</p>
+<p>The flowers are on the table.</p>
+</body</html>

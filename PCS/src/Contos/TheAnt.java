@@ -8,12 +8,11 @@
 package Contos;
 import javax.swing.JOptionPane;
 import java.awt.Font;
-import java.awt.event.MouseEvent;
 import pcs.Conto;
 import Dicas.TheAntDica;
 import java.awt.Dimension;
 import java.awt.Toolkit;
-//import Quiz.TheAntQuiz;
+import Quiz.TheAntQuiz;
 
 /**
  *
@@ -27,7 +26,7 @@ public class TheAnt extends javax.swing.JFrame {
      */
     public TheAnt() {
         initComponents();
-        this.setSize(640, 390);
+        this.setSize(600, 360);
         this.setResizable(false);
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
@@ -189,8 +188,8 @@ public class TheAnt extends javax.swing.JFrame {
         }}else{
         
             System.out.println("Acabou :(");
-            //TheAntQuiz quiz = new TheAntQuiz();
-            //quiz.setVisible(true);
+            TheAntQuiz quiz = new TheAntQuiz();
+            quiz.setVisible(true);
             this.dispose();
         }
         

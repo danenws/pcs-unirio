@@ -5,7 +5,8 @@
  */
 package Contos;
 
-import java.awt.Color;
+import Dicas.ThePot;
+import Quiz.ThePoty;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Toolkit;
@@ -147,8 +148,8 @@ public class Twopots extends javax.swing.JFrame {
         }}else{
         
             System.out.println("Acabou :(");
-            //TheAntQuiz quiz = new TheAntQuiz();
-            //quiz.setVisible(true);
+            ThePoty quiz = new ThePoty();
+            quiz.setVisible(true);
             this.dispose();
         }
         
@@ -179,7 +180,7 @@ public class Twopots extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        Twopots conto2 = new Twopots();
+        ThePot conto2 = new ThePot();
         conto2.setVisible(true);
         dica=1;
 

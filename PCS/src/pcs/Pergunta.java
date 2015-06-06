@@ -1,3 +1,11 @@
+package pcs;
+
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Scanner;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -6,23 +14,31 @@
 
 /**
  *
- * @author felipequintanilha
+ * @author Gabriel Ramos
  */
 public class Pergunta {
     
     private String pergunta;
-    private Resposta resposta; //Como criar um vetor de respostas para associar uma pergunta com um numero x de respostas?
+    private Resposta resposta;
     
-    public Pergunta(String pergunta, Resposta resposta){
-        
-        this.pergunta = pergunta;  
-     //   resposta = new Resposta();
-        
+    public Pergunta(){
     }
+    
 
-    public String getPergunta() {
-        return pergunta;
-    }
+    public String getPergunta(String arquivo) throws FileNotFoundException{     
+        String dica21 = null; 
+        try{
+            Scanner scanner = new Scanner(new FileReader(arquivo)).useDelimiter("\\*");
+            dica21=scanner.next(); 
+            return dica21;  
+            }catch (FileNotFoundException ex) { // trata as exceções do tipo FileNotFoundException   
+            ex.printStackTrace();  
+        } catch (IOException ex) { // trata as exceções do tipo IOException   
+            ex.printStackTrace();  
+        } 
+        return dica21;  
+}
+    
 
     public void setPergunta(String pergunta) {
         this.pergunta = pergunta;
@@ -34,16 +50,5 @@ public class Pergunta {
 
     public void setResposta(Resposta resposta) {
         this.resposta = resposta;
-    }
-    
-    public boolean corrigir(){
-        
-        if((resposta.getCerta()==true)){
-            return true;
-        }
-        else{
-            return false;
-        }
-    }
-    
+} 
 }

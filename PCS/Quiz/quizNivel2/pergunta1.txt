@@ -1,0 +1,4 @@
+<html><body>
+<p>Write the word to complete the sentence:</p>
+<p>1 - It ____ easy.</p>
+</html></body>

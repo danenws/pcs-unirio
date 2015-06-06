@@ -7,10 +7,8 @@
 package Dicas;
 
 import java.awt.Dimension;
-import java.awt.Font;
 import java.awt.Toolkit;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import pcs.Dica;
@@ -34,7 +32,7 @@ public class TheAntDica extends javax.swing.JFrame {
         Dica d = new Dica();
         String  x = null;
         try { 
-            x = d.exibirDica("contos/dicaprefacio/dica1.txt");
+            x = d.exibirDica("Dica/dicaPrefacio/dica1.txt");
         } catch (FileNotFoundException ex) {
             Logger.getLogger(TheAntDica.class.getName()).log(Level.SEVERE, null, ex);
         }

@@ -5,7 +5,8 @@
  */
 package Contos;
 
-import java.awt.Color;
+import Dicas.TheFox;
+import Quiz.TheFoxy;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Toolkit;
@@ -116,7 +117,7 @@ public class FoxGrapes extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextPane1PropertyChange
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        FoxGrapes conto2 = new FoxGrapes();
+        TheFox conto2 = new TheFox();
         conto2.setVisible(true);
         dica=1;
 
@@ -148,7 +149,7 @@ public class FoxGrapes extends javax.swing.JFrame {
                     System.out.print(cont);
                     System.out.println("");
                 } else {
-                    JOptionPane.showMessageDialog(null, "aperta no dica");
+             JOptionPane.showMessageDialog(null, "Você tem uma dica te esperando!!");
                 }}
                 else {
                     cont++;
@@ -161,6 +162,8 @@ public class FoxGrapes extends javax.swing.JFrame {
                 }}else{
 
                     System.out.println("Acabou :(");
+                    TheFoxy quiz = new TheFoxy();
+                    quiz.setVisible(true);
                     this.dispose();
                 }
 
