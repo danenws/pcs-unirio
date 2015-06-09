@@ -27,7 +27,7 @@ public class Twopots extends javax.swing.JFrame {
     public int dica=0;
     
     public Twopots() {
-        initComponents();
+       // initComponents();
         initComponents();
         this.setSize(640, 390);
         this.setResizable(false);
