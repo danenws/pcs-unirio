@@ -26,8 +26,8 @@ public class FoxGrapes extends javax.swing.JFrame {
      * Creates new form FoxGrapes
      */
     public FoxGrapes() {
-        initComponents();
-        initComponents();
+       // initComponents();
+       // initComponents();
         initComponents();
         this.setSize(640, 390);
         this.setResizable(false);
