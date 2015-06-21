@@ -10,8 +10,11 @@ import Quiz.TheFoxy;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Toolkit;
+import java.io.FileNotFoundException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-import pcs.Conto;
+import pcs.contoBuilder;
 
 /**
  *
@@ -107,7 +110,7 @@ public class FoxGrapes extends javax.swing.JFrame {
     private void jTextPane1PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jTextPane1PropertyChange
         // TODO add your handling code here:
 
-        Conto c = new Conto();
+        contoBuilder c = new contoBuilder();
 
         jTextPane1.setText(c.lerContoPos(0, "contos/capitulo2/tfatg.txt"));
         Font font = new Font("Serif", Font.ITALIC, 20);
@@ -131,26 +134,27 @@ public class FoxGrapes extends javax.swing.JFrame {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
 
-        Conto c = new Conto(); //Cria um objeto do tipo conto
-
-        String [] x;
-        x = c.lerConto("contos/capitulo2/tfatg.txt"); //Lê o conteúdo do conto em um arquivo e armazena no vetor x
-
-        int tam = c.tamanhoConto("contos/capitulo2/tfatg.txt"); //Pega o tamanho do vetor do conteúdo do conto
-        System.out.println(tam);
-
-        if(cont<tam){
-            if (cont==2){
-                if (dica== 1){
-                    cont++;
-                    jTextPane1.setText(x[cont]);
-
-                    System.out.print("Cont e: ");
-                    System.out.print(cont);
-                    System.out.println("");
-                } else {
-             JOptionPane.showMessageDialog(null, "Você tem uma dica te esperando!!");
-                }}
+        try {
+            contoBuilder c = new contoBuilder(); //Cria um objeto do tipo conto
+            
+            String [] x;
+            x = c.lerConto("contos/capitulo2/tfatg.txt"); //Lê o conteúdo do conto em um arquivo e armazena no vetor x
+            
+            int tam = c.tamanhoConto("contos/capitulo2/tfatg.txt"); //Pega o tamanho do vetor do conteúdo do conto
+            System.out.println(tam);
+            
+            if(cont<tam){
+                if (cont==2){
+                    if (dica== 1){
+                        cont++;
+                        jTextPane1.setText(x[cont]);
+                        
+                        System.out.print("Cont e: ");
+                        System.out.print(cont);
+                        System.out.println("");
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Você tem uma dica te esperando!!");
+                    }}
                 else {
                     cont++;
                     jTextPane1.setText(x[cont]);
@@ -160,12 +164,15 @@ public class FoxGrapes extends javax.swing.JFrame {
                     System.out.println("");
 
                 }}else{
-
-                    System.out.println("Acabou :(");
-                    TheFoxy quiz = new TheFoxy();
-                    quiz.setVisible(true);
-                    this.dispose();
-                }
+                
+                System.out.println("Acabou :(");
+                TheFoxy quiz = new TheFoxy();
+                quiz.setVisible(true);
+                this.dispose();
+            }
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(FoxGrapes.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
     }//GEN-LAST:event_jButton1MouseClicked
 
@@ -220,10 +227,8 @@ public class FoxGrapes extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new FoxGrapes().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new FoxGrapes().setVisible(true);
         });
     }
 

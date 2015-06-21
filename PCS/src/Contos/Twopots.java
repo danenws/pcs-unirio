@@ -10,8 +10,12 @@ import Quiz.ThePoty;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Toolkit;
+import java.io.FileNotFoundException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import pcs.Conto;
+import pcs.contoBuilder;
 
 /**
  *
@@ -107,7 +111,7 @@ public class Twopots extends javax.swing.JFrame {
     private void jTextPane1PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jTextPane1PropertyChange
         // TODO add your handling code here:
 
-        Conto c = new Conto();
+        contoBuilder c = new contoBuilder();
        
         jTextPane1.setText(c.lerContoPos(0, "contos/capitulo1/tepatbp.txt"));
         Font font = new Font("Serif", Font.ITALIC, 20);
@@ -117,12 +121,17 @@ public class Twopots extends javax.swing.JFrame {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
 
-        Conto c = new Conto(); //Cria um objeto do tipo conto
+        contoBuilder c = new contoBuilder();
         
         String [] x;
         x = c.lerConto("contos/capitulo1/tepatbp.txt"); //Lê o conteúdo do conto em um arquivo e armazena no vetor x
        
-        int tam = c.tamanhoConto("contos/capitulo1/tepatbp.txt"); //Pega o tamanho do vetor do conteúdo do conto
+        int tam = 0; 
+        try {
+            tam = c.tamanhoConto("contos/capitulo1/tepatbp.txt"); //Pega o tamanho do vetor do conteúdo do conto
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(Twopots.class.getName()).log(Level.SEVERE, null, ex);
+        }
         System.out.println(tam);
         
         if(cont<tam-1){

@@ -8,11 +8,14 @@
 package Contos;
 import javax.swing.JOptionPane;
 import java.awt.Font;
-import pcs.Conto;
 import Dicas.TheAntDica;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import Quiz.TheAntQuiz;
+import java.io.FileNotFoundException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import pcs.contoBuilder;
 
 /**
  *
@@ -105,7 +108,7 @@ public class TheAnt extends javax.swing.JFrame {
     private void jTextPane1PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jTextPane1PropertyChange
         // TODO add your handling code here:
         
-        Conto c = new Conto();
+        contoBuilder c = new contoBuilder();
        
         jTextPane1.setText(c.lerContoPos(0, "contos/prefacio/taatg.txt"));
         Font font = new Font("Serif", Font.ITALIC, 20);
@@ -157,12 +160,17 @@ public class TheAnt extends javax.swing.JFrame {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         
-        Conto c = new Conto(); //Cria um objeto do tipo conto
+        contoBuilder c = new contoBuilder(); //Cria um objeto do tipo conto
         
         String [] x;
         x = c.lerConto("contos/prefacio/taatg.txt"); //Lê o conteúdo do conto em um arquivo e armazena no vetor x
        
-        int tam = c.tamanhoConto("contos/prefacio/taatg.txt"); //Pega o tamanho do vetor do conteúdo do conto
+        int tam = 0; 
+        try {
+            tam = c.tamanhoConto("contos/prefacio/taatg.txt"); //Pega o tamanho do vetor do conteúdo do conto
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(TheAnt.class.getName()).log(Level.SEVERE, null, ex);
+        }
         System.out.println(tam);
         
         if(cont<tam-1){
@@ -225,10 +233,8 @@ public class TheAnt extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new TheAnt().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new TheAnt().setVisible(true);
         });
     }
 
