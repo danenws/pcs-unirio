@@ -22,10 +22,10 @@ public class Saver {
     public void salvarJogo(historicoBuilder hist) throws FileNotFoundException{
         XMLEncoder xmlEncoder = null;
         
-        System.out.println("Historico: ");
-        System.out.println(hist);
+        
+       
         try{
-            
+            System.out.println("OI!!!");
             xmlEncoder = new XMLEncoder(
             
                     new FileOutputStream("dadosjogo.xml"));

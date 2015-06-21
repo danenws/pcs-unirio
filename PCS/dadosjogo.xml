@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <java version="1.8.0_45" class="java.beans.XMLDecoder">
- <object class="pcs.historicoBuilder"/>
+ <object class="pcs.historicoBuilder">
+  <void property="data">
+   <string>Sei lá</string>
+  </void>
+  <void property="nota">
+   <float>7.0</float>
+  </void>
+  <void property="quiz">
+   <string>A noite</string>
+  </void>
+  <void property="usuario">
+   <string>Maria</string>
+  </void>
+ </object>
 </java>

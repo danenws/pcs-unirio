@@ -22,10 +22,13 @@ public class Historico {
 
     Historico(historicoBuilder builder) {
         
+        
+                
         this.usuario = builder.usuario;
         this.quiz = builder.quiz;
         this.nota = builder.nota;
         this.data = builder.data;
+            
         
     }
 

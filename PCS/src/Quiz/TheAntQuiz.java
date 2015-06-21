@@ -16,7 +16,10 @@ import pcs.Pergunta;
 import pcs.Quiz;
 import pcs.Resposta;
 import pcs.Saver;
+import pcs.Usuario;
 import pcs.historicoBuilder;
+
+
 
 /**
  *
@@ -24,11 +27,13 @@ import pcs.historicoBuilder;
  */
 public class TheAntQuiz extends javax.swing.JFrame {
     double nota;
-    int chance=3;
+    int chance=1;
+    
     /**
      * Creates new form TheAntQuiz
      */
     public TheAntQuiz() {
+        
         initComponents();
         this.setSize(1011, 731);
         this.setResizable(false);
@@ -289,10 +294,10 @@ public class TheAntQuiz extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        
+       historicoBuilder hist = new historicoBuilder("Maria", "A noite", (float) 7.0, "Sei lá");
        Saver salvar = new Saver();
-       historicoBuilder hist = new historicoBuilder();
        
+        
         try {
             salvar.salvarJogo(hist);
         } catch (FileNotFoundException ex) {

@@ -61,11 +61,12 @@ public class usuarioBuilder {
 
             } catch (IOException ex) {  
             }  
-        } 
+        }
+        
   }
      
      public String mostrarUsersNamePosicao(int pos) throws FileNotFoundException{
-        System.out.println("POS ENTRADA: " + pos);
+       // System.out.println("POS ENTRADA: " + pos);
         String nom = null;
         int i = 1;
         Scanner scanner = new Scanner(new FileReader("usuarios.txt"))
@@ -78,7 +79,7 @@ public class usuarioBuilder {
                nome = scanner.next();
                genero = scanner.next();
                dataNascimento = scanner.next();
-               System.out.println("nome todos: " + nome);
+               //System.out.println("nome todos: " + nome);
                if(i == pos){
                    nom = nome;
                    break;
@@ -86,7 +87,7 @@ public class usuarioBuilder {
                i++;
             }
         }  
-        System.out.println("nome na pos" + pos + ": "+ nom);
+        //System.out.println("nome na pos" + pos + ": "+ nom);
         return nom;
         
     }

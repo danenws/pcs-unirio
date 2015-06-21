@@ -29,12 +29,16 @@ public class historicoBuilder {
     
     public historicoBuilder(String usuario, String quiz, float nota, String data){
         
+        
+        
         this.usuario = usuario;
         this.quiz = quiz;
         this.nota = nota;
         this.data = data;
         
-         try {    //Salvando o novo usuarios no arquivo
+        
+        
+         /*try {    //Salvando o novo usuarios no arquivo
             String n = usuario + "|" + quiz + "|" + nota + "|" + data;
             
             String file = "historico.txt";
@@ -45,7 +49,8 @@ public class historicoBuilder {
             
         } catch (IOException ex) {  
         }  
-        
+*/
+       
     }
     
     void gerarHist() throws FileNotFoundException{
@@ -84,22 +89,54 @@ public class historicoBuilder {
         
     }
 
-    public historicoBuilder setUsuario(String usuario) {
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
+
+    public void setQuiz(String quiz) {
+        this.quiz = quiz;
+    }
+
+    public void setNota(float nota) {
+        this.nota = nota;
+    }
+
+    public void setData(String data) {
+        this.data = data;
+    }
+
+    public String getUsuario() {
+        return usuario;
+    }
+
+    public String getQuiz() {
+        return quiz;
+    }
+
+    public float getNota() {
+        return nota;
+    }
+
+    public String getData() {
+        return data;
+    }
+
+    public historicoBuilder Usuario(String usuario) {
         this.usuario = usuario;
         return this;
     }
 
-    public historicoBuilder setQuiz(String quiz) {
+    public historicoBuilder Quiz(String quiz) {
         this.quiz = quiz;
         return this;
     }
 
-    public historicoBuilder setNota(float nota) {
+    public historicoBuilder Nota(float nota) {
         this.nota = nota;
         return this;
     }
 
-    public historicoBuilder setData(String data) {
+    public historicoBuilder Data(String data) {
         this.data = data;
         return this;
     }
