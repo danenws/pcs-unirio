@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import pcs.Usuario;
+import pcs.usuarioBuilder;
 
 /**
  *
@@ -167,7 +168,7 @@ public class TelaUsuarios extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton1PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jButton1PropertyChange
-        Usuario usuario = new Usuario();
+        usuarioBuilder usuario = new usuarioBuilder();
         String con;
         try {
             con = usuario.mostrarUsersNamePosicao(1);
@@ -201,7 +202,7 @@ public class TelaUsuarios extends javax.swing.JFrame {
 
     private void jButton2PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jButton2PropertyChange
         // TODO add your handling code here:
-        Usuario usuario = new Usuario();
+        usuarioBuilder usuario = new usuarioBuilder();
         String con;
         
         try {
@@ -238,7 +239,7 @@ public class TelaUsuarios extends javax.swing.JFrame {
 
     private void jButton3PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jButton3PropertyChange
         // TODO add your handling code here:
-        Usuario usuario = new Usuario();
+        usuarioBuilder usuario = new usuarioBuilder();
         String con;
         
         try {
@@ -251,7 +252,7 @@ public class TelaUsuarios extends javax.swing.JFrame {
 
     private void jButton5PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jButton5PropertyChange
         // TODO add your handling code here:
-        Usuario usuario = new Usuario();
+        usuarioBuilder usuario = new usuarioBuilder();
         String con;
         
         try {
@@ -264,7 +265,7 @@ public class TelaUsuarios extends javax.swing.JFrame {
 
     private void jButton6PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jButton6PropertyChange
         // TODO add your handling code here:
-        Usuario usuario = new Usuario();
+        usuarioBuilder usuario = new usuarioBuilder();
         String con;
         
         try {

@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import pcs.Usuario;
+import pcs.usuarioBuilder;
 
 /**
  *
@@ -119,7 +120,8 @@ public class TelaCadastro extends javax.swing.JFrame {
         try {
             // Criando um novo usuario:
             if(nome.getText().length()!=0 && sexo.getText().length()!=0 && data_nasc.getText().length()!=0){ //Verifica se todos os campos foram preenchidos
-                Usuario usr = new Usuario(nome.getText(), sexo.getText(), data_nasc.getText());
+                
+                usuarioBuilder usr = new usuarioBuilder(nome.getText(), sexo.getText(), data_nasc.getText());
                 System.out.println("Usuario criado!!!");
                 this.dispose(); //Fecha a tela após criar novo usuário
             }
