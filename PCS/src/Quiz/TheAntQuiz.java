@@ -6,6 +6,7 @@
 package Quiz;
 
 
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.io.FileNotFoundException;
@@ -94,6 +95,11 @@ public class TheAntQuiz extends javax.swing.JFrame {
         jTextField3 = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jTextField4 = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
         jTextField5 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -149,9 +155,34 @@ public class TheAntQuiz extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(520, 630, 280, 70);
+        jLabel7.setBounds(710, 560, 280, 70);
         getContentPane().add(jTextField4);
         jTextField4.setBounds(50, 490, 330, 50);
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 51, 51));
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(400, 74, 210, 50);
+
+        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 51, 51));
+        getContentPane().add(jLabel11);
+        jLabel11.setBounds(390, 500, 210, 40);
+
+        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 51, 51));
+        getContentPane().add(jLabel10);
+        jLabel10.setBounds(390, 350, 210, 50);
+
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 51, 51));
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(390, 210, 200, 50);
+
+        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 51, 51));
+        getContentPane().add(jLabel12);
+        jLabel12.setBounds(390, 640, 210, 40);
 
         jTextField5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -192,6 +223,37 @@ public class TheAntQuiz extends javax.swing.JFrame {
             int nota = 0;
             nota = q.Corrigir();
             jLabel7.setText("Sua nota é : "+nota+"%");
+            if (q.q1()){
+            jLabel8.setText("");
+            } else {
+            jLabel8.setText("Você errou!"); 
+            }
+            
+            if (q.q2()){
+            jLabel9.setText("");
+            } else {
+            jLabel9.setText("Você errou!"); 
+            }
+            
+            if (q.q3()){
+            jLabel10.setText("");
+            } else {
+            jLabel10.setText("Você errou!"); 
+            }
+            
+            if (q.q4()){
+            jLabel11.setText("");
+            } else {
+            jLabel11.setText("Você errou!"); 
+            }
+            
+            if (q.q5()){
+            jLabel12.setText("");
+            } else {
+            jLabel12.setText("Você errou!"); 
+            }
+            
+            
             
         } catch (FileNotFoundException ex) {
             Logger.getLogger(TheAntQuiz.class.getName()).log(Level.SEVERE, null, ex);
@@ -246,12 +308,17 @@ public class TheAntQuiz extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;

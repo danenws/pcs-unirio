@@ -85,8 +85,36 @@ public class Quiz {
     return nota;
     }
 
+    public boolean q1(){
+    if (r1.equals(c1)){
+    return true;      
+    }
+    return false;
+}
+    public boolean q2(){
+    if (r2.equals(c2)){
+    return true;      
+    }
+    return false;
+}
+    public boolean q3(){
+    if (r3.equals(c3)){
+    return true;      
+    }
+    return false;
+}
+    public boolean q4(){
+    if (r4.equals(c4)){
+    return true;      
+    }
+    return false;
+}
+    public boolean q5(){
+    if (r5.equals(c5)){
+    return true;      
+    }
+    return false;
+}
     
-     
-     
     
 }
