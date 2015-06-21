@@ -12,6 +12,7 @@ import java.io.FileNotFoundException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import pcs.Dica;
+import pcs.DicaBuilder;
 
 /**
  *
@@ -29,7 +30,7 @@ public class TheFox extends javax.swing.JFrame {
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
 
-        Dica d = new Dica();
+        DicaBuilder d = new DicaBuilder();
         String  x = null;
         try { 
             x = d.exibirDica("Dica/dicacap2/dica1.txt");
