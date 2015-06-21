@@ -14,24 +14,23 @@ import java.util.Scanner;
  *
  * @author Gabriel Ramos
  */
-public class Resposta {
+public class RespostaBuilder {
 
-        private String resposta;
-    
-    public Resposta(String resposta) {
+    public RespostaBuilder(String resposta) {
         this.resposta = resposta;
     }
     
-   public Resposta(RespostaBuilder builder) {
-        this.resposta = builder.resposta;
+    public Resposta build(){
+        return new Resposta(this);
     }
     
+    String resposta;
 
     public void setResposta(String resposta) {
         this.resposta = resposta;
     }
 
-    public Resposta(){
+    public RespostaBuilder(){
     
     }
     

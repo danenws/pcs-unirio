@@ -31,6 +31,19 @@ public class Quiz {
         this.c5 = c5;
     }
     
+      public Quiz(QuizBuilder builder) {
+        this.r1 = builder.r1;
+        this.c1 = builder.c1;
+        this.r2 = builder.r2;
+        this.c2 = builder.c2;
+        this.r3 = builder.r3;
+        this.c3 = builder.c3;
+        this.r4 = builder.r4;
+        this.c4 = builder.c4;
+        this.r5 = builder.r5;
+        this.c5 = builder.c5;
+    }
+      
     private String pergunta;
     private String r1;
     private String c1;

@@ -1,4 +1,6 @@
 package pcs;
+
+
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -14,28 +16,18 @@ import java.util.Scanner;
  *
  * @author Gabriel Ramos
  */
-public class Resposta {
-
-        private String resposta;
+public class PerguntaBuilder {
     
-    public Resposta(String resposta) {
-        this.resposta = resposta;
+   String pergunta;
+   Resposta resposta;
+    
+    public Pergunta build(){   
+            return new Pergunta(this);
     }
     
-   public Resposta(RespostaBuilder builder) {
-        this.resposta = builder.resposta;
-    }
     
 
-    public void setResposta(String resposta) {
-        this.resposta = resposta;
-    }
-
-    public Resposta(){
-    
-    }
-    
-     public String getResposta(String arquivo) throws FileNotFoundException{     
+    public String getPergunta(String arquivo) throws FileNotFoundException{     
         String dica21 = null; 
         try{
             Scanner scanner = new Scanner(new FileReader(arquivo)).useDelimiter("\\*");
@@ -48,10 +40,17 @@ public class Resposta {
         } 
         return dica21;  
 }
+    
 
+    public void setPergunta(String pergunta) {
+        this.pergunta = pergunta;
+    }
 
-  
-    
-    
-    
+    public Resposta getResposta() {
+        return resposta;
+    }
+
+    public void setResposta(Resposta resposta) {
+        this.resposta = resposta;
+} 
 }

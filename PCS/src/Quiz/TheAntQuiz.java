@@ -18,7 +18,8 @@ import pcs.Resposta;
 import pcs.Saver;
 import pcs.Usuario;
 import pcs.historicoBuilder;
-
+import pcs.PerguntaBuilder;
+import pcs.RespostaBuilder;
 
 
 /**
@@ -27,7 +28,7 @@ import pcs.historicoBuilder;
  */
 public class TheAntQuiz extends javax.swing.JFrame {
     double nota;
-    int chance=1;
+    int chance=3;
     
     /**
      * Creates new form TheAntQuiz
@@ -40,7 +41,7 @@ public class TheAntQuiz extends javax.swing.JFrame {
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
         
-        Pergunta p = new Pergunta();
+        PerguntaBuilder p = new PerguntaBuilder();
         String  x = null;
         
         try { 
@@ -50,9 +51,9 @@ public class TheAntQuiz extends javax.swing.JFrame {
         }
         jLabel2.setText(x);
         
-        Pergunta p1 = new Pergunta();
+   
         try { 
-            x = p1.getPergunta("Quiz/quizPrefacio/pergunta2.txt");
+            x = p.getPergunta("Quiz/quizPrefacio/pergunta2.txt");
         } catch (FileNotFoundException ex) {
 
         }
@@ -81,7 +82,7 @@ public class TheAntQuiz extends javax.swing.JFrame {
         }
         jLabel6.setText(x);
         
-      
+      jButton1.setText("Corrigir "+chance+" chances");
         
     }
 
@@ -94,7 +95,6 @@ public class TheAntQuiz extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton2 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
@@ -117,15 +117,6 @@ public class TheAntQuiz extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jButton2.setText("Finalizar");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton2);
-        jButton2.setBounds(840, 620, 150, 60);
-
         jButton1.setText("Corrigir");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -133,7 +124,7 @@ public class TheAntQuiz extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(680, 620, 150, 60);
+        jButton1.setBounds(800, 620, 180, 70);
 
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -233,7 +224,7 @@ public class TheAntQuiz extends javax.swing.JFrame {
             resp3 = jTextField3.getText();
             resp4 = jTextField4.getText();
             resp5 = jTextField5.getText();
-            Resposta r1 = new Resposta();
+            RespostaBuilder r1 = new RespostaBuilder();
             c1 = r1.getResposta("Quiz/respostaPrefacio/1.txt");
             c2 = r1.getResposta("Quiz/respostaPrefacio/2.txt");
             c3 = r1.getResposta("Quiz/respostaPrefacio/3.txt");
@@ -274,26 +265,24 @@ public class TheAntQuiz extends javax.swing.JFrame {
             }
             
             chance--;
-            
+            if (chance==0) {
+               jButton1.setText("Enviar"); 
+            } else {
+            jButton1.setText("Corrigir "+chance+" chances");
+            }
         } catch (FileNotFoundException ex) {
             Logger.getLogger(TheAntQuiz.class.getName()).log(Level.SEVERE, null, ex);
         } } else{
-                    //AQUI VAI a proxima tela ou o historico
-                }
-        
-
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
-
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+                                jLabel8.setText("");
+                                jLabel10.setText("");
+                                jLabel11.setText("");
+                                jLabel12.setText("");
+                                jLabel9.setText("");           
+                    
+                                
+           // Historico                    
+                                
+                    
        historicoBuilder hist = new historicoBuilder("Maria", "A noite", (float) 7.0, "Sei lá");
        Saver salvar = new Saver();
        
@@ -303,9 +292,20 @@ public class TheAntQuiz extends javax.swing.JFrame {
         } catch (FileNotFoundException ex) {
             Logger.getLogger(TheAntQuiz.class.getName()).log(Level.SEVERE, null, ex);
         }
+              
         
+        // End Historico
         
-    }//GEN-LAST:event_jButton2ActionPerformed
+                }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField5ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -344,7 +344,6 @@ public class TheAntQuiz extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
