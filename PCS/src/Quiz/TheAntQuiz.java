@@ -22,6 +22,7 @@ import pcs.Resposta;
  */
 public class TheAntQuiz extends javax.swing.JFrame {
     double nota;
+    int chance=3;
     /**
      * Creates new form TheAntQuiz
      */
@@ -73,6 +74,7 @@ public class TheAntQuiz extends javax.swing.JFrame {
         }
         jLabel6.setText(x);
         
+      
         
     }
 
@@ -206,6 +208,7 @@ public class TheAntQuiz extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+                if (chance>0){
         try {
             String resp1, resp2, resp3, resp4, resp5, c1, c2, c3, c4, c5;
             resp1 = jTextField1.getText();
@@ -253,11 +256,13 @@ public class TheAntQuiz extends javax.swing.JFrame {
             jLabel12.setText("Você errou!"); 
             }
             
-            
+            chance--;
             
         } catch (FileNotFoundException ex) {
             Logger.getLogger(TheAntQuiz.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        } } else{
+                    //AQUI VAI a proxima tela ou o historico
+                }
         
 
     }//GEN-LAST:event_jButton1ActionPerformed
