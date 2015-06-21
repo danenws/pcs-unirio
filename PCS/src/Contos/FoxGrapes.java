@@ -149,9 +149,9 @@ public class FoxGrapes extends javax.swing.JFrame {
                         cont++;
                         jTextPane1.setText(x[cont]);
                         
-                        System.out.print("Cont e: ");
+                        /*System.out.print("Cont e: ");
                         System.out.print(cont);
-                        System.out.println("");
+                        System.out.println("");*/
                     } else {
                         JOptionPane.showMessageDialog(null, "Você tem uma dica te esperando!!");
                     }}
@@ -165,7 +165,7 @@ public class FoxGrapes extends javax.swing.JFrame {
 
                 }}else{
                 
-                System.out.println("Acabou :(");
+                //System.out.println("Acabou :(");
                 TheFoxy quiz = new TheFoxy();
                 quiz.setVisible(true);
                 this.dispose();

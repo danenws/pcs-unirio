@@ -49,7 +49,7 @@ public class contoBuilder {
                 if(text.equals("*")){//conta quantos * tem no arquivo
                     flag++;
                     //System.out.println(flag);
-                    System.out.println(Arrays.toString(cont));
+                    //System.out.println(Arrays.toString(cont));
                 }
             }
             return flag;

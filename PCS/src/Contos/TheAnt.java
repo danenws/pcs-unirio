@@ -171,7 +171,7 @@ public class TheAnt extends javax.swing.JFrame {
         } catch (FileNotFoundException ex) {
             Logger.getLogger(TheAnt.class.getName()).log(Level.SEVERE, null, ex);
         }
-        System.out.println(tam);
+        //System.out.println(tam);
         
         if(cont<tam-1){
              if (cont==2){

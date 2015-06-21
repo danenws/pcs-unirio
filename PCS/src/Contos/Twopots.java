@@ -132,7 +132,7 @@ public class Twopots extends javax.swing.JFrame {
         } catch (FileNotFoundException ex) {
             Logger.getLogger(Twopots.class.getName()).log(Level.SEVERE, null, ex);
         }
-        System.out.println(tam);
+        //System.out.println(tam);
         
         if(cont<tam-1){
              if (cont==2){
@@ -140,9 +140,9 @@ public class Twopots extends javax.swing.JFrame {
                  cont++;
             jTextPane1.setText(x[cont]);
 
-            System.out.print("Cont e: ");
+            /*System.out.print("Cont e: ");
             System.out.print(cont);
-            System.out.println("");
+            System.out.println("");*/
              } else {
              JOptionPane.showMessageDialog(null, "Você tem uma dica te esperando!!");
              }}
@@ -150,9 +150,9 @@ public class Twopots extends javax.swing.JFrame {
             cont++;
             jTextPane1.setText(x[cont]);
 
-            System.out.print("Cont e: ");
+            /*System.out.print("Cont e: ");
             System.out.print(cont);
-            System.out.println("");
+            System.out.println("");*/
              
         }}else{
         
