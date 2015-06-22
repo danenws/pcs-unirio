@@ -1,4 +1,4 @@
 <html><body>
-<p>Write the word to complete the sentence:</p>
-<p>1 - Long long ago there lived a fox ____ loved to eat.</p>
+<p>Write the word to complete the sentences. Use the words in the parenthesis.</p>
+<p>1 - Long long ago there lived a fox ____ loved to eat. (who, which, the, this)</p>
 </html></body>
