@@ -18,12 +18,12 @@ import pcs.DicaBuilder;
  *
  * @author LABCCET
  */
-public class TheFox extends javax.swing.JFrame {
+public class TheLion extends javax.swing.JFrame {
 
     /**
      * Creates new form TheAntDica
      */
-    public TheFox() {
+    public TheLion() {
         initComponents();
         this.setSize(611, 416);
         this.setResizable(false);
@@ -33,7 +33,7 @@ public class TheFox extends javax.swing.JFrame {
         DicaBuilder d = new DicaBuilder();
         String  x = null;
         try { 
-            x = d.exibirDica("Dica/dicacap2/dica1.txt");
+            x = d.exibirDica("Dica/dicacap3/dica1.txt");
         } catch (FileNotFoundException ex) {
             Logger.getLogger(TheAntDica.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -105,7 +105,7 @@ public class TheFox extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TheFox().setVisible(true);
+                new TheLion().setVisible(true);
             }
         });
     }

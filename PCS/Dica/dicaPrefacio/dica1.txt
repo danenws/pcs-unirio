@@ -1,23 +1,27 @@
 <html><body
-<p>The verb be is used in the following patterns:</p>
-<p>1. with a noun:</p>
-<p>My mother is a teacher.</p>
-<p>Bill Clinton was the president of the US.</p>
+<p>An adjective is a word or set of words that modifies (i.e., describes) a noun or pronoun.</p>
+<p>Adjectives may come before the word they modify.</p>
 
-<p>2. with an adjective:</p>
-<p>This soup is very tasty.</p>
-<p>The children were good.</p>
+<p>Examples:</p>
+<p>That is a cute puppy.</p>
+<p>She likes a high school senior.</p>
 
-<p>2.1 with the -ing form to make the continuous aspect</p>
-<p>We were walking down the street.</p>
-<p>Everything was wet. It had been raining for hours.</p>
+<p>Adjectives may also follow the word they modify:</p>
 
-<p>2.2 with the -ed form to make the passive voice</p>
-<p>The house was built in 1890.</p>
-<p>The street is called Montagu Street.</p>
-<p>This car was made in Japan.</p>
+<p>Examples:</p>
+<p>That puppy looks cute.</p>
+<p>The technology is state-of-the-art.</p>
 
-<p>3. with a prepositional phrase:</p>
-<p>John and his wife are from Manchester.</p>
-<p>The flowers are on the table.</p>
+<p>An adverb is a word or set of words that modifies verbs, adjectives, or other adverbs.</p>
+
+<p>Examples</p>
+<p>He speaks slowly (modifies the verb speaks)</p>
+<p>He is especially clever (modifies the adjective clever)</p>
+<p>He speaks all too slowly (modifies the adverb slowly)</p>
+
+<p>An adverb answers how, when, where, or to what extent-how often or how much (e.g., daily, completely).</p>
+
+<p>Example:</p>
+<p>He speaks slowly (answers the question how)</p>
+<p>He speaks very slowly (answers the question how slowly)</p>
 </body</html>

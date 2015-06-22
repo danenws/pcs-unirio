@@ -105,7 +105,7 @@ public class ThePot extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TheAntDica().setVisible(true);
+                new ThePot().setVisible(true);
             }
         });
     }
