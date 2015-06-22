@@ -23,6 +23,8 @@ import pcs.usuarioBuilder;
  */
 public class TelaUsuarios extends javax.swing.JFrame {
 
+    private String nomeSelecionado;
+    
     /**
      * Creates new form TelaUsuarios
      */
@@ -147,9 +149,9 @@ public class TelaUsuarios extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // Quando o usuário clica em seu nome vai para a tela de seleção de dificuldade
         
-        Dificuldade tela = new Dificuldade();
+        Dificuldade tela = new Dificuldade(nomeSelecionado);
         tela.setVisible(true);
-        
+        //nomeSelecionado = con;
         // TESTE 1
     }//GEN-LAST:event_jButton1ActionPerformed
 
