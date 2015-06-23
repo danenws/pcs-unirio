@@ -7,7 +7,9 @@ package Contos;
 
 import Dicas.TheAntDica;
 import Quiz.TheAntQuiz;
+import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.Toolkit;
 import java.io.FileNotFoundException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -37,9 +39,16 @@ public class TheLion extends javax.swing.JFrame {
     }
     public TheLion(String nome) {
         
-        nomeUsuario = nome;
+        /*nomeUsuario = nome;
         this.setSize(750, 450);
+        initComponents();*/
+        
+        nomeUsuario = nome;
         initComponents();
+        this.setSize(750, 450);
+        this.setResizable(false);
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
         
     }
 
@@ -88,8 +97,13 @@ public class TheLion extends javax.swing.JFrame {
                 jButton2MouseClicked(evt);
             }
         });
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton2);
-        jButton2.setBounds(730, 420, 66, 40);
+        jButton2.setBounds(730, 420, 83, 40);
 
         jButton4.setText("Sair");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -167,6 +181,11 @@ public class TheLion extends javax.swing.JFrame {
         Font font = new Font("Serif", Font.ITALIC, 20);
         jTextPane1.setFont(font);
     }//GEN-LAST:event_jTextPane1PropertyChange
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

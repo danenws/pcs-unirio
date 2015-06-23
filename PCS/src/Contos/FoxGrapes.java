@@ -24,6 +24,9 @@ public class FoxGrapes extends javax.swing.JFrame {
     
     private int cont=0;
     public int dica=0;
+    
+    String nomeUsuario;
+    String titulo;
 
     /**
      * Creates new form FoxGrapes
@@ -33,6 +36,15 @@ public class FoxGrapes extends javax.swing.JFrame {
        // initComponents();
         initComponents();
         this.setSize(640, 390);
+        this.setResizable(false);
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+    }
+    
+    public FoxGrapes(String nome) {
+        nomeUsuario = nome;
+        initComponents();
+        this.setSize(750, 450);
         this.setResizable(false);
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);

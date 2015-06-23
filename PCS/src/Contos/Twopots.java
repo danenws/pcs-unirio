@@ -29,11 +29,23 @@ public class Twopots extends javax.swing.JFrame {
     
     private int cont=0;
     public int dica=0;
+    String nomeUsuario;
+    String titulo;
+    
     
     public Twopots() {
        // initComponents();
         initComponents();
         this.setSize(640, 390);
+        this.setResizable(false);
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+    }
+    
+    public Twopots(String nome) {
+        nomeUsuario = nome;
+        initComponents();
+        this.setSize(750, 450);
         this.setResizable(false);
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
@@ -66,7 +78,7 @@ public class Twopots extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jTextPane1);
 
         getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(200, 20, 390, 210);
+        jScrollPane2.setBounds(30, 20, 560, 160);
 
         jButton1.setText("Avançar");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -80,7 +92,7 @@ public class Twopots extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(530, 320, 94, 29);
+        jButton1.setBounds(530, 320, 73, 23);
 
         jButton3.setBackground(new java.awt.Color(200, 218, 235));
         jButton3.setText("Dica");
@@ -90,7 +102,7 @@ public class Twopots extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(90, 90, 73, 50);
+        jButton3.setBounds(483, 240, 110, 30);
 
         jButton2.setText("Sair");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -99,7 +111,7 @@ public class Twopots extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(20, 300, 73, 29);
+        jButton2.setBounds(20, 300, 73, 23);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Contos/twopots.jpg"))); // NOI18N
         getContentPane().add(jLabel1);

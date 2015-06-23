@@ -4,5 +4,14 @@
   <void property="data">
    <string>23/06/2015</string>
   </void>
+  <void property="nota">
+   <float>7.0</float>
+  </void>
+  <void property="quiz">
+   <string>A noite</string>
+  </void>
+  <void property="usuario">
+   <string>Maria</string>
+  </void>
  </object>
 </java>
