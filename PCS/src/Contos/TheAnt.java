@@ -24,7 +24,7 @@ import pcs.contoBuilder;
 public class TheAnt extends javax.swing.JFrame {
     private int cont=0;
     public int dica=0;
-    String nome1;
+    String nomeUsuario;
     String titulo;
     /**
      * Creates new form TheAnt
@@ -39,7 +39,7 @@ public class TheAnt extends javax.swing.JFrame {
     }
 
     public TheAnt(String nome) {
-        nome1 = nome;
+        nomeUsuario = nome;
         initComponents();
         this.setSize(600, 360);
         this.setResizable(false);
@@ -74,7 +74,7 @@ public class TheAnt extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jTextPane1);
 
         getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(200, 0, 390, 210);
+        jScrollPane2.setBounds(170, 20, 390, 210);
 
         jButton1.setText("Avançar");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -88,7 +88,7 @@ public class TheAnt extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(510, 300, 73, 23);
+        jButton1.setBounds(510, 300, 94, 29);
 
         jButton3.setBackground(new java.awt.Color(200, 218, 235));
         jButton3.setText("Dica");
@@ -98,7 +98,7 @@ public class TheAnt extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(90, 90, 73, 50);
+        jButton3.setBounds(70, 90, 73, 50);
 
         jButton2.setText("Sair");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -107,11 +107,11 @@ public class TheAnt extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(20, 300, 73, 23);
+        jButton2.setBounds(20, 300, 73, 29);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Telas/theant.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 600, 340);
+        jLabel1.setBounds(0, -10, 650, 440);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -201,14 +201,10 @@ public class TheAnt extends javax.swing.JFrame {
             cont++;
             jTextPane1.setText(x[cont]);
 
-            System.out.print("Cont e: ");
-            System.out.print(cont);
-            System.out.println("");
              
         }}else{
         
-            System.out.println("Acabou :(");
-            TheAntQuiz quiz = new TheAntQuiz(nome1, titulo);
+            TheAntQuiz quiz = new TheAntQuiz(nomeUsuario, titulo);
             quiz.setVisible(true);
             this.dispose();
         }

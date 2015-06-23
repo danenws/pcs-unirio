@@ -37,7 +37,7 @@ public final class historicoBuilder {
         this.usuario = usuario;
         this.quiz = quiz;
         this.nota = nota;
-        this.data = pegarData();
+        this.data = "0/0/0/";
         
         
         

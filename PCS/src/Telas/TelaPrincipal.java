@@ -19,7 +19,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
      */
     public TelaPrincipal() {
         initComponents();
-        this.setSize(640, 430);
+        this.setSize(875, 565);
         this.setResizable(false);
           Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
@@ -39,7 +39,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("EnglishTale - Main Screen");
@@ -48,9 +48,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Telas/Logo.png"))); // NOI18N
         jLabel2.setText("jLabel2");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(190, 0, 440, 100);
+        jLabel2.setBounds(270, 0, 490, 130);
 
-        jButton1.setFont(new java.awt.Font("Luminari", 0, 13)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Luminari", 0, 18)); // NOI18N
         jButton1.setText("Entrar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,9 +58,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(400, 150, 110, 40);
+        jButton1.setBounds(430, 180, 200, 60);
 
-        jButton2.setFont(new java.awt.Font("Luminari", 0, 13)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Luminari", 0, 18)); // NOI18N
         jButton2.setText("Cadastrar-se");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -68,7 +68,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(400, 200, 110, 40);
+        jButton2.setBounds(430, 290, 200, 60);
 
         jButton3.setFont(new java.awt.Font("Luminari", 0, 13)); // NOI18N
         jButton3.setText("Sair");
@@ -78,11 +78,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(540, 360, 80, 29);
+        jButton3.setBounds(790, 500, 80, 29);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Telas/cadastro.jpg"))); // NOI18N
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 640, 410);
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Telas/principal.jpg"))); // NOI18N
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(0, -10, 940, 560);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -147,7 +147,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 }

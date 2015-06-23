@@ -29,7 +29,7 @@ import pcs.RespostaBuilder;
  */
 public class TheAntQuiz extends javax.swing.JFrame {
     float nota = 0;
-    int chance=3;
+    int chance=1;
     String nome2;
     String titulo1;
     /**
@@ -84,7 +84,7 @@ public class TheAntQuiz extends javax.swing.JFrame {
         }
         jLabel6.setText(x);
         
-      jButton1.setText("Corrigir "+chance+" chances");
+      jButton1.setText("Corrigir");
         
     }
 
@@ -138,7 +138,7 @@ public class TheAntQuiz extends javax.swing.JFrame {
         }
         jLabel6.setText(x);
         
-      jButton1.setText("Corrigir "+chance+" chances");
+      jButton1.setText("Corrigir ");
         
         
     }
@@ -343,7 +343,7 @@ public class TheAntQuiz extends javax.swing.JFrame {
              System.out.println(nota);
              
                     
-       /*historicoBuilder hist = null;
+       historicoBuilder hist = null;
                     try {
                         hist = new historicoBuilder(nome2, titulo1, nota);
                     } catch (ParseException ex) {
@@ -356,18 +356,9 @@ public class TheAntQuiz extends javax.swing.JFrame {
             salvar.salvarJogo(hist);
         } catch (FileNotFoundException ex) {
             Logger.getLogger(TheAntQuiz.class.getName()).log(Level.SEVERE, null, ex);
-        }*/
+        }
              
-         historicoBuilder hist = null;
-                    try {
-                        System.out.println("passoudentro");
-                        hist = new historicoBuilder("Maria", "A noite", (float) 7.0);
-                        String teste = hist.getData();
-                        System.out.println(teste);
-                    } catch (ParseException ex) {
-                        Logger.getLogger(TheAntQuiz.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-        Saver salvar = new Saver();    
+            
               
         
         // End Historico
