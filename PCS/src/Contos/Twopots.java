@@ -36,7 +36,7 @@ public class Twopots extends javax.swing.JFrame {
     public Twopots() {
        // initComponents();
         initComponents();
-        this.setSize(640, 390);
+        this.setSize(750, 450);
         this.setResizable(false);
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
@@ -78,7 +78,7 @@ public class Twopots extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jTextPane1);
 
         getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(30, 20, 560, 160);
+        jScrollPane2.setBounds(70, 50, 630, 160);
 
         jButton1.setText("Avançar");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -92,7 +92,7 @@ public class Twopots extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(530, 320, 73, 23);
+        jButton1.setBounds(640, 350, 90, 40);
 
         jButton3.setBackground(new java.awt.Color(200, 218, 235));
         jButton3.setText("Dica");
@@ -102,7 +102,7 @@ public class Twopots extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(483, 240, 110, 30);
+        jButton3.setBounds(590, 210, 110, 30);
 
         jButton2.setText("Sair");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -111,11 +111,11 @@ public class Twopots extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(20, 300, 73, 23);
+        jButton2.setBounds(650, 400, 73, 23);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Contos/twopots.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 630, 360);
+        jLabel1.setBounds(30, 0, 730, 510);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

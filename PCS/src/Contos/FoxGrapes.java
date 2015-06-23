@@ -35,7 +35,7 @@ public class FoxGrapes extends javax.swing.JFrame {
        // initComponents();
        // initComponents();
         initComponents();
-        this.setSize(640, 390);
+        this.setSize(750, 450);
         this.setResizable(false);
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
@@ -77,7 +77,7 @@ public class FoxGrapes extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jTextPane1);
 
         getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(210, 20, 390, 210);
+        jScrollPane2.setBounds(50, 50, 630, 190);
 
         jButton3.setBackground(new java.awt.Color(200, 218, 235));
         jButton3.setText("Dica");
@@ -87,7 +87,7 @@ public class FoxGrapes extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(80, 90, 73, 50);
+        jButton3.setBounds(570, 240, 110, 40);
 
         jButton2.setText("Sair");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -96,7 +96,7 @@ public class FoxGrapes extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(20, 320, 73, 23);
+        jButton2.setBounds(640, 400, 73, 23);
 
         jButton1.setText("Avançar");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -110,11 +110,11 @@ public class FoxGrapes extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(520, 320, 73, 23);
+        jButton1.setBounds(620, 360, 110, 40);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Contos/fox2.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 630, 380);
+        jLabel1.setBounds(0, -40, 820, 570);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
