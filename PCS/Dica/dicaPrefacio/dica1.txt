@@ -1,27 +1,28 @@
 <html><body
-<p>An adjective is a word or set of words that modifies (i.e., describes) a noun or pronoun.</p>
-<p>Adjectives may come before the word they modify.</p>
+<p><b>Verbo to be</b></p>
+<p>Utilizamos o verbo to be não apenas como verbo, mas também como auxiliar.</p>
 
-<p>Examples:</p>
-<p>That is a cute puppy.</p>
-<p>She likes a high school senior.</p>
+<p><b>Simple Presente - Para presente</b></p>
 
-<p>Adjectives may also follow the word they modify:</p>
+<p><b>Singular</b></p>
+<p>I <b>am</b></p>
+<p>You <b>are</b></p>
+<p>He/She/It <b>is</b></p>
 
-<p>Examples:</p>
-<p>That puppy looks cute.</p>
-<p>The technology is state-of-the-art.</p>
+<p><b>Plural</b></p>
+<p>We <b>are</b></p>
+<p>You <b>are</b></p>
+<p>They <b>are</b></p>
 
-<p>An adverb is a word or set of words that modifies verbs, adjectives, or other adverbs.</p>
+<p><b>Simple Past - Para passado</b></p>
 
-<p>Examples</p>
-<p>He speaks slowly (modifies the verb speaks)</p>
-<p>He is especially clever (modifies the adjective clever)</p>
-<p>He speaks all too slowly (modifies the adverb slowly)</p>
+<p><b>Singular</b></p>
+<p>I <b>was</b></p>
+<p>You <b>were</b></p>
+<p>He/She/It <b>was</b></p>
 
-<p>An adverb answers how, when, where, or to what extent-how often or how much (e.g., daily, completely).</p>
-
-<p>Example:</p>
-<p>He speaks slowly (answers the question how)</p>
-<p>He speaks very slowly (answers the question how slowly)</p>
+<p><b>Plural</b></p>
+<p>We <b>were</b></p>
+<p>You <b>were</b></p>
+<p>They <b>were</b></p>
 </body</html>

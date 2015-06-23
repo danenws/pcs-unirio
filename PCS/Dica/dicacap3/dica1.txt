@@ -1,20 +1,10 @@
 <html><body
-<p>The words 'have to' describe something that needs to take place soon. </p>
-<p>It expresses certainty, necessity, or obligation.</p>
+<p><b>One day</b></p>
+<p>at an uncertain time, usually of the future, rarely of the past; sooner or later.
+On a certain day, not definitely specified, referring to time past.</p>
 <p></p>
-<p>Here are some examples:</p>
-<p></p>
-<p>I have to switch schools.</p>
-<p>I have to use the telephone.</p>
-<p>I have to go to the bathroom.</p>
-<p>I have to leave.</p>
-<p>I have to unpack my bags.</p>
-<p></p>
-<p>You can also add the word 'don't' to suggest that someone is not required to do something.</p>
-<p></p>
-<p>I don't have to switch schools.</p>
-<p>I don't have to use the telephone.</p>
-<p>I don't have to go to the bathroom.</p>
-<p>I don't have to leave.</p>
+<p><b>But then... </b></p>
+<p>From another point of view; "on the other hand, she is too ambitious for her own good"; "then again, she might not go"</p>
+
 
 </body</html>
