@@ -14,6 +14,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.util.Scanner;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 /**
  *
@@ -37,7 +38,7 @@ public final class historicoBuilder {
         this.usuario = usuario;
         this.quiz = quiz;
         this.nota = nota;
-        this.data = "0/0/0/";
+        this.data = pegarData();
         
         
         
@@ -151,11 +152,21 @@ public final class historicoBuilder {
     
     public String pegarData() throws ParseException{
         String novaData = null;
-        Date dataN = new Date(System.currentTimeMillis());
-        SimpleDateFormat in= new SimpleDateFormat("yyyy-MM-dd");  
+        
+        /*Date dataN = new Date(System.currentTimeMillis());
+        SimpleDateFormat in= new SimpleDateFormat("yyyy-MM-dd"); 
+        System.out.println(in);
         SimpleDateFormat out = new SimpleDateFormat("dd/MM/yyyy");  
-  
-        novaData = out.format(in.parse(dataN.toString())); 
+        
+        novaData = out.format(in.parse(dataN.toString())); */
+        
+        novaData = new SimpleDateFormat("dd/MM/yyyy").format(new Date()).toString();
+        
+        
+        /*GregorianCalendar atual=(GregorianCalendar) GregorianCalendar.getInstance();  
+        int mes = GregorianCalendar.MONTH;
+        novaData="Data:" +atual.get(GregorianCalendar.DATE)+"/"+(atual.get((mes))+"/"+(atual.get(GregorianCalendar.YEAR))); 
+        */
         System.out.println(novaData);
         return novaData;
     }

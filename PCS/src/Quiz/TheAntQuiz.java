@@ -340,6 +340,8 @@ public class TheAntQuiz extends javax.swing.JFrame {
        historicoBuilder hist = null;
                     try {
                         hist = new historicoBuilder(nome2, titulo1, nota);
+                        System.out.println("pegou");
+                        System.out.println(hist.getData());
                     } catch (ParseException ex) {
                         Logger.getLogger(TheAntQuiz.class.getName()).log(Level.SEVERE, null, ex);
                     }
