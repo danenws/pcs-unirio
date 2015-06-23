@@ -25,7 +25,7 @@ import pcs.RespostaBuilder;
  */
 public class TheFoxy extends javax.swing.JFrame {
     double nota;
-    int chance=3;
+    int chance=1;
     /**
      * Creates new form TheAntQuiz
      */
@@ -129,7 +129,6 @@ public class TheFoxy extends javax.swing.JFrame {
         jTextField1.setBounds(50, 70, 330, 50);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("jLabel3");
         getContentPane().add(jLabel3);
         jLabel3.setBounds(50, 150, 710, 60);
@@ -137,19 +136,16 @@ public class TheFoxy extends javax.swing.JFrame {
         jTextField2.setBounds(50, 210, 330, 50);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("jLabel4");
         getContentPane().add(jLabel4);
         jLabel4.setBounds(50, 290, 660, 60);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("jLabel5");
         getContentPane().add(jLabel5);
         jLabel5.setBounds(50, 420, 640, 70);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("jLabel6");
         getContentPane().add(jLabel6);
         jLabel6.setBounds(50, 550, 630, 80);
@@ -157,7 +153,6 @@ public class TheFoxy extends javax.swing.JFrame {
         jTextField3.setBounds(50, 350, 330, 50);
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         getContentPane().add(jLabel7);
         jLabel7.setBounds(720, 560, 280, 70);
         getContentPane().add(jTextField4);
@@ -197,12 +192,11 @@ public class TheFoxy extends javax.swing.JFrame {
         jTextField5.setBounds(50, 630, 330, 50);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("jLabel2");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(50, 10, 640, 60);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Quiz/quiz.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Quiz/quizimg.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 1010, 730);
 
