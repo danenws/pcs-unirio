@@ -5,6 +5,11 @@
  */
 package Telas;
 
+import java.io.FileNotFoundException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import pcs.historicoBuilder;
+
 /**
  *
  * @author felipequintanilha
@@ -50,20 +55,25 @@ public class TelaHistorico extends javax.swing.JFrame {
 
         jLabel2.setText("Nome ");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(80, 140, 41, 16);
+        jLabel2.setBounds(80, 140, 30, 14);
 
         jLabel3.setText("Conto");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(230, 140, 45, 16);
+        jLabel3.setBounds(230, 140, 45, 14);
 
         jLabel4.setText("Nota");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(440, 140, 45, 16);
+        jLabel4.setBounds(440, 140, 45, 14);
 
         jLabel5.setText("Data");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(560, 140, 45, 16);
+        jLabel5.setBounds(560, 140, 45, 14);
 
+        jTextPane1.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                jTextPane1PropertyChange(evt);
+            }
+        });
         jScrollPane2.setViewportView(jTextPane1);
 
         getContentPane().add(jScrollPane2);
@@ -81,6 +91,18 @@ public class TelaHistorico extends javax.swing.JFrame {
 
         this.dispose();
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jTextPane1PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jTextPane1PropertyChange
+        // TODO add your handling code here:
+        historicoBuilder hist = new historicoBuilder();
+       
+        try {
+            jTextPane1.setText(hist.gerarHist());
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(TelaHistorico.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+    }//GEN-LAST:event_jTextPane1PropertyChange
 
     /**
      * @param args the command line arguments

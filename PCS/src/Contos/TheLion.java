@@ -25,7 +25,7 @@ public class TheLion extends javax.swing.JFrame {
     /**
      * Creates new form TheLion
      */
-    
+    contoBuilder c = new contoBuilder();
     private int cont=0;
     public int dica=0;
     String nomeUsuario;
@@ -66,6 +66,7 @@ public class TheLion extends javax.swing.JFrame {
         jTextPane1 = new javax.swing.JTextPane();
         jButton2 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -79,7 +80,7 @@ public class TheLion extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(640, 210, 120, 40);
+        jButton3.setBounds(580, 200, 120, 40);
 
         jTextPane1.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
@@ -89,7 +90,7 @@ public class TheLion extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTextPane1);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(50, 70, 710, 130);
+        jScrollPane1.setBounds(40, 60, 660, 130);
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Contos/seta2.png"))); // NOI18N
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -103,7 +104,7 @@ public class TheLion extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(730, 420, 83, 40);
+        jButton2.setBounds(660, 370, 83, 40);
 
         jButton4.setText("Sair");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -112,11 +113,20 @@ public class TheLion extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton4);
-        jButton4.setBounds(740, 470, 50, 20);
+        jButton4.setBounds(680, 420, 50, 20);
+
+        jLabel1.setFont(new java.awt.Font("Lucida Calligraphy", 0, 11)); // NOI18N
+        jLabel1.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                jLabel1PropertyChange(evt);
+            }
+        });
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(190, 20, 420, 30);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Contos/lion2.jpg"))); // NOI18N
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(0, -10, 820, 510);
+        jLabel2.setBounds(0, -10, 750, 460);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -174,18 +184,28 @@ public class TheLion extends javax.swing.JFrame {
 
     private void jTextPane1PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jTextPane1PropertyChange
         // TODO add your handling code here:
-        contoBuilder c = new contoBuilder();
+        
        
         jTextPane1.setText(c.lerContoPos(1, "contos/prefacio/taatg.txt"));
-        titulo = c.lerContoPos(1, "contos/prefacio/taatg.txt");
-        Font font = new Font("Serif", Font.ITALIC, 20);
+        Font font = new Font("Serif", Font.ITALIC, 15);
         jTextPane1.setFont(font);
+        
     }//GEN-LAST:event_jTextPane1PropertyChange
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jLabel1PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jLabel1PropertyChange
+        // TODO add your handling code here:
+        
+        titulo = (c.lerContoPos(0, "contos/prefacio/taatg.txt"));
+        Font font = new Font("Serif", Font.ITALIC, 20);
+        jLabel1.setFont(font);
+        jLabel1.setText(titulo);
+        
+    }//GEN-LAST:event_jLabel1PropertyChange
 
     /**
      * @param args the command line arguments
@@ -226,6 +246,7 @@ public class TheLion extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextPane jTextPane1;

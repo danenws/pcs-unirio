@@ -50,7 +50,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         getContentPane().add(jLabel2);
         jLabel2.setBounds(270, 0, 490, 130);
 
-        jButton1.setFont(new java.awt.Font("Luminari", 0, 18)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Lucida Handwriting", 0, 18)); // NOI18N
         jButton1.setText("Entrar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -60,7 +60,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         getContentPane().add(jButton1);
         jButton1.setBounds(430, 180, 200, 60);
 
-        jButton2.setFont(new java.awt.Font("Luminari", 0, 18)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Lucida Handwriting", 0, 18)); // NOI18N
         jButton2.setText("Cadastrar-se");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -78,7 +78,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(790, 500, 80, 29);
+        jButton3.setBounds(790, 500, 80, 27);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Telas/principal.jpg"))); // NOI18N
         getContentPane().add(jLabel3);

@@ -57,24 +57,30 @@ public final class historicoBuilder {
        
     }
     
-    /*void gerarHist() throws FileNotFoundException{
-        
+    public String gerarHist() throws FileNotFoundException{
+        String retorno = "";
+        String n;
         Scanner scanner = new Scanner(new FileReader("historico.txt"))
                        .useDelimiter("\\||\\n");
         while (scanner.hasNext()) {
            usuario = scanner.next();
            quiz = scanner.next();
-           nota = Float.parseFloat(scanner.next());
+           n = scanner.next();
            data = scanner.next();
+           retorno = retorno + usuario + "                              " + quiz + "                                  " + n + "                 " + data + "\n";
+           
           System.out.println(usuario);
           System.out.println(quiz);
-          System.out.println(nota);
+          System.out.println(n);
           System.out.println(data);
+          
         }
+        return retorno;
         
-    }*/
+        
+    }
     //Gerar historico de determinado usuario
-    /*void gerarHistUser(String user) throws FileNotFoundException{
+    public void gerarHistUser(String user) throws FileNotFoundException{
         
         Scanner scanner = new Scanner(new FileReader("historico.txt"))
                        .useDelimiter("\\||\\n");
@@ -91,7 +97,7 @@ public final class historicoBuilder {
            }
         }
         
-    }*/
+    }
 
     public void setUsuario(String usuario) {
         this.usuario = usuario;
