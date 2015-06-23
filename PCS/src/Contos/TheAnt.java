@@ -26,6 +26,7 @@ public class TheAnt extends javax.swing.JFrame {
     public int dica=0;
     String nomeUsuario;
     String titulo;
+    contoBuilder c = new contoBuilder();
     /**
      * Creates new form TheAnt
      */
@@ -61,6 +62,7 @@ public class TheAnt extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -98,7 +100,7 @@ public class TheAnt extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(570, 230, 120, 40);
+        jButton3.setBounds(570, 240, 120, 40);
 
         jButton2.setText("Sair");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -109,51 +111,34 @@ public class TheAnt extends javax.swing.JFrame {
         getContentPane().add(jButton2);
         jButton2.setBounds(650, 410, 73, 23);
 
+        jLabel2.setFont(new java.awt.Font("Lucida Calligraphy", 0, 11)); // NOI18N
+        jLabel2.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                jLabel2PropertyChange(evt);
+            }
+        });
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(190, 20, 420, 30);
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Telas/theant.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, -20, 800, 540);
+        jLabel1.setBounds(0, -20, 750, 470);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextPane1PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jTextPane1PropertyChange
         // TODO add your handling code here:
-        
-        contoBuilder c = new contoBuilder();
-       
-        jTextPane1.setText(c.lerContoPos(0, "contos/prefacio/taatg.txt"));
-        titulo = c.lerContoPos(0, "contos/prefacio/taatg.txt");
-        Font font = new Font("Serif", Font.ITALIC, 20);
+    
+        jTextPane1.setText(c.lerContoPos(1, "contos/prefacio/taatg.txt"));
+        Font font = new Font("Serif", Font.ITALIC, 15);
         jTextPane1.setFont(font);
         
         
     }//GEN-LAST:event_jTextPane1PropertyChange
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
-        
-        // Quando clicar no botão avançar, atualizar o campo de texto:
-        
-        /*Conto c = new Conto(); //Cria um objeto do tipo conto
-        
-        String [] x;
-        x = c.lerConto("contos/capitulo1/tepatbp.txt"); //Lê o conteúdo do conto em um arquivo e armazena no vetor x
-       
-        //int tam=0;
-        
-        jTextPane1.setText(x[cont]);
-        cont= cont++;
-        System.out.print("Cont e: ");
-        System.out.print(cont);
-        System.out.println("");*/
-        
-       // tam = c.tamanhoConto("contos/capitulo1/tepatbp.txt");
-        
-        //jTextPane1.setText(c.lerContoPos(++cont, "contos/capitulo1/tepatbp.txt"));
-        
-        
-        
-        
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -172,7 +157,7 @@ public class TheAnt extends javax.swing.JFrame {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         
-        contoBuilder c = new contoBuilder(); //Cria um objeto do tipo conto
+        //Cria um objeto do tipo conto
         
         String [] x;
         x = c.lerConto("contos/prefacio/taatg.txt"); //Lê o conteúdo do conto em um arquivo e armazena no vetor x
@@ -191,9 +176,6 @@ public class TheAnt extends javax.swing.JFrame {
                  cont++;
             jTextPane1.setText(x[cont]);
 
-            System.out.print("Cont e: ");
-            System.out.print(cont);
-            System.out.println("");
              } else {
              JOptionPane.showMessageDialog(null, "Você tem uma dica te esperando!!");
              }}
@@ -212,6 +194,16 @@ public class TheAnt extends javax.swing.JFrame {
 
             
     }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jLabel2PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jLabel2PropertyChange
+        // TODO add your handling code here:
+
+        titulo = (c.lerContoPos(0, "contos/prefacio/taatg.txt"));
+        Font font = new Font("Serif", Font.ITALIC, 20);
+        jLabel2.setFont(font);
+        jLabel2.setText(titulo);
+
+    }//GEN-LAST:event_jLabel2PropertyChange
 
     /**
      * @param args the command line arguments
@@ -251,6 +243,7 @@ public class TheAnt extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextPane jTextPane1;
     // End of variables declaration//GEN-END:variables

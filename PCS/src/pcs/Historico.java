@@ -20,17 +20,11 @@ public class Historico {
     private final float nota;
     private final String data; //ler a data exatamente como foi gravada
     
-
     Historico(historicoBuilder builder) {
-        
-        
-                
         this.usuario = builder.usuario;
         this.quiz = builder.quiz;
         this.nota = builder.nota;
         this.data = builder.data;
-            
-        
     }
 
     public String getUsuario() {

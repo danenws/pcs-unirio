@@ -186,7 +186,7 @@ public class TheLion extends javax.swing.JFrame {
         // TODO add your handling code here:
         
        
-        jTextPane1.setText(c.lerContoPos(1, "contos/prefacio/taatg.txt"));
+        jTextPane1.setText(c.lerContoPos(1, "contos/conclusao/tls.txt"));
         Font font = new Font("Serif", Font.ITALIC, 15);
         jTextPane1.setFont(font);
         
@@ -200,7 +200,7 @@ public class TheLion extends javax.swing.JFrame {
     private void jLabel1PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jLabel1PropertyChange
         // TODO add your handling code here:
         
-        titulo = (c.lerContoPos(0, "contos/prefacio/taatg.txt"));
+        titulo = (c.lerContoPos(0, "contos/conclusao/tls.txt"));
         Font font = new Font("Serif", Font.ITALIC, 20);
         jLabel1.setFont(font);
         jLabel1.setText(titulo);

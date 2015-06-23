@@ -32,29 +32,20 @@ public final class historicoBuilder {
     }
     
     public historicoBuilder(String usuario, String quiz, float nota) throws ParseException{
-        
-        
-        
         this.usuario = usuario;
         this.quiz = quiz;
         this.nota = nota;
         this.data = pegarData();
-        
-        
-        
-         /*try {    //Salvando o novo usuarios no arquivo
-            String n = usuario + "|" + quiz + "|" + nota + "|" + data;
-            
+        String nt = Float.toString(nota);
+        try {    //Salvando o novo usuarios no arquivo
+            String n = usuario + "|" + quiz + "|" + nt + "|" + data;
             String file = "historico.txt";
             try (FileWriter f = new FileWriter(file,true) // true e para adicionar nova linha
             ) {
                 f.write(n+"\r\n");//Pula uma linha após escrever o texto
             } //Pula uma linha após escrever o texto
-            
         } catch (IOException ex) {  
         }  
-*/
-       
     }
     
     public String gerarHist() throws FileNotFoundException{
@@ -68,20 +59,15 @@ public final class historicoBuilder {
            n = scanner.next();
            data = scanner.next();
            retorno = retorno + usuario + "                              " + quiz + "                                  " + n + "                 " + data + "\n";
-           
           System.out.println(usuario);
           System.out.println(quiz);
           System.out.println(n);
           System.out.println(data);
-          
         }
-        return retorno;
-        
-        
+        return retorno;        
     }
     //Gerar historico de determinado usuario
     public void gerarHistUser(String user) throws FileNotFoundException{
-        
         Scanner scanner = new Scanner(new FileReader("historico.txt"))
                        .useDelimiter("\\||\\n");
         while (scanner.hasNext()) {
@@ -96,7 +82,6 @@ public final class historicoBuilder {
                 System.out.println(data);
            }
         }
-        
     }
 
     public void setUsuario(String usuario) {
@@ -152,7 +137,6 @@ public final class historicoBuilder {
     }
     
     public Historico build(){
-        
         return new Historico(this);
     }
     

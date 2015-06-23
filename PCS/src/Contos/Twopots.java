@@ -26,7 +26,7 @@ public class Twopots extends javax.swing.JFrame {
     /**
      * Creates new form Twopots
      */
-    
+    contoBuilder c = new contoBuilder();
     private int cont=0;
     public int dica=0;
     String nomeUsuario;
@@ -65,6 +65,7 @@ public class Twopots extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -78,7 +79,7 @@ public class Twopots extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jTextPane1);
 
         getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(70, 50, 630, 160);
+        jScrollPane2.setBounds(70, 70, 630, 160);
 
         jButton1.setText("Avançar");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -102,7 +103,7 @@ public class Twopots extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(590, 210, 110, 30);
+        jButton3.setBounds(590, 250, 110, 30);
 
         jButton2.setText("Sair");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -113,9 +114,18 @@ public class Twopots extends javax.swing.JFrame {
         getContentPane().add(jButton2);
         jButton2.setBounds(650, 400, 73, 23);
 
+        jLabel2.setFont(new java.awt.Font("Lucida Calligraphy", 0, 11)); // NOI18N
+        jLabel2.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                jLabel2PropertyChange(evt);
+            }
+        });
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(200, 20, 420, 30);
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Contos/twopots.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(30, 0, 730, 510);
+        jLabel1.setBounds(0, 0, 750, 510);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -123,17 +133,17 @@ public class Twopots extends javax.swing.JFrame {
     private void jTextPane1PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jTextPane1PropertyChange
         // TODO add your handling code here:
 
-        contoBuilder c = new contoBuilder();
+        
        
-        jTextPane1.setText(c.lerContoPos(0, "contos/capitulo1/tepatbp.txt"));
-        Font font = new Font("Serif", Font.ITALIC, 20);
+        jTextPane1.setText(c.lerContoPos(1, "contos/capitulo1/tepatbp.txt"));
+        Font font = new Font("Serif", Font.ITALIC, 15);
         jTextPane1.setFont(font);
 
     }//GEN-LAST:event_jTextPane1PropertyChange
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
 
-        contoBuilder c = new contoBuilder();
+        
         
         String [] x;
         x = c.lerConto("contos/capitulo1/tepatbp.txt"); //Lê o conteúdo do conto em um arquivo e armazena no vetor x
@@ -212,6 +222,15 @@ public class Twopots extends javax.swing.JFrame {
 
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jLabel2PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jLabel2PropertyChange
+        // TODO add your handling code here:
+
+        titulo = (c.lerContoPos(0, "contos/capitulo1/tepatbp.txt"));
+        Font font = new Font("Serif", Font.ITALIC, 20);
+        jLabel2.setFont(font);
+        jLabel2.setText(titulo);
+    }//GEN-LAST:event_jLabel2PropertyChange
     
     
     /**
@@ -252,6 +271,7 @@ public class Twopots extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextPane jTextPane1;
     // End of variables declaration//GEN-END:variables

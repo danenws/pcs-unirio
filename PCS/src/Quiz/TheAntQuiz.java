@@ -42,18 +42,14 @@ public class TheAntQuiz extends javax.swing.JFrame {
         this.setResizable(false);
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
-        
         PerguntaBuilder p = new PerguntaBuilder();
         String  x = null;
         
         try { 
             x = p.getPergunta("Quiz/quizPrefacio/pergunta1.txt");
         } catch (FileNotFoundException ex) {
-
         }
         jLabel2.setText(x);
-        
-   
         try { 
             x = p.getPergunta("Quiz/quizPrefacio/pergunta2.txt");
         } catch (FileNotFoundException ex) {
@@ -99,15 +95,12 @@ public class TheAntQuiz extends javax.swing.JFrame {
         
         PerguntaBuilder p = new PerguntaBuilder();
         String  x = null;
-        
         try { 
             x = p.getPergunta("Quiz/quizPrefacio/pergunta1.txt");
         } catch (FileNotFoundException ex) {
 
         }
         jLabel2.setText(x);
-        
-   
         try { 
             x = p.getPergunta("Quiz/quizPrefacio/pergunta2.txt");
         } catch (FileNotFoundException ex) {
@@ -121,26 +114,19 @@ public class TheAntQuiz extends javax.swing.JFrame {
 
         }
         jLabel4.setText(x);
-        
-
         try { 
             x = p.getPergunta("Quiz/quizPrefacio/pergunta4.txt");
         } catch (FileNotFoundException ex) {
 
         }
         jLabel5.setText(x);
-        
-
         try { 
             x = p.getPergunta("Quiz/quizPrefacio/pergunta5.txt");
         } catch (FileNotFoundException ex) {
 
         }
         jLabel6.setText(x);
-        
       jButton1.setText("Corrigir ");
-        
-        
     }
 
     /**
@@ -345,9 +331,8 @@ public class TheAntQuiz extends javax.swing.JFrame {
                     } catch (ParseException ex) {
                         Logger.getLogger(TheAntQuiz.class.getName()).log(Level.SEVERE, null, ex);
                     }
+                    
        Saver salvar = new Saver();
-       
-        
         try {
             salvar.salvarJogo(hist);
         } catch (FileNotFoundException ex) {
