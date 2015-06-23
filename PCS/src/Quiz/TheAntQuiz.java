@@ -10,6 +10,7 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.io.FileNotFoundException;
+import java.text.ParseException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import pcs.Pergunta;
@@ -27,9 +28,10 @@ import pcs.RespostaBuilder;
  * @author Gabriel Ramos
  */
 public class TheAntQuiz extends javax.swing.JFrame {
-    double nota;
+    float nota = 0;
     int chance=3;
-    
+    String nome2;
+    String titulo1;
     /**
      * Creates new form TheAntQuiz
      */
@@ -83,6 +85,61 @@ public class TheAntQuiz extends javax.swing.JFrame {
         jLabel6.setText(x);
         
       jButton1.setText("Corrigir "+chance+" chances");
+        
+    }
+
+    public TheAntQuiz(String nome1, String titulo) {
+        nome2 = nome1;
+        titulo1 = titulo;
+       initComponents();
+        this.setSize(1011, 731);
+        this.setResizable(false);
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+        
+        PerguntaBuilder p = new PerguntaBuilder();
+        String  x = null;
+        
+        try { 
+            x = p.getPergunta("Quiz/quizPrefacio/pergunta1.txt");
+        } catch (FileNotFoundException ex) {
+
+        }
+        jLabel2.setText(x);
+        
+   
+        try { 
+            x = p.getPergunta("Quiz/quizPrefacio/pergunta2.txt");
+        } catch (FileNotFoundException ex) {
+
+        }
+        jLabel3.setText(x);
+        
+        try { 
+            x = p.getPergunta("Quiz/quizPrefacio/pergunta3.txt");
+        } catch (FileNotFoundException ex) {
+
+        }
+        jLabel4.setText(x);
+        
+
+        try { 
+            x = p.getPergunta("Quiz/quizPrefacio/pergunta4.txt");
+        } catch (FileNotFoundException ex) {
+
+        }
+        jLabel5.setText(x);
+        
+
+        try { 
+            x = p.getPergunta("Quiz/quizPrefacio/pergunta5.txt");
+        } catch (FileNotFoundException ex) {
+
+        }
+        jLabel6.setText(x);
+        
+      jButton1.setText("Corrigir "+chance+" chances");
+        
         
     }
 
@@ -231,8 +288,8 @@ public class TheAntQuiz extends javax.swing.JFrame {
             c4 = r1.getResposta("Quiz/respostaPrefacio/4.txt");
             c5 = r1.getResposta("Quiz/respostaPrefacio/5.txt");
             Quiz q = new Quiz(resp1, c1, resp2, c2, resp3, c3, resp4, c4, resp5, c5);
-            int nota = 0;
-            nota = q.Corrigir();
+            
+            this.nota = q.Corrigir();
             jLabel7.setText("Sua nota é : "+nota+"%");
             if (q.q1()){
             jLabel8.setText("");
@@ -281,9 +338,17 @@ public class TheAntQuiz extends javax.swing.JFrame {
                     
                                 
            // Historico                    
-                                
+             System.out.println(titulo1);     
+             System.out.println(nome2);
+             System.out.println(nota);
+             
                     
-       historicoBuilder hist = new historicoBuilder("Maria", "A noite", (float) 7.0, "Sei lá");
+       /*historicoBuilder hist = null;
+                    try {
+                        hist = new historicoBuilder(nome2, titulo1, nota);
+                    } catch (ParseException ex) {
+                        Logger.getLogger(TheAntQuiz.class.getName()).log(Level.SEVERE, null, ex);
+                    }
        Saver salvar = new Saver();
        
         
@@ -291,7 +356,18 @@ public class TheAntQuiz extends javax.swing.JFrame {
             salvar.salvarJogo(hist);
         } catch (FileNotFoundException ex) {
             Logger.getLogger(TheAntQuiz.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        }*/
+             
+         historicoBuilder hist = null;
+                    try {
+                        System.out.println("passoudentro");
+                        hist = new historicoBuilder("Maria", "A noite", (float) 7.0);
+                        String teste = hist.getData();
+                        System.out.println(teste);
+                    } catch (ParseException ex) {
+                        Logger.getLogger(TheAntQuiz.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+        Saver salvar = new Saver();    
               
         
         // End Historico

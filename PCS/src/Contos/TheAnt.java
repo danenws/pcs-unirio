@@ -24,6 +24,8 @@ import pcs.contoBuilder;
 public class TheAnt extends javax.swing.JFrame {
     private int cont=0;
     public int dica=0;
+    String nome1;
+    String titulo;
     /**
      * Creates new form TheAnt
      */
@@ -34,6 +36,15 @@ public class TheAnt extends javax.swing.JFrame {
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
         
+    }
+
+    public TheAnt(String nome) {
+        nome1 = nome;
+        initComponents();
+        this.setSize(600, 360);
+        this.setResizable(false);
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
     }
 
     /**
@@ -111,6 +122,7 @@ public class TheAnt extends javax.swing.JFrame {
         contoBuilder c = new contoBuilder();
        
         jTextPane1.setText(c.lerContoPos(0, "contos/prefacio/taatg.txt"));
+        titulo = c.lerContoPos(0, "contos/prefacio/taatg.txt");
         Font font = new Font("Serif", Font.ITALIC, 20);
         jTextPane1.setFont(font);
         
@@ -196,7 +208,7 @@ public class TheAnt extends javax.swing.JFrame {
         }}else{
         
             System.out.println("Acabou :(");
-            TheAntQuiz quiz = new TheAntQuiz();
+            TheAntQuiz quiz = new TheAntQuiz(nome1, titulo);
             quiz.setVisible(true);
             this.dispose();
         }

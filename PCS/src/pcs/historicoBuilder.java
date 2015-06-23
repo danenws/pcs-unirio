@@ -9,32 +9,35 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
 import java.util.Scanner;
+import java.util.Date;
 
 /**
  *
  * @author felipequintanilha
  */
-public class historicoBuilder {
+public final class historicoBuilder {
     
     String usuario; //como e apenas ler um arquivo, tera que ser string.
     String quiz;
     float nota;
-    String data; //ler a data exatamente como foi gravada
-    
+    String data;
     
     public historicoBuilder() {
 	super();
     }
     
-    public historicoBuilder(String usuario, String quiz, float nota, String data){
+    public historicoBuilder(String usuario, String quiz, float nota) throws ParseException{
         
         
         
         this.usuario = usuario;
         this.quiz = quiz;
         this.nota = nota;
-        this.data = data;
+        this.data = pegarData();
         
         
         
@@ -53,7 +56,7 @@ public class historicoBuilder {
        
     }
     
-    void gerarHist() throws FileNotFoundException{
+    /*void gerarHist() throws FileNotFoundException{
         
         Scanner scanner = new Scanner(new FileReader("historico.txt"))
                        .useDelimiter("\\||\\n");
@@ -68,9 +71,9 @@ public class historicoBuilder {
           System.out.println(data);
         }
         
-    }
+    }*/
     //Gerar historico de determinado usuario
-    void gerarHistUser(String user) throws FileNotFoundException{
+    /*void gerarHistUser(String user) throws FileNotFoundException{
         
         Scanner scanner = new Scanner(new FileReader("historico.txt"))
                        .useDelimiter("\\||\\n");
@@ -87,7 +90,7 @@ public class historicoBuilder {
            }
         }
         
-    }
+    }*/
 
     public void setUsuario(String usuario) {
         this.usuario = usuario;
@@ -144,5 +147,16 @@ public class historicoBuilder {
     public Historico build(){
         
         return new Historico(this);
+    }
+    
+    public String pegarData() throws ParseException{
+        String novaData = null;
+        Date dataN = new Date(System.currentTimeMillis());
+        SimpleDateFormat in= new SimpleDateFormat("yyyy-MM-dd");  
+        SimpleDateFormat out = new SimpleDateFormat("dd/MM/yyyy");  
+  
+        novaData = out.format(in.parse(dataN.toString())); 
+        System.out.println(novaData);
+        return novaData;
     }
 }

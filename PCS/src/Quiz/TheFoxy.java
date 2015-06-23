@@ -9,6 +9,7 @@ package Quiz;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.io.FileNotFoundException;
+import java.text.ParseException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import pcs.Pergunta;
@@ -278,7 +279,12 @@ public class TheFoxy extends javax.swing.JFrame {
            // Historico                    
                                 
                     
-       historicoBuilder hist = new historicoBuilder("Maria", "A noite", (float) 7.0, "Sei lá");
+       historicoBuilder hist = null;
+               try {
+                   hist = new historicoBuilder("Maria", "A noite", (float) 7.0);
+               } catch (ParseException ex) {
+                   Logger.getLogger(TheFoxy.class.getName()).log(Level.SEVERE, null, ex);
+               }
        Saver salvar = new Saver();
        
         

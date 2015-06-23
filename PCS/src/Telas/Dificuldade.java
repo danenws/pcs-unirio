@@ -14,11 +14,20 @@ import java.awt.Toolkit;
  * @author felipequintanilha
  */
 public class Dificuldade extends javax.swing.JFrame {
-
+String nome;
     /**
      * Creates new form Dificuldade
      */
     public Dificuldade() {
+        initComponents();
+        this.setSize(550, 350);
+        this.setResizable(false);
+          Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+    }
+
+    Dificuldade(String con) {
+        nome = con;
         initComponents();
         this.setSize(550, 350);
         this.setResizable(false);
@@ -85,7 +94,7 @@ public class Dificuldade extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
             // Abre o conto 
-        TheAnt conto = new TheAnt();
+        TheAnt conto = new TheAnt(nome);
         conto.setVisible(true);
         
     }//GEN-LAST:event_jButton1ActionPerformed
