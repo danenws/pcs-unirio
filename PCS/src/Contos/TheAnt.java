@@ -25,7 +25,7 @@ public class TheAnt extends javax.swing.JFrame {
     private int cont=0;
     public int dica=0;
     String nomeUsuario;
-    String titulo;
+    String titulo= "The Ant and the Grasshopper";
     contoBuilder c = new contoBuilder();
     /**
      * Creates new form TheAnt

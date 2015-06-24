@@ -153,7 +153,7 @@ public class TelaUsuarios extends javax.swing.JFrame {
         nomeUsuario = pos1;
         Dificuldade tela = new Dificuldade(nomeUsuario);
         tela.setVisible(true);
-        
+        this.dispose();
         
         // TESTE 1
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -163,6 +163,7 @@ public class TelaUsuarios extends javax.swing.JFrame {
         nomeUsuario = pos2;
         Dificuldade tela = new Dificuldade(nomeUsuario);
         tela.setVisible(true);
+        this.dispose();
        
         // TESTE
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -172,6 +173,7 @@ public class TelaUsuarios extends javax.swing.JFrame {
         nomeUsuario = pos3;
         Dificuldade tela = new Dificuldade(nomeUsuario);
         tela.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton1PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jButton1PropertyChange
@@ -237,6 +239,7 @@ public class TelaUsuarios extends javax.swing.JFrame {
         nomeUsuario = pos5;
         Dificuldade tela = new Dificuldade(nomeUsuario);
         tela.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
@@ -244,6 +247,7 @@ public class TelaUsuarios extends javax.swing.JFrame {
         nomeUsuario = pos6;
         Dificuldade tela = new Dificuldade(nomeUsuario);
         tela.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton3PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jButton3PropertyChange

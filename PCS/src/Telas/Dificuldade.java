@@ -114,6 +114,7 @@ String nome;
             // Abre o conto 
         TheAnt conto = new TheAnt(nome);
         conto.setVisible(true);
+        this.dispose();
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -121,18 +122,21 @@ String nome;
         // TODO add your handling code here:
         Twopots conto = new Twopots(nome);
         conto.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         FoxGrapes conto = new FoxGrapes(nome);
         conto.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         TheLion conto = new TheLion(nome);
         conto.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**

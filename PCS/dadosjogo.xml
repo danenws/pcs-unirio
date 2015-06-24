@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="1.8.0_45" class="java.beans.XMLDecoder">
+<java version="1.8.0_40" class="java.beans.XMLDecoder">
  <object class="pcs.historicoBuilder">
   <void property="data">
    <string>23/06/2015</string>
@@ -7,6 +7,9 @@
   <void property="quiz">
    <string>The Lion&apos;s Share&#13;
 </string>
+  </void>
+  <void property="usuario">
+   <string>Andre</string>
   </void>
  </object>
 </java>

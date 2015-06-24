@@ -24,9 +24,9 @@ public class FoxGrapes extends javax.swing.JFrame {
     
     private int cont=0;
     public int dica=0;
-    
+        contoBuilder c = new contoBuilder();
     String nomeUsuario;
-    String titulo;
+    String titulo= "The Fox and The Grapes";
 
     /**
      * Creates new form FoxGrapes
@@ -146,44 +146,38 @@ public class FoxGrapes extends javax.swing.JFrame {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
 
+       //Cria um objeto do tipo conto
+        
+        String [] x;
+        x = c.lerConto("contos/capitulo2/tfatg.txt"); //Lê o conteúdo do conto em um arquivo e armazena no vetor x
+       
+        int tam = 0; 
         try {
-            contoBuilder c = new contoBuilder(); //Cria um objeto do tipo conto
-            
-            String [] x;
-            x = c.lerConto("contos/capitulo2/tfatg.txt"); //Lê o conteúdo do conto em um arquivo e armazena no vetor x
-            
-            int tam = c.tamanhoConto("contos/capitulo2/tfatg.txt"); //Pega o tamanho do vetor do conteúdo do conto
-            System.out.println(tam);
-            
-            if(cont<tam){
-                if (cont==2){
-                    if (dica== 1){
-                        cont++;
-                        jTextPane1.setText(x[cont]);
-                        
-                        /*System.out.print("Cont e: ");
-                        System.out.print(cont);
-                        System.out.println("");*/
-                    } else {
-                        JOptionPane.showMessageDialog(null, "Você tem uma dica te esperando!!");
-                    }}
-                else {
-                    cont++;
-                    jTextPane1.setText(x[cont]);
-
-                    System.out.print("Cont e: ");
-                    System.out.print(cont);
-                    System.out.println("");
-
-                }}else{
-
-                //System.out.println("Acabou :(");
-                TheFoxy quiz = new TheFoxy(nomeUsuario, titulo);
-                quiz.setVisible(true);
-                this.dispose();
-            }
+            tam = c.tamanhoConto("contos/capitulo2/tfatg.txt"); //Pega o tamanho do vetor do conteúdo do conto
         } catch (FileNotFoundException ex) {
-            Logger.getLogger(FoxGrapes.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TheAnt.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        //System.out.println(tam);
+        
+        if(cont<tam-1){
+             if (cont==2){
+             if (dica== 1){
+                 cont++;
+            jTextPane1.setText(x[cont]);
+
+             } else {
+             JOptionPane.showMessageDialog(null, "Você tem uma dica te esperando!!");
+             }}
+              else {
+            cont++;
+            jTextPane1.setText(x[cont]);
+
+             
+        }}else{
+        
+            TheFoxy quiz = new TheFoxy(nomeUsuario, titulo);
+            quiz.setVisible(true);
+            this.dispose();
         }
 
     }//GEN-LAST:event_jButton1MouseClicked

@@ -29,7 +29,7 @@ public class TheLion extends javax.swing.JFrame {
     private int cont=0;
     public int dica=0;
     String nomeUsuario;
-    String titulo;
+    String titulo = "The Fox and The Grapes";
     
     public TheLion() {
         
@@ -180,7 +180,7 @@ public class TheLion extends javax.swing.JFrame {
 
              
         }}else{
-        
+        System.out.println(titulo);   
             TheLiony quiz = new TheLiony(nomeUsuario, titulo);
             quiz.setVisible(true);
             this.dispose();

@@ -29,9 +29,11 @@ public class ThePoty extends javax.swing.JFrame {
     float nota;
     int chance = 1;
       String nome2;
+          int cont=0;
     String titulo1;
     private String nome1;
     private String titulo;
+                String resp1, resp2, resp3, resp4, resp5, c1, c2, c3, c4, c5;
     /**
      * Creates new form TheAntQuiz
      */
@@ -85,11 +87,11 @@ public class ThePoty extends javax.swing.JFrame {
         }
         jLabel6.setText(x);
         
-         jButton1.setText("Corrigir "+chance+" chances");
+      jButton1.setText("Corrigir");
     }
 
     public ThePoty(String nomeUsuario, String titulo) {
-        nome2 = nome1;
+        nome2 = nomeUsuario;
         titulo1 = titulo;
         initComponents();
         this.setSize(1011, 731);
@@ -138,7 +140,7 @@ public class ThePoty extends javax.swing.JFrame {
         }
         jLabel6.setText(x);
         
-         jButton1.setText("Corrigir "+chance+" chances");
+         jButton1.setText("Corrigir");
     }
 
     /**
@@ -169,7 +171,7 @@ public class ThePoty extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(null);
 
         jButton1.setText("Corrigir");
@@ -265,9 +267,10 @@ public class ThePoty extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-          if (chance>0){
+    if (cont == 0) {
+        if (chance>0){
         try {
-            String resp1, resp2, resp3, resp4, resp5, c1, c2, c3, c4, c5;
+            
             resp1 = jTextField1.getText();
             resp2 = jTextField2.getText();
             resp3 = jTextField3.getText();
@@ -315,19 +318,24 @@ public class ThePoty extends javax.swing.JFrame {
             
           chance--;
             if (chance==0) {
-               jButton1.setText("Enviar"); 
+               jButton1.setText("Mostrar correta"); 
             } else {
-            jButton1.setText("Corrigir "+chance+" chances");
+            jButton1.setText("Corrigir ");
             }
         } catch (FileNotFoundException ex) {
             Logger.getLogger(TheAntQuiz.class.getName()).log(Level.SEVERE, null, ex);
         } } else{
-                                jLabel8.setText("");
-                                jLabel10.setText("");
-                                jLabel11.setText("");
-                                jLabel12.setText("");
-                                jLabel9.setText("");           
-                    
+                                jLabel8.setText(c1);
+                                jLabel10.setText(c2);
+                                jLabel11.setText(c3);
+                                jLabel12.setText(c4);
+                                jLabel9.setText(c5);           
+                    jButton1.setText("Fechar ");
+                                 cont++;  
+           // Historico                    
+             System.out.println(titulo1);     
+             System.out.println(nome2);
+             System.out.println(nota);
                                 
            // Historico                    
                                 
@@ -357,7 +365,9 @@ public class ThePoty extends javax.swing.JFrame {
         
         // End Historico
         
-                }
+                }} else {
+                   this.dispose();
+               }
         
         
         
