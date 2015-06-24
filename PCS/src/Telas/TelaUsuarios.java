@@ -124,7 +124,7 @@ public class TelaUsuarios extends javax.swing.JFrame {
         jLabel2.setBounds(200, 10, 230, 30);
 
         jButton1.setBackground(new java.awt.Color(228, 220, 206));
-        jButton1.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Lucida Sans", 0, 11)); // NOI18N
         jButton1.setText("<Nome>");
         jButton1.setBorder(null);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
