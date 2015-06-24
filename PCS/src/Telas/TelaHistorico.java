@@ -5,6 +5,8 @@
  */
 package Telas;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import java.io.FileNotFoundException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -21,6 +23,10 @@ public class TelaHistorico extends javax.swing.JFrame {
      */
     public TelaHistorico() {
         initComponents();
+        this.setSize(647, 720);
+        this.setResizable(false);
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
     }
 
     /**
@@ -33,10 +39,6 @@ public class TelaHistorico extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton4 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextPane1 = new javax.swing.JTextPane();
         jLabel1 = new javax.swing.JLabel();
@@ -51,24 +53,10 @@ public class TelaHistorico extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton4);
-        jButton4.setBounds(560, 670, 70, 30);
+        jButton4.setBounds(560, 650, 70, 30);
 
-        jLabel2.setText("Nome ");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(80, 140, 30, 14);
-
-        jLabel3.setText("Conto");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(230, 140, 45, 14);
-
-        jLabel4.setText("Nota");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(440, 140, 45, 14);
-
-        jLabel5.setText("Data");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(560, 140, 45, 14);
-
+        jTextPane1.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        jTextPane1.setForeground(new java.awt.Color(77, 177, 251));
         jTextPane1.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
                 jTextPane1PropertyChange(evt);
@@ -77,11 +65,11 @@ public class TelaHistorico extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jTextPane1);
 
         getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(20, 170, 610, 500);
+        jScrollPane2.setBounds(20, 140, 610, 500);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Telas/Untitled-5.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 650, 710);
+        jLabel1.setBounds(0, 0, 640, 690);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -142,10 +130,6 @@ public class TelaHistorico extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextPane jTextPane1;
     // End of variables declaration//GEN-END:variables

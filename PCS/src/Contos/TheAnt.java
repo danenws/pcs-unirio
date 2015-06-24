@@ -42,7 +42,7 @@ public class TheAnt extends javax.swing.JFrame {
     public TheAnt(String nome) {
         nomeUsuario = nome;
         initComponents();
-        this.setSize(750, 450);
+        this.setSize(740, 470);
         this.setResizable(false);
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);

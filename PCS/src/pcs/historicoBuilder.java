@@ -67,7 +67,7 @@ public final class historicoBuilder {
                    + "do usuario: " + n + "%\n Data que o usuario realizou o "
                    + "quiz: " + data + "-------------------------------------"
                    + "---------------------------------------------------------"
-                   + "----------------------------------------------------\n\n\n";
+                   + "----------------------------------------------------\n\n";
           System.out.println(usuario);
           System.out.println(quiz);
           System.out.println(n);
