@@ -35,7 +35,7 @@ public class FoxGrapes extends javax.swing.JFrame {
        // initComponents();
        // initComponents();
         initComponents();
-        this.setSize(750, 450);
+        this.setSize(740, 470);
         this.setResizable(false);
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
@@ -66,7 +66,7 @@ public class FoxGrapes extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(null);
 
         jTextPane1.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
@@ -96,7 +96,7 @@ public class FoxGrapes extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(640, 400, 73, 23);
+        jButton2.setBounds(640, 410, 73, 23);
 
         jButton1.setText("Avançar");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -114,7 +114,7 @@ public class FoxGrapes extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Contos/fox2.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, -40, 820, 570);
+        jLabel1.setBounds(0, 0, 820, 570);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -176,9 +176,9 @@ public class FoxGrapes extends javax.swing.JFrame {
                     System.out.println("");
 
                 }}else{
-                
+
                 //System.out.println("Acabou :(");
-                TheFoxy quiz = new TheFoxy();
+                TheFoxy quiz = new TheFoxy(nomeUsuario, titulo);
                 quiz.setVisible(true);
                 this.dispose();
             }

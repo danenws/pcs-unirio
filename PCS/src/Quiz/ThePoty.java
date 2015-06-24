@@ -6,6 +6,7 @@
 package Quiz;
 
 
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.io.FileNotFoundException;
@@ -16,6 +17,7 @@ import pcs.Pergunta;
 import pcs.Quiz;
 import pcs.Resposta;
 import pcs.Saver;
+import pcs.Usuario;
 import pcs.historicoBuilder;
 import pcs.PerguntaBuilder;
 import pcs.RespostaBuilder;
@@ -24,12 +26,71 @@ import pcs.RespostaBuilder;
  * @author Gabriel Ramos
  */
 public class ThePoty extends javax.swing.JFrame {
-    double nota;
+    float nota;
     int chance = 1;
+      String nome2;
+    String titulo1;
+    private String nome1;
+    private String titulo;
     /**
      * Creates new form TheAntQuiz
      */
     public ThePoty() {
+        
+
+        initComponents();
+        this.setSize(1011, 731);
+        this.setResizable(false);
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+        
+        PerguntaBuilder p = new PerguntaBuilder();
+        String  x = null;
+        
+        try { 
+            x = p.getPergunta("Quiz/quizNivel1/pergunta1.txt");
+        } catch (FileNotFoundException ex) {
+
+        }
+        jLabel2.setText(x);
+        
+  
+        try { 
+            x = p.getPergunta("Quiz/quizNivel1/pergunta2.txt");
+        } catch (FileNotFoundException ex) {
+
+        }
+        jLabel3.setText(x);
+        
+        try { 
+            x = p.getPergunta("Quiz/quizNivel1/pergunta3.txt");
+        } catch (FileNotFoundException ex) {
+
+        }
+        jLabel4.setText(x);
+        
+
+        try { 
+            x = p.getPergunta("Quiz/quizNivel1/pergunta4.txt");
+        } catch (FileNotFoundException ex) {
+
+        }
+        jLabel5.setText(x);
+        
+
+        try { 
+            x = p.getPergunta("Quiz/quizNivel1/pergunta5.txt");
+        } catch (FileNotFoundException ex) {
+ 
+        }
+        jLabel6.setText(x);
+        
+         jButton1.setText("Corrigir "+chance+" chances");
+    }
+
+    public ThePoty(String nomeUsuario, String titulo) {
+        nome2 = nome1;
+        titulo1 = titulo;
         initComponents();
         this.setSize(1011, 731);
         this.setResizable(false);
@@ -271,20 +332,27 @@ public class ThePoty extends javax.swing.JFrame {
            // Historico                    
                                 
                     
+            System.out.println(titulo1);     
+             System.out.println(nome2);
+             System.out.println(nota);
+             
+                    
        historicoBuilder hist = null;
-              try {
-                  hist = new historicoBuilder("Maria", "A noite", (float) 7.0);
-              } catch (ParseException ex) {
-                  Logger.getLogger(ThePoty.class.getName()).log(Level.SEVERE, null, ex);
-              }
+                    try {
+                        hist = new historicoBuilder(nome2, titulo1, nota);
+                        System.out.println("pegou");
+                        System.out.println(hist.getData());
+                    } catch (ParseException ex) {
+                        Logger.getLogger(TheAntQuiz.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                    
        Saver salvar = new Saver();
-       
-        
         try {
             salvar.salvarJogo(hist);
         } catch (FileNotFoundException ex) {
             Logger.getLogger(TheAntQuiz.class.getName()).log(Level.SEVERE, null, ex);
         }
+             
               
         
         // End Historico

@@ -34,11 +34,13 @@ public final class historicoBuilder {
     public historicoBuilder(String usuario, String quiz, float nota) throws ParseException{
         this.usuario = usuario;
         this.quiz = quiz;
+        String q  = quiz.replace ("\n", "");
         this.nota = nota;
         this.data = pegarData();
         String nt = Float.toString(nota);
         try {    //Salvando o novo usuarios no arquivo
-            String n = usuario + "|" + quiz + "|" + nt + "|" + data;
+            String n = usuario + "|" + q + "|" + nt + "|" + data;
+            String nov  = n.replace ("\n", "");
             String file = "historico.txt";
             try (FileWriter f = new FileWriter(file,true) // true e para adicionar nova linha
             ) {
@@ -47,9 +49,11 @@ public final class historicoBuilder {
         } catch (IOException ex) {  
         }  
     }
-    
+
     public String gerarHist() throws FileNotFoundException{
-        String retorno = "";
+        String retorno = "-------------------------------------------------"
+                + "------------------------------------------------------------"
+                + "-------------------------------------\n";
         String n;
         Scanner scanner = new Scanner(new FileReader("historico.txt"))
                        .useDelimiter("\\||\\n");
@@ -58,7 +62,12 @@ public final class historicoBuilder {
            quiz = scanner.next();
            n = scanner.next();
            data = scanner.next();
-           retorno = retorno + usuario + "                              " + quiz + "                                  " + n + "                 " + data + "\n";
+           retorno = retorno + " Nome do Usuario: "+ usuario + " "
+                   + "\n Nome do Conto referente ao quiz: " + quiz + " \n Nota "
+                   + "do usuario: " + n + "%\n Data que o usuario realizou o "
+                   + "quiz: " + data + "-------------------------------------"
+                   + "---------------------------------------------------------"
+                   + "----------------------------------------------------\n\n\n";
           System.out.println(usuario);
           System.out.println(quiz);
           System.out.println(n);
@@ -66,6 +75,7 @@ public final class historicoBuilder {
         }
         return retorno;        
     }
+    
     //Gerar historico de determinado usuario
     public void gerarHistUser(String user) throws FileNotFoundException{
         Scanner scanner = new Scanner(new FileReader("historico.txt"))
@@ -142,21 +152,7 @@ public final class historicoBuilder {
     
     public String pegarData() throws ParseException{
         String novaData = null;
-        
-        /*Date dataN = new Date(System.currentTimeMillis());
-        SimpleDateFormat in= new SimpleDateFormat("yyyy-MM-dd"); 
-        System.out.println(in);
-        SimpleDateFormat out = new SimpleDateFormat("dd/MM/yyyy");  
-        
-        novaData = out.format(in.parse(dataN.toString())); */
-        
         novaData = new SimpleDateFormat("dd/MM/yyyy").format(new Date()).toString();
-        
-        
-        /*GregorianCalendar atual=(GregorianCalendar) GregorianCalendar.getInstance();  
-        int mes = GregorianCalendar.MONTH;
-        novaData="Data:" +atual.get(GregorianCalendar.DATE)+"/"+(atual.get((mes))+"/"+(atual.get(GregorianCalendar.YEAR))); 
-        */
         System.out.println(novaData);
         return novaData;
     }

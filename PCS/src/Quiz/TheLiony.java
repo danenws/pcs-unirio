@@ -28,8 +28,11 @@ import pcs.RespostaBuilder;
  * @author Gabriel Ramos
  */
 public class TheLiony extends javax.swing.JFrame {
-    double nota;
+    float nota;
     int chance=1;
+      String nome2;
+    String titulo1;
+    private String nome1;
     
     /**
      * Creates new form TheAntQuiz
@@ -85,6 +88,59 @@ public class TheLiony extends javax.swing.JFrame {
         
       jButton1.setText("Corrigir "+chance+" chances");
         
+    }
+
+    public TheLiony(String nomeUsuario, String titulo) {
+        nome2 = nome1;
+        titulo1 = titulo;
+          initComponents();
+        this.setSize(1011, 731);
+        this.setResizable(false);
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+        
+        PerguntaBuilder p = new PerguntaBuilder();
+        String  x = null;
+        
+        try { 
+            x = p.getPergunta("Quiz/quizNivel3/pergunta1.txt");
+        } catch (FileNotFoundException ex) {
+
+        }
+        jLabel2.setText(x);
+        
+   
+        try { 
+            x = p.getPergunta("Quiz/quizNivel3/pergunta2.txt");
+        } catch (FileNotFoundException ex) {
+
+        }
+        jLabel3.setText(x);
+        
+        try { 
+            x = p.getPergunta("Quiz/quizNivel3/pergunta3.txt");
+        } catch (FileNotFoundException ex) {
+
+        }
+        jLabel4.setText(x);
+        
+
+        try { 
+            x = p.getPergunta("Quiz/quizNivel3/pergunta4.txt");
+        } catch (FileNotFoundException ex) {
+
+        }
+        jLabel5.setText(x);
+        
+
+        try { 
+            x = p.getPergunta("Quiz/quizNivel3/pergunta5.txt");
+        } catch (FileNotFoundException ex) {
+
+        }
+        jLabel6.setText(x);
+        
+      jButton1.setText("Corrigir "+chance+" chances");
     }
 
     /**
@@ -278,20 +334,27 @@ public class TheLiony extends javax.swing.JFrame {
            // Historico                    
                                 
                     
+          System.out.println(titulo1);     
+             System.out.println(nome2);
+             System.out.println(nota);
+             
+                    
        historicoBuilder hist = null;
                     try {
-                        hist = new historicoBuilder("Maria", "A noite", (float) 7.0);
+                        hist = new historicoBuilder(nome2, titulo1, nota);
+                        System.out.println("pegou");
+                        System.out.println(hist.getData());
                     } catch (ParseException ex) {
-                        Logger.getLogger(TheLiony.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(TheAntQuiz.class.getName()).log(Level.SEVERE, null, ex);
                     }
+                    
        Saver salvar = new Saver();
-       
-        
         try {
             salvar.salvarJogo(hist);
         } catch (FileNotFoundException ex) {
             Logger.getLogger(TheAntQuiz.class.getName()).log(Level.SEVERE, null, ex);
         }
+             
               
         
         // End Historico

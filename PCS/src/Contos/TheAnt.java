@@ -32,7 +32,7 @@ public class TheAnt extends javax.swing.JFrame {
      */
     public TheAnt() {
         initComponents();
-        this.setSize(750, 450);
+        this.setSize(740, 470);
         this.setResizable(false);
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
@@ -122,7 +122,7 @@ public class TheAnt extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Telas/theant.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, -20, 750, 470);
+        jLabel1.setBounds(0, -10, 750, 470);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

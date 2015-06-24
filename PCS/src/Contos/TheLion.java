@@ -5,8 +5,8 @@
  */
 package Contos;
 
-import Dicas.TheAntDica;
-import Quiz.TheAntQuiz;
+import Dicas.TheLionx;
+import Quiz.TheLiony;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Toolkit;
@@ -33,7 +33,10 @@ public class TheLion extends javax.swing.JFrame {
     
     public TheLion() {
         
-        this.setSize(750, 450);
+           this.setSize(740, 470);
+        this.setResizable(false);
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
         initComponents();
         
     }
@@ -45,7 +48,7 @@ public class TheLion extends javax.swing.JFrame {
         
         nomeUsuario = nome;
         initComponents();
-        this.setSize(750, 450);
+         this.setSize(740, 470);
         this.setResizable(false);
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
@@ -69,7 +72,9 @@ public class TheLion extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(750, 450));
+        setResizable(false);
         getContentPane().setLayout(null);
 
         jButton3.setBackground(new java.awt.Color(200, 218, 235));
@@ -104,7 +109,7 @@ public class TheLion extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(660, 370, 83, 40);
+        jButton2.setBounds(640, 340, 83, 40);
 
         jButton4.setText("Sair");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -113,7 +118,7 @@ public class TheLion extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton4);
-        jButton4.setBounds(680, 420, 50, 20);
+        jButton4.setBounds(660, 390, 50, 20);
 
         jLabel1.setFont(new java.awt.Font("Lucida Calligraphy", 0, 11)); // NOI18N
         jLabel1.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
@@ -126,15 +131,15 @@ public class TheLion extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Contos/lion2.jpg"))); // NOI18N
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(0, -10, 750, 460);
+        jLabel2.setBounds(0, 0, 750, 460);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        TheAntDica conto2 = new TheAntDica();
+        TheLionx conto2 = new TheLionx();
         conto2.setVisible(true);
-        int dica = 1;
+        dica = 1;
 
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -176,7 +181,7 @@ public class TheLion extends javax.swing.JFrame {
              
         }}else{
         
-            TheAntQuiz quiz = new TheAntQuiz(nomeUsuario, titulo);
+            TheLiony quiz = new TheLiony(nomeUsuario, titulo);
             quiz.setVisible(true);
             this.dispose();
         }

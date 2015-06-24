@@ -1,7 +1,7 @@
-daiane|f|25-08-1992
-felipe|m|24-02-1993
-novo|m|25-03-1992
-novo2|m|2932920
+﻿Daiane|menina|25/08/1992
+Felipe|menino|24/02/1993
 Gabriel|menino|07/06/1996
-Felipe|menino|18/07/1993
-João|menino|1/1/1
+Maria|menina|07/06/1996
+Andre|menino|07/06/1996
+Joao|menino|18/07/1993
+Daiane|menina|25/08/1992

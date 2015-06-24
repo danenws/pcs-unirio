@@ -36,7 +36,7 @@ public class Twopots extends javax.swing.JFrame {
     public Twopots() {
        // initComponents();
         initComponents();
-        this.setSize(750, 450);
+         this.setSize(740, 470);
         this.setResizable(false);
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
@@ -68,7 +68,7 @@ public class Twopots extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(null);
 
         jTextPane1.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
@@ -179,7 +179,7 @@ public class Twopots extends javax.swing.JFrame {
         }}else{
         
             System.out.println("Acabou :(");
-            ThePoty quiz = new ThePoty();
+            ThePoty quiz = new ThePoty(nomeUsuario, titulo);
             quiz.setVisible(true);
             this.dispose();
         }
