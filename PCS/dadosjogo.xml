@@ -2,7 +2,7 @@
 <java version="1.8.0_45" class="java.beans.XMLDecoder">
  <object class="pcs.historicoBuilder">
   <void property="data">
-   <string>24/06/2015</string>
+   <string>25/06/2015</string>
   </void>
   <void property="quiz">
    <string>The Earthen Pot and The Brass Pot

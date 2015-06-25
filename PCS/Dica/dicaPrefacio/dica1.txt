@@ -1,28 +1,27 @@
-<html><body
-<p><b>Verbo to be</b></p>
-<p>Utilizamos o verbo to be não apenas como verbo, mas também como auxiliar.</p>
 
-<p><b>Simple Presente - Para presente</b></p>
+Verbo to be - Utilizamos o verbo to be não apenas como verbo, mas também como auxiliar
 
-<p><b>Singular</b></p>
-<p>I <b>am</b></p>
-<p>You <b>are</b></p>
-<p>He/She/It <b>is</b></p>
 
-<p><b>Plural</b></p>
-<p>We <b>are</b></p>
-<p>You <b>are</b></p>
-<p>They <b>are</b></p>
+Simple Presente - Para presente
 
-<p><b>Simple Past - Para passado</b></p>
+Singular
+I am
+You are
+He/She/It is
 
-<p><b>Singular</b></p>
-<p>I <b>was</b></p>
-<p>You <b>were</b></p>
-<p>He/She/It <b>was</b></p>
+Plural
+We are
+You are
+They are
 
-<p><b>Plural</b></p>
-<p>We <b>were</b></p>
-<p>You <b>were</b></p>
-<p>They <b>were</b></p>
-</body</html>
+Simple Past - Para passado
+
+Singular
+I was
+You were
+He/She/It was
+
+Plural
+We were
+You were
+They were

@@ -172,6 +172,7 @@ public class TheLiony extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         jTextField5 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -184,85 +185,109 @@ public class TheLiony extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(800, 620, 180, 70);
+        jButton1.setBounds(850, 630, 130, 60);
 
+        jTextField1.setAlignmentX(100.0F);
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
             }
         });
         getContentPane().add(jTextField1);
-        jTextField1.setBounds(50, 70, 330, 50);
+        jTextField1.setBounds(150, 150, 230, 40);
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Tamil MN", 0, 18)); // NOI18N
         jLabel3.setText("jLabel3");
+        jLabel3.setAlignmentX(100.0F);
+        jLabel3.setFocusCycleRoot(true);
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(50, 150, 710, 60);
+        jLabel3.setBounds(150, 210, 710, 60);
+
+        jTextField2.setAlignmentX(100.0F);
         getContentPane().add(jTextField2);
-        jTextField2.setBounds(50, 210, 330, 50);
+        jTextField2.setBounds(150, 280, 230, 40);
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Tamil MN", 0, 18)); // NOI18N
         jLabel4.setText("jLabel4");
+        jLabel4.setAlignmentX(100.0F);
+        jLabel4.setFocusCycleRoot(true);
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(50, 290, 660, 60);
+        jLabel4.setBounds(150, 320, 660, 60);
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Tamil MN", 0, 18)); // NOI18N
         jLabel5.setText("jLabel5");
+        jLabel5.setAlignmentX(100.0F);
+        jLabel5.setFocusCycleRoot(true);
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(50, 420, 640, 70);
+        jLabel5.setBounds(150, 430, 640, 70);
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Tamil MN", 0, 18)); // NOI18N
         jLabel6.setText("jLabel6");
+        jLabel6.setAlignmentX(100.0F);
+        jLabel6.setFocusCycleRoot(true);
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(50, 550, 630, 80);
-        getContentPane().add(jTextField3);
-        jTextField3.setBounds(50, 350, 330, 50);
+        jLabel6.setBounds(150, 530, 630, 80);
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jTextField3.setAlignmentX(100.0F);
+        getContentPane().add(jTextField3);
+        jTextField3.setBounds(150, 380, 230, 40);
+
+        jLabel7.setFont(new java.awt.Font("Marker Felt", 0, 28)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 102, 0));
         getContentPane().add(jLabel7);
         jLabel7.setBounds(710, 560, 280, 70);
+
+        jTextField4.setAlignmentX(100.0F);
         getContentPane().add(jTextField4);
-        jTextField4.setBounds(50, 490, 330, 50);
+        jTextField4.setBounds(150, 490, 230, 40);
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 51, 51));
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(400, 74, 210, 50);
+        jLabel8.setBounds(400, 150, 210, 40);
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 51, 51));
         getContentPane().add(jLabel11);
-        jLabel11.setBounds(390, 500, 210, 40);
+        jLabel11.setBounds(390, 490, 210, 30);
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 51, 51));
         getContentPane().add(jLabel10);
-        jLabel10.setBounds(390, 350, 210, 50);
+        jLabel10.setBounds(390, 380, 210, 30);
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 51, 51));
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(390, 210, 200, 50);
+        jLabel9.setBounds(380, 280, 200, 40);
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 51, 51));
         getContentPane().add(jLabel12);
-        jLabel12.setBounds(390, 640, 210, 40);
+        jLabel12.setBounds(390, 610, 210, 30);
 
+        jTextField5.setAlignmentX(100.0F);
         jTextField5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField5ActionPerformed(evt);
             }
         });
         getContentPane().add(jTextField5);
-        jTextField5.setBounds(50, 630, 330, 50);
+        jTextField5.setBounds(150, 610, 230, 40);
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Tamil MN", 0, 18)); // NOI18N
         jLabel2.setText("jLabel2");
+        jLabel2.setAlignmentX(100.0F);
+        jLabel2.setFocusCycleRoot(true);
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(50, 10, 640, 60);
+        jLabel2.setBounds(150, 90, 640, 60);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Quiz/quizimg.jpg"))); // NOI18N
+        jLabel13.setFont(new java.awt.Font("Marker Felt", 0, 25)); // NOI18N
+        jLabel13.setText("Escolha uma das opções entre parênteses para completar a frase:");
+        getContentPane().add(jLabel13);
+        jLabel13.setBounds(150, 40, 670, 30);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Quiz/quizdef.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 1010, 730);
 
@@ -422,6 +447,7 @@ public class TheLiony extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

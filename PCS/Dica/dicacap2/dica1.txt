@@ -1,10 +1,10 @@
-<html><body
-<p><b>Pronomes demonstrativos</b></p>
-<p><b>This</b>, que tem como plural <b>these</b>, significa este, esta, isto. Usado para identificar algo próximo de nós.</p>
-<p>Exemplo:</p>
+Pronomes demonstrativos
 
-<p>This book is mine. (Esse livro é meu).</p>
+This, que tem como plural these, significa este, esta, isto. Usado para identificar algo próximo de nós.
+Exemplo:
 
-<p><b>That</b>, que tem <b>those</b> como plural, refere-se a "aquele" ou a "aquela".</p>
-<p>Exemplo:</p>
-<p>That is not my aunt (Aquela não é minha tia).</p>
+This book is mine. (Esse livro é meu).
+
+That, que tem those como plural, refere-se a "aquele" ou a "aquela".
+Exemplo:
+That is not my aunt (Aquela não é minha tia).
