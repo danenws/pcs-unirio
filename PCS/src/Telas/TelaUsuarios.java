@@ -24,14 +24,14 @@ import pcs.usuarioBuilder;
 public class TelaUsuarios extends javax.swing.JFrame {
   
   String nomeUsuario = null;
-  String pos1, pos2, pos3, pos4, pos5, pos6;
-  
+  String pos1, pos2, pos3, pos4, pos5;
+  usuarioBuilder usuario = new usuarioBuilder();
     /**
      * Creates new form TelaUsuarios
      */
     public TelaUsuarios() {
         initComponents();
-        this.setSize(599, 380);
+        this.setSize(872, 541);
         this.setResizable(false);
           Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
@@ -46,32 +46,16 @@ public class TelaUsuarios extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(null);
-
-        jButton2.setBackground(new java.awt.Color(228, 220, 206));
-        jButton2.setFont(new java.awt.Font("Lucida Sans", 0, 11)); // NOI18N
-        jButton2.setText("<Nome>");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        jButton2.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                jButton2PropertyChange(evt);
-            }
-        });
-        getContentPane().add(jButton2);
-        jButton2.setBounds(250, 120, 100, 40);
 
         jButton3.setBackground(new java.awt.Color(228, 220, 206));
         jButton3.setText("<Nome>");
@@ -86,208 +70,171 @@ public class TelaUsuarios extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(250, 180, 100, 40);
+        jButton3.setBounds(390, 80, 110, 60);
 
-        jButton5.setBackground(new java.awt.Color(228, 220, 206));
-        jButton5.setText("<Nome>");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-        jButton5.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                jButton5PropertyChange(evt);
-            }
-        });
-        getContentPane().add(jButton5);
-        jButton5.setBounds(250, 240, 100, 40);
-
-        jButton6.setBackground(new java.awt.Color(228, 220, 206));
-        jButton6.setText("<Nome>");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
-            }
-        });
-        jButton6.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                jButton6PropertyChange(evt);
-            }
-        });
-        getContentPane().add(jButton6);
-        jButton6.setBounds(250, 300, 100, 40);
-
-        jLabel2.setFont(new java.awt.Font("Luminari", 0, 16)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Luminari", 0, 18)); // NOI18N
         jLabel2.setText("Achou seu nome? Vamos lá!");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(200, 10, 230, 30);
+        jLabel2.setBounds(330, 20, 230, 30);
 
-        jButton1.setBackground(new java.awt.Color(228, 220, 206));
-        jButton1.setFont(new java.awt.Font("Lucida Sans", 0, 11)); // NOI18N
-        jButton1.setText("<Nome>");
-        jButton1.setBorder(null);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButton4.setBackground(new java.awt.Color(228, 220, 206));
+        jButton4.setText("<Nome>");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButton4ActionPerformed(evt);
             }
         });
-        jButton1.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+        jButton4.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                jButton1PropertyChange(evt);
+                jButton4PropertyChange(evt);
             }
         });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(250, 60, 100, 40);
+        getContentPane().add(jButton4);
+        jButton4.setBounds(390, 440, 110, 60);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Telas/Hansel_Gretel2.jpg"))); // NOI18N
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 10, 590, 350);
+        jButton7.setBackground(new java.awt.Color(228, 220, 206));
+        jButton7.setText("<Nome>");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+        jButton7.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                jButton7PropertyChange(evt);
+            }
+        });
+        getContentPane().add(jButton7);
+        jButton7.setBounds(390, 170, 110, 60);
+
+        jButton8.setBackground(new java.awt.Color(228, 220, 206));
+        jButton8.setText("<Nome>");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+        jButton8.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                jButton8PropertyChange(evt);
+            }
+        });
+        getContentPane().add(jButton8);
+        jButton8.setBounds(390, 260, 110, 60);
+
+        jButton9.setBackground(new java.awt.Color(228, 220, 206));
+        jButton9.setText("<Nome>");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+        jButton9.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                jButton9PropertyChange(evt);
+            }
+        });
+        getContentPane().add(jButton9);
+        jButton9.setBounds(390, 350, 110, 60);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Telas/hensel_gretel3.jpg"))); // NOI18N
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(0, 0, 870, 520);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // Quando o usuário clica em seu nome vai para a tela de seleção de dificuldade
-        
-        nomeUsuario = pos1;
-        Dificuldade tela = new Dificuldade(nomeUsuario);
-        tela.setVisible(true);
-        this.dispose();
-        
-        // TESTE 1
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        nomeUsuario = pos2;
-        Dificuldade tela = new Dificuldade(nomeUsuario);
-        tela.setVisible(true);
-        this.dispose();
-       
-        // TESTE
-    }//GEN-LAST:event_jButton2ActionPerformed
-
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        nomeUsuario = pos3;
+        nomeUsuario = pos1;
         Dificuldade tela = new Dificuldade(nomeUsuario);
         tela.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jButton1PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jButton1PropertyChange
-        usuarioBuilder usuario = new usuarioBuilder();
-
-        try {
-            pos1 = usuario.mostrarUsersNamePosicao(1);
-             jButton1.setText(pos1);
-           
-// Transforma o nome do usuário na label do botão
-            
-            /*Usuario usuario = new Usuario();
-            String nomeusr = null;
-            nomeusr = usuario.mostrarUsersName(0,"contos/capitulo1/tepatbp.txt");
-            
-            jButton1.setText(nomeusr);
-            
-            /*BufferedReader r = null;
-            try {
-            r = new BufferedReader(new FileReader("usuarios.txt")); //carrega o arquivo para leitura
-            } catch (FileNotFoundException ex) {
-            Logger.getLogger(TelaUsuarios.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            
-            try {
-            jButton1.setText(r.readLine()); //Lê a primeira linha do arquivo
-            } catch (IOException ex) {
-            Logger.getLogger(TelaUsuarios.class.getName()).log(Level.SEVERE, null, ex);
-            }*/
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(TelaUsuarios.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-    }//GEN-LAST:event_jButton1PropertyChange
-
-    private void jButton2PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jButton2PropertyChange
-        // TODO add your handling code here:
-        usuarioBuilder usuario = new usuarioBuilder();
-  
-        
-        try {
-            pos2 = usuario.mostrarUsersNamePosicao(2);
-             jButton2.setText(pos2);
-            /*BufferedReader r = null;
-            try {
-            r = new BufferedReader(new FileReader("usuarios.txt")); //carrega o arquivo para leitura
-            } catch (FileNotFoundException ex) {
-            Logger.getLogger(TelaUsuarios.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            
-            try {
-            jButton2.setText(r.readLine()); //Lê a primeira linha do arquivo
-            } catch (IOException ex) {
-            Logger.getLogger(TelaUsuarios.class.getName()).log(Level.SEVERE, null, ex);
-            }*/
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(TelaUsuarios.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_jButton2PropertyChange
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-        nomeUsuario = pos5;
-        Dificuldade tela = new Dificuldade(nomeUsuario);
-        tela.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_jButton5ActionPerformed
-
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-        nomeUsuario = pos6;
-        Dificuldade tela = new Dificuldade(nomeUsuario);
-        tela.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_jButton6ActionPerformed
-
     private void jButton3PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jButton3PropertyChange
         // TODO add your handling code here:
-        usuarioBuilder usuario = new usuarioBuilder();
-  
         
         try {
-            pos3 = usuario.mostrarUsersNamePosicao(3);
-             jButton3.setText(pos3);
+            pos1 = usuario.mostrarUsersNamePosicao(1);
+             jButton3.setText(pos1);
         } catch (FileNotFoundException ex) {
             Logger.getLogger(TelaUsuarios.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton3PropertyChange
 
-    private void jButton5PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jButton5PropertyChange
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        usuarioBuilder usuario = new usuarioBuilder();
-
+        nomeUsuario = pos5;
+        Dificuldade tela = new Dificuldade(nomeUsuario);
+        tela.setVisible(true);
+        this.dispose();
         
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton4PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jButton4PropertyChange
+        // TODO add your handling code here:
         try {
-            pos5 = usuario.mostrarUsersNamePosicao(4);
-             jButton5.setText(pos5);
+            pos5 = usuario.mostrarUsersNamePosicao(5);
+             jButton4.setText(pos5);
         } catch (FileNotFoundException ex) {
             Logger.getLogger(TelaUsuarios.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_jButton5PropertyChange
+    }//GEN-LAST:event_jButton4PropertyChange
 
-    private void jButton6PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jButton6PropertyChange
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
-        usuarioBuilder usuario = new usuarioBuilder();
+        nomeUsuario = pos2;
+        Dificuldade tela = new Dificuldade(nomeUsuario);
+        tela.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton7ActionPerformed
 
-        
+    private void jButton7PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jButton7PropertyChange
+        // TODO add your handling code here:
         try {
-            pos6 = usuario.mostrarUsersNamePosicao(5);
-             jButton6.setText(pos6);
+            pos2 = usuario.mostrarUsersNamePosicao(2);
+             jButton7.setText(pos2);
         } catch (FileNotFoundException ex) {
             Logger.getLogger(TelaUsuarios.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_jButton6PropertyChange
+    }//GEN-LAST:event_jButton7PropertyChange
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        // TODO add your handling code here:
+        nomeUsuario = pos3;
+        Dificuldade tela = new Dificuldade(nomeUsuario);
+        tela.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton8PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jButton8PropertyChange
+        // TODO add your handling code here:
+        try {
+            pos3 = usuario.mostrarUsersNamePosicao(3);
+             jButton8.setText(pos3);
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(TelaUsuarios.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton8PropertyChange
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        // TODO add your handling code here:
+        nomeUsuario = pos4;
+        Dificuldade tela = new Dificuldade(nomeUsuario);
+        tela.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton9PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jButton9PropertyChange
+        // TODO add your handling code here:
+        try {
+            pos4 = usuario.mostrarUsersNamePosicao(4);
+             jButton9.setText(pos4);
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(TelaUsuarios.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton9PropertyChange
 
     /**
      * @param args the command line arguments
@@ -325,12 +272,12 @@ public class TelaUsuarios extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 }

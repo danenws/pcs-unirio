@@ -78,7 +78,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(790, 500, 80, 27);
+        jButton3.setBounds(790, 500, 80, 29);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Telas/principal.jpg"))); // NOI18N
         getContentPane().add(jLabel3);

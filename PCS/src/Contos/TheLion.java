@@ -87,6 +87,7 @@ public class TheLion extends javax.swing.JFrame {
         getContentPane().add(jButton3);
         jButton3.setBounds(580, 200, 120, 40);
 
+        jTextPane1.setForeground(new java.awt.Color(51, 51, 51));
         jTextPane1.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
                 jTextPane1PropertyChange(evt);
@@ -98,6 +99,8 @@ public class TheLion extends javax.swing.JFrame {
         jScrollPane1.setBounds(40, 60, 660, 130);
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Contos/seta2.png"))); // NOI18N
+        jButton2.setBorderPainted(false);
+        jButton2.setContentAreaFilled(false);
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton2MouseClicked(evt);
@@ -109,25 +112,26 @@ public class TheLion extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(640, 340, 83, 40);
+        jButton2.setBounds(660, 360, 90, 80);
 
-        jButton4.setText("Sair");
+        jButton4.setText("X");
+        jButton4.setBorder(null);
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton4);
-        jButton4.setBounds(660, 390, 50, 20);
+        jButton4.setBounds(720, 0, 30, 20);
 
-        jLabel1.setFont(new java.awt.Font("Lucida Calligraphy", 0, 11)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Lucida Calligraphy", 1, 20)); // NOI18N
         jLabel1.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
                 jLabel1PropertyChange(evt);
             }
         });
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(190, 20, 420, 30);
+        jLabel1.setBounds(270, 20, 290, 30);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Contos/lion2.jpg"))); // NOI18N
         getContentPane().add(jLabel2);
@@ -192,7 +196,7 @@ public class TheLion extends javax.swing.JFrame {
         
        
         jTextPane1.setText(c.lerContoPos(1, "contos/conclusao/tls.txt"));
-        Font font = new Font("Serif", Font.ITALIC, 15);
+        Font font = new Font("Serif", Font.ITALIC, 20);
         jTextPane1.setFont(font);
         
     }//GEN-LAST:event_jTextPane1PropertyChange
@@ -206,8 +210,6 @@ public class TheLion extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         titulo = (c.lerContoPos(0, "contos/conclusao/tls.txt"));
-        Font font = new Font("Serif", Font.ITALIC, 20);
-        jLabel1.setFont(font);
         jLabel1.setText(titulo);
         
     }//GEN-LAST:event_jLabel1PropertyChange

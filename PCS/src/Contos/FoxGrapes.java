@@ -35,7 +35,7 @@ public class FoxGrapes extends javax.swing.JFrame {
        // initComponents();
        // initComponents();
         initComponents();
-        this.setSize(740, 470);
+        this.setSize(750, 470);
         this.setResizable(false);
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
@@ -62,8 +62,9 @@ public class FoxGrapes extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextPane1 = new javax.swing.JTextPane();
         jButton3 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -77,7 +78,7 @@ public class FoxGrapes extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jTextPane1);
 
         getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(50, 50, 630, 190);
+        jScrollPane2.setBounds(60, 80, 630, 180);
 
         jButton3.setBackground(new java.awt.Color(200, 218, 235));
         jButton3.setText("Dica");
@@ -87,34 +88,47 @@ public class FoxGrapes extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(570, 240, 110, 40);
+        jButton3.setBounds(580, 280, 110, 40);
 
-        jButton2.setText("Sair");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton2);
-        jButton2.setBounds(640, 410, 73, 23);
-
-        jButton1.setText("Avançar");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Contos/seta2.png"))); // NOI18N
+        jButton4.setBorderPainted(false);
+        jButton4.setContentAreaFilled(false);
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
+                jButton4MouseClicked(evt);
             }
         });
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButton4ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(620, 360, 110, 40);
+        getContentPane().add(jButton4);
+        jButton4.setBounds(660, 370, 90, 80);
 
+        jButton5.setText("X");
+        jButton5.setBorder(null);
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton5);
+        jButton5.setBounds(720, 0, 30, 20);
+
+        jLabel2.setFont(new java.awt.Font("Lucida Calligraphy", 1, 20)); // NOI18N
+        jLabel2.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                jLabel2PropertyChange(evt);
+            }
+        });
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(230, 30, 380, 30);
+
+        jLabel1.setForeground(new java.awt.Color(51, 51, 51));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Contos/fox2.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 820, 570);
+        jLabel1.setBounds(0, -50, 820, 560);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -124,7 +138,7 @@ public class FoxGrapes extends javax.swing.JFrame {
 
         contoBuilder c = new contoBuilder();
 
-        jTextPane1.setText(c.lerContoPos(0, "contos/capitulo2/tfatg.txt"));
+        jTextPane1.setText(c.lerContoPos(1, "contos/capitulo2/tfatg.txt"));
         Font font = new Font("Serif", Font.ITALIC, 20);
         jTextPane1.setFont(font);
         //setBackground( new Color(0, 0, 0, 0) );
@@ -138,72 +152,61 @@ public class FoxGrapes extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // Sai do conto
-
-        this.dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-
-       //Cria um objeto do tipo conto
-        
+    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+        // TODO add your handling code here:
+        contoBuilder c = new contoBuilder(); //Cria um objeto do tipo conto
+        Font font = new Font("Serif", Font.ITALIC, 20);
+        jTextPane1.setFont(font);
         String [] x;
         x = c.lerConto("contos/capitulo2/tfatg.txt"); //Lê o conteúdo do conto em um arquivo e armazena no vetor x
-       
-        int tam = 0; 
+
+        int tam = 0;
         try {
             tam = c.tamanhoConto("contos/capitulo2/tfatg.txt"); //Pega o tamanho do vetor do conteúdo do conto
         } catch (FileNotFoundException ex) {
             Logger.getLogger(TheAnt.class.getName()).log(Level.SEVERE, null, ex);
         }
         //System.out.println(tam);
-        
+
         if(cont<tam-1){
-             if (cont==2){
-             if (dica== 1){
-                 cont++;
-            jTextPane1.setText(x[cont]);
+            if (cont==2){
+                if (dica== 1){
+                    cont++;
+                    jTextPane1.setText(x[cont]);
 
-             } else {
-             JOptionPane.showMessageDialog(null, "Você tem uma dica te esperando!!");
-             }}
-              else {
-            cont++;
-            jTextPane1.setText(x[cont]);
+                } else {
+                    JOptionPane.showMessageDialog(null, "Você tem uma dica te esperando!!");
+                }}
+                else {
+                    cont++;
+                    jTextPane1.setText(x[cont]);
 
-             
-        }}else{
-        
-            TheFoxy quiz = new TheFoxy(nomeUsuario, titulo);
-            quiz.setVisible(true);
-            this.dispose();
-        }
+                }}else{
+                    System.out.println(titulo);
+                    TheFoxy quiz = new TheFoxy(nomeUsuario, titulo);
+                    quiz.setVisible(true);
+                    this.dispose();
+                }
+    }//GEN-LAST:event_jButton4MouseClicked
 
-    }//GEN-LAST:event_jButton1MouseClicked
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // Sai do conto
 
-        // Quando clicar no botão avançar, atualizar o campo de texto:
+        this.dispose();
+    }//GEN-LAST:event_jButton5ActionPerformed
 
-        /*Conto c = new Conto(); //Cria um objeto do tipo conto
+    private void jLabel2PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jLabel2PropertyChange
+        // TODO add your handling code here:
 
-        String [] x;
-        x = c.lerConto("contos/capitulo1/tepatbp.txt"); //Lê o conteúdo do conto em um arquivo e armazena no vetor x
-
-        //int tam=0;
-
-        jTextPane1.setText(x[cont]);
-        cont= cont++;
-        System.out.print("Cont e: ");
-        System.out.print(cont);
-        System.out.println("");*/
-
-        // tam = c.tamanhoConto("contos/capitulo1/tepatbp.txt");
-
-        //jTextPane1.setText(c.lerContoPos(++cont, "contos/capitulo1/tepatbp.txt"));
-
-    }//GEN-LAST:event_jButton1ActionPerformed
+        titulo = (c.lerContoPos(0, "contos/capitulo2/tfatg.txt"));
+        //Font font = new Font("Serif", Font.ITALIC, 30);
+        //jLabel2.setFont(font);
+        jLabel2.setText(titulo);
+    }//GEN-LAST:event_jLabel2PropertyChange
 
     /**
      * @param args the command line arguments
@@ -231,6 +234,9 @@ public class FoxGrapes extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(FoxGrapes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
@@ -239,10 +245,11 @@ public class FoxGrapes extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextPane jTextPane1;
     // End of variables declaration//GEN-END:variables

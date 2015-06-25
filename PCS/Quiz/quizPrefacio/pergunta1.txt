@@ -1,4 +1,3 @@
 <html><body>
-<p>Escreva uma palavra para completar a frase. Para ajudar, escolha uma das palavras entre parenteses.:</p>
-<p>1 - ___  ant passed by... (A, An, It, That) (</p>
+<p>1 - ___  ant passed by... [___ Formiga passou...] <p>(A, An, It, Who)</p>
 </html></body>
