@@ -25,14 +25,14 @@ public class TheAnt extends javax.swing.JFrame {
     private int cont=0;
     public int dica=0;
     String nomeUsuario;
-    String titulo= "The Ant and the Grasshopper";
+    String titulo;
     contoBuilder c = new contoBuilder();
     /**
      * Creates new form TheAnt
      */
     public TheAnt() {
         initComponents();
-        this.setSize(750, 470);
+        this.setSize(740, 470);
         this.setResizable(false);
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
@@ -60,15 +60,15 @@ public class TheAnt extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextPane1 = new javax.swing.JTextPane();
         jButton3 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jTextPane1.setForeground(new java.awt.Color(51, 51, 51));
+        jTextPane1.setKeymap(null);
         jTextPane1.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
                 jTextPane1PropertyChange(evt);
@@ -77,7 +77,7 @@ public class TheAnt extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jTextPane1);
 
         getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(50, 70, 650, 160);
+        jScrollPane2.setBounds(40, 70, 650, 160);
 
         jButton3.setBackground(new java.awt.Color(200, 218, 235));
         jButton3.setText("Dica");
@@ -87,16 +87,25 @@ public class TheAnt extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(580, 240, 120, 40);
+        jButton3.setBounds(570, 240, 120, 40);
 
-        jLabel2.setFont(new java.awt.Font("Lucida Calligraphy", 1, 20)); // NOI18N
+        jButton2.setText("X");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2);
+        jButton2.setBounds(710, 0, 40, 20);
+
+        jLabel2.setFont(new java.awt.Font("Lucida Calligraphy", 0, 11)); // NOI18N
         jLabel2.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
                 jLabel2PropertyChange(evt);
             }
         });
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(210, 20, 380, 30);
+        jLabel2.setBounds(190, 20, 420, 30);
 
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Contos/seta2.png"))); // NOI18N
         jButton4.setBorderPainted(false);
@@ -112,21 +121,11 @@ public class TheAnt extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton4);
-        jButton4.setBounds(660, 370, 90, 80);
-
-        jButton5.setText("X");
-        jButton5.setBorder(null);
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton5);
-        jButton5.setBounds(720, 0, 30, 20);
+        jButton4.setBounds(660, 380, 83, 40);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Telas/theant.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, -10, 750, 470);
+        jLabel1.setBounds(0, -20, 750, 470);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -135,13 +134,20 @@ public class TheAnt extends javax.swing.JFrame {
         // TODO add your handling code here:
     
         jTextPane1.setText(c.lerContoPos(1, "contos/prefacio/taatg.txt"));
-        Font font = new Font("Serif", Font.ITALIC, 20);
+        Font font = new Font("Serif", Font.ITALIC, 15);
         jTextPane1.setFont(font);
         
         
     }//GEN-LAST:event_jTextPane1PropertyChange
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // Sai do conto
+        
+        this.dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+       
         TheAntDica conto2 = new TheAntDica();
         conto2.setVisible(true);
         dica=1;
@@ -153,8 +159,8 @@ public class TheAnt extends javax.swing.JFrame {
         // TODO add your handling code here:
 
         titulo = (c.lerContoPos(0, "contos/prefacio/taatg.txt"));
-        //Font font = new Font("Serif", Font.ITALIC, 30);
-        //jLabel2.setFont(font);
+        Font font = new Font("Serif", Font.ITALIC, 20);
+        jLabel2.setFont(font);
         jLabel2.setText(titulo);
 
     }//GEN-LAST:event_jLabel2PropertyChange
@@ -189,7 +195,7 @@ public class TheAnt extends javax.swing.JFrame {
                     jTextPane1.setText(x[cont]);
 
                 }}else{
-                    System.out.println(titulo);
+
                     TheAntQuiz quiz = new TheAntQuiz(nomeUsuario, titulo);
                     quiz.setVisible(true);
                     this.dispose();
@@ -198,14 +204,9 @@ public class TheAnt extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
+        
 
     }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // Sai do conto
-
-        this.dispose();
-    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -241,9 +242,9 @@ public class TheAnt extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane2;

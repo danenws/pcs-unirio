@@ -191,14 +191,14 @@ public class ThePoty extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextField1);
-        jTextField1.setBounds(150, 150, 230, 40);
+        jTextField1.setBounds(150, 160, 230, 40);
 
         jLabel3.setFont(new java.awt.Font("Tamil MN", 0, 18)); // NOI18N
         jLabel3.setText("jLabel3");
         jLabel3.setAlignmentX(100.0F);
         jLabel3.setFocusCycleRoot(true);
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(150, 210, 710, 60);
+        jLabel3.setBounds(150, 220, 710, 50);
 
         jTextField2.setAlignmentX(100.0F);
         getContentPane().add(jTextField2);
@@ -241,7 +241,7 @@ public class ThePoty extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 51, 51));
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(400, 150, 210, 40);
+        jLabel8.setBounds(390, 160, 210, 40);
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 51, 51));
@@ -277,12 +277,12 @@ public class ThePoty extends javax.swing.JFrame {
         jLabel2.setAlignmentX(100.0F);
         jLabel2.setFocusCycleRoot(true);
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(150, 90, 640, 60);
+        jLabel2.setBounds(150, 80, 640, 80);
 
         jLabel13.setFont(new java.awt.Font("Marker Felt", 0, 25)); // NOI18N
-        jLabel13.setText("Escolha uma das opções entre parênteses para completar a frase:");
+        jLabel13.setText("Choose a word between brackets to complete the sentences: ");
         getContentPane().add(jLabel13);
-        jLabel13.setBounds(150, 40, 670, 30);
+        jLabel13.setBounds(150, 40, 700, 30);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Quiz/quizdef.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
@@ -301,11 +301,11 @@ public class ThePoty extends javax.swing.JFrame {
                     resp4 = jTextField4.getText();
                     resp5 = jTextField5.getText();
                     RespostaBuilder r1 = new RespostaBuilder();
-                    c1 = r1.getResposta("Quiz/respostaPrefacio/1.txt");
-                    c2 = r1.getResposta("Quiz/respostaPrefacio/2.txt");
-                    c3 = r1.getResposta("Quiz/respostaPrefacio/3.txt");
-                    c4 = r1.getResposta("Quiz/respostaPrefacio/4.txt");
-                    c5 = r1.getResposta("Quiz/respostaPrefacio/5.txt");
+                    c1 = r1.getResposta("Quiz/respostaNivel1/1.txt");
+                    c2 = r1.getResposta("Quiz/respostaNivel1/2.txt");
+                    c3 = r1.getResposta("Quiz/respostaNivel1/3.txt");
+                    c4 = r1.getResposta("Quiz/respostaNivel1/4.txt");
+                    c5 = r1.getResposta("Quiz/respostaNivel1/5.txt");
                     Quiz q = new Quiz(resp1, c1, resp2, c2, resp3, c3, resp4, c4, resp5, c5);
 
                     this.nota = q.Corrigir();
@@ -351,10 +351,10 @@ public class ThePoty extends javax.swing.JFrame {
                     Logger.getLogger(TheAntQuiz.class.getName()).log(Level.SEVERE, null, ex);
                 } } else{
                     jLabel8.setText(c1);
-                    jLabel10.setText(c2);
-                    jLabel11.setText(c3);
-                    jLabel12.setText(c4);
-                    jLabel9.setText(c5);
+                    jLabel9.setText(c2);
+                    jLabel10.setText(c3);
+                    jLabel11.setText(c4);
+                    jLabel12.setText(c5);
                     jButton1.setText("Fechar ");
                     cont++;
                     // Historico

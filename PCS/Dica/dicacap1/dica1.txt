@@ -1,6 +1,5 @@
-<html><body>
-<p>"An" e "a" são usados com sentido de "um" ou "uma"</p> 
-<p>Quando a palavra começa com um som de vogal (a,e,i,o,u), então usamos "an". </p> 
-<p></p>
-<p>Se começar com som de consoante, utilizamos "a".</p> 
-</body</html>
+﻿
+"An" e "a" são usados com sentido de "um" ou "uma" 
+Quando a palavra começa com um som de vogal (a,e,i,o,u), então usamos "an". 
+
+Se começar com som de consoante, utilizamos "a". 

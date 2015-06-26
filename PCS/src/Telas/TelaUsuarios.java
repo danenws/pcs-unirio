@@ -26,6 +26,7 @@ public class TelaUsuarios extends javax.swing.JFrame {
   String nomeUsuario = null;
   String pos1, pos2, pos3, pos4, pos5;
   usuarioBuilder usuario = new usuarioBuilder();
+  
     /**
      * Creates new form TelaUsuarios
      */

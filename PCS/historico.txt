@@ -1,35 +1,10 @@
-﻿Daiane|The Ant and the Grasshopper|0.0|23/06/2015
-Felipe|The Ant and the Grasshopper|0.0|23/06/2015
-﻿Daiane|The Ant and the Grasshopper|0.0|23/06/2015
-﻿Daiane|The Ant and the Grasshopper|0.0|23/06/2015
-﻿Daiane|The Ant and the Grasshopper|0.0|23/06/2015
-﻿Daiane|The Ant and the Grasshopper|0.0|23/06/2015
-﻿Daiane|The Ant and the Grasshopper|0.0|23/06/2015
-null|The Earthen Pot and The Brass Pot|0.0|23/06/2015
-﻿Daiane|The Ant and the Grasshopper|0.0|23/06/2015
-null|The Earthen Pot and The Brass Pot|0.0|23/06/2015
-null|The Lion's Share|0.0|23/06/2015
-﻿Daiane|The Ant and the Grasshopper|0.0|23/06/2015
-﻿Daiane|The Earthen Pot and The Brass Pot|0.0|23/06/2015
-﻿Daiane|The Earthen Pot and The Brass Pot|0.0|23/06/2015
-﻿Daiane|The Earthen Pot and The Brass Pot|0.0|23/06/2015
-﻿Daiane|The Earthen Pot and The Brass Pot|0.0|23/06/2015
-﻿Daiane|The Earthen Pot and The Brass Pot|0.0|23/06/2015
-﻿Daiane|The Earthen Pot and The Brass Pot|0.0|23/06/2015
-﻿Daiane|The Earthen Pot and The Brass Pot|0.0|23/06/2015
-﻿Daiane|The Ant and the Grasshopper|0.0|23/06/2015
-Felipe|The Earthen Pot and The Brass Pot|0.0|23/06/2015
-Maria|The Lion's Share|0.0|23/06/2015
-﻿Daiane|The Ant and the Grasshopper|0.0|23/06/2015
-Felipe|The Earthen Pot and The Brass Pot|0.0|23/06/2015
-Gabriel|The Fox and The Grapes|0.0|23/06/2015
-Maria|The Lion's Share|0.0|23/06/2015
-Gabriel|The Fox and The Grapes|0.0|23/06/2015
-Andre|The Lion's Share|0.0|23/06/2015
+﻿Andre|The Lion's Share|0.0|23/06/2015
 Felipe|The Ant and the Grasshopper|0.0|24/06/2015
 Felipe|The Earthen Pot and The Brass Pot|0.0|24/06/2015
-Felipe|The Lion's Share|0.0|24/06/2015
-﻿Daiane|The Ant and the Grasshopper|0.0|24/06/2015
-﻿Daiane|The Earthen Pot and The Brass Pot|0.0|24/06/2015
-﻿Daiane|The Ant and the Grasshopper|0.0|25/06/2015
+Felipe|The Lion's Share|20.0|24/06/2015
+﻿Daiane|The Ant and the Grasshopper|20.0|24/06/2015
+﻿Daiane|The Ant and the Grasshopper|40.0|25/06/2015
 ﻿Daiane|The Earthen Pot and The Brass Pot|0.0|25/06/2015
+﻿Daiane|The Ant and the Grasshopper|60.0|25/06/2015
+alexandre|The Ant and the Grasshopper|40.0|25/06/2015
+﻿Daiane|The Lion's Share|0.0|25/06/2015

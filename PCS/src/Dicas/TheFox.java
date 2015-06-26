@@ -71,6 +71,7 @@ public class TheFox extends javax.swing.JFrame {
         jButton1.setBounds(440, 10, 60, 29);
 
         jTextPane1.setFont(new java.awt.Font("Tamil MN", 0, 13)); // NOI18N
+        jTextPane1.setKeymap(null);
         jTextPane1.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
                 jTextPane1PropertyChange(evt);

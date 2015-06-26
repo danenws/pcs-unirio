@@ -30,7 +30,7 @@ public class Twopots extends javax.swing.JFrame {
     private int cont=0;
     public int dica=0;
     String nomeUsuario;
-    String titulo = "The Lion's Share";
+    String titulo;
     
     
     public Twopots() {
@@ -45,7 +45,7 @@ public class Twopots extends javax.swing.JFrame {
     public Twopots(String nome) {
         nomeUsuario = nome;
         initComponents();
-        this.setSize(740, 470);
+        this.setSize(750, 450);
         this.setResizable(false);
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
@@ -62,18 +62,16 @@ public class Twopots extends javax.swing.JFrame {
 
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextPane1 = new javax.swing.JTextPane();
+        jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jButton6 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jTextPane1.setFont(new java.awt.Font("Lucida Grande", 0, 20)); // NOI18N
-        jTextPane1.setForeground(new java.awt.Color(51, 51, 51));
+        jTextPane1.setKeymap(null);
         jTextPane1.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
                 jTextPane1PropertyChange(evt);
@@ -82,7 +80,21 @@ public class Twopots extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jTextPane1);
 
         getContentPane().add(jScrollPane2);
-        jScrollPane2.setBounds(70, 80, 630, 150);
+        jScrollPane2.setBounds(70, 70, 630, 160);
+
+        jButton1.setText("Avançar");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1);
+        jButton1.setBounds(640, 350, 90, 40);
 
         jButton3.setBackground(new java.awt.Color(200, 218, 235));
         jButton3.setText("Dica");
@@ -92,57 +104,29 @@ public class Twopots extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(590, 250, 110, 40);
+        jButton3.setBounds(590, 250, 110, 30);
 
-        jLabel2.setFont(new java.awt.Font("Lucida Calligraphy", 1, 22)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("Sair");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2);
+        jButton2.setBounds(650, 400, 73, 23);
+
+        jLabel2.setFont(new java.awt.Font("Lucida Calligraphy", 0, 11)); // NOI18N
         jLabel2.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
                 jLabel2PropertyChange(evt);
             }
         });
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(180, 40, 440, 30);
-
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Contos/seta2.png"))); // NOI18N
-        jButton4.setBorderPainted(false);
-        jButton4.setContentAreaFilled(false);
-        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton4MouseClicked(evt);
-            }
-        });
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton4);
-        jButton4.setBounds(660, 370, 90, 80);
+        jLabel2.setBounds(200, 20, 420, 30);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Contos/twopots.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 750, 510);
-
-        jButton6.setText("X");
-        jButton6.setBorder(null);
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton6);
-        jButton6.setBounds(720, 0, 30, 20);
-
-        jButton5.setText("X");
-        jButton5.setBorder(null);
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton5);
-        jButton5.setBounds(720, 0, 30, 20);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -153,10 +137,79 @@ public class Twopots extends javax.swing.JFrame {
         
        
         jTextPane1.setText(c.lerContoPos(1, "contos/capitulo1/tepatbp.txt"));
-        Font font = new Font("Serif", Font.ITALIC, 20);
+        Font font = new Font("Serif", Font.ITALIC, 15);
         jTextPane1.setFont(font);
 
     }//GEN-LAST:event_jTextPane1PropertyChange
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+
+        
+        
+        String [] x;
+        x = c.lerConto("contos/capitulo1/tepatbp.txt"); //Lê o conteúdo do conto em um arquivo e armazena no vetor x
+       
+        int tam = 0; 
+        try {
+            tam = c.tamanhoConto("contos/capitulo1/tepatbp.txt"); //Pega o tamanho do vetor do conteúdo do conto
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(Twopots.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        //System.out.println(tam);
+        
+        if(cont<tam-1){
+             if (cont==2){
+             if (dica== 1){
+                 cont++;
+            jTextPane1.setText(x[cont]);
+
+            /*System.out.print("Cont e: ");
+            System.out.print(cont);
+            System.out.println("");*/
+             } else {
+             JOptionPane.showMessageDialog(null, "Você tem uma dica te esperando!!");
+             }}
+              else {
+            cont++;
+            jTextPane1.setText(x[cont]);
+
+            /*System.out.print("Cont e: ");
+            System.out.print(cont);
+            System.out.println("");*/
+             
+        }}else{
+        
+            System.out.println("Acabou :(");
+            ThePoty quiz = new ThePoty(nomeUsuario, titulo);
+            quiz.setVisible(true);
+            this.dispose();
+        }
+        
+
+    }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
+        // Quando clicar no botão avançar, atualizar o campo de texto:
+
+        /*Conto c = new Conto(); //Cria um objeto do tipo conto
+
+        String [] x;
+        x = c.lerConto("contos/capitulo1/tepatbp.txt"); //Lê o conteúdo do conto em um arquivo e armazena no vetor x
+
+        //int tam=0;
+
+        jTextPane1.setText(x[cont]);
+        cont= cont++;
+        System.out.print("Cont e: ");
+        System.out.print(cont);
+        System.out.println("");*/
+
+        // tam = c.tamanhoConto("contos/capitulo1/tepatbp.txt");
+
+        //jTextPane1.setText(c.lerContoPos(++cont, "contos/capitulo1/tepatbp.txt"));
+
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         ThePot conto2 = new ThePot();
@@ -165,65 +218,20 @@ public class Twopots extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // Sai do conto
+
+        this.dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     private void jLabel2PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jLabel2PropertyChange
         // TODO add your handling code here:
 
         titulo = (c.lerContoPos(0, "contos/capitulo1/tepatbp.txt"));
+        Font font = new Font("Serif", Font.ITALIC, 20);
+        jLabel2.setFont(font);
         jLabel2.setText(titulo);
     }//GEN-LAST:event_jLabel2PropertyChange
-
-    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
-        // TODO add your handling code here:
-        contoBuilder c = new contoBuilder(); //Cria um objeto do tipo conto
-        Font font = new Font("Serif", Font.ITALIC, 20);
-        jTextPane1.setFont(font);
-        String [] x;
-        x = c.lerConto("contos/capitulo1/tepatbp.txt"); //Lê o conteúdo do conto em um arquivo e armazena no vetor x
-
-        int tam = 0;
-        try {
-            tam = c.tamanhoConto("contos/capitulo1/tepatbp.txt"); //Pega o tamanho do vetor do conteúdo do conto
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(TheAnt.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        //System.out.println(tam);
-
-        if(cont<tam-1){
-            if (cont==2){
-                if (dica== 1){
-                    cont++;
-                    jTextPane1.setText(x[cont]);
-
-                } else {
-                    JOptionPane.showMessageDialog(null, "Você tem uma dica te esperando!!");
-                }}
-                else {
-                    cont++;
-                    jTextPane1.setText(x[cont]);
-
-                }}else{
-                    System.out.println(titulo);
-                    ThePoty quiz = new ThePoty(nomeUsuario, titulo);
-                    quiz.setVisible(true);
-                    this.dispose();
-                }
-    }//GEN-LAST:event_jButton4MouseClicked
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // Sai do conto
-
-        this.dispose();
-    }//GEN-LAST:event_jButton5ActionPerformed
-
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // Sai do conto
-
-        this.dispose();
-    }//GEN-LAST:event_jButton6ActionPerformed
     
     
     /**
@@ -260,10 +268,9 @@ public class Twopots extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane2;

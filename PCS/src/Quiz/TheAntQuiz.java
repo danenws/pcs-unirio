@@ -181,14 +181,14 @@ public class TheAntQuiz extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextField1);
-        jTextField1.setBounds(150, 150, 230, 40);
+        jTextField1.setBounds(150, 130, 230, 40);
 
         jLabel3.setFont(new java.awt.Font("Tamil MN", 0, 18)); // NOI18N
         jLabel3.setText("jLabel3");
         jLabel3.setAlignmentX(100.0F);
         jLabel3.setFocusCycleRoot(true);
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(150, 210, 710, 60);
+        jLabel3.setBounds(150, 180, 710, 90);
 
         jTextField2.setAlignmentX(100.0F);
         getContentPane().add(jTextField2);
@@ -231,7 +231,7 @@ public class TheAntQuiz extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 51, 51));
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(400, 150, 210, 40);
+        jLabel8.setBounds(380, 130, 210, 40);
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 51, 51));
@@ -246,7 +246,7 @@ public class TheAntQuiz extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 51, 51));
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(380, 280, 200, 40);
+        jLabel9.setBounds(390, 280, 200, 40);
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 51, 51));
@@ -267,12 +267,12 @@ public class TheAntQuiz extends javax.swing.JFrame {
         jLabel2.setAlignmentX(100.0F);
         jLabel2.setFocusCycleRoot(true);
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(150, 90, 640, 60);
+        jLabel2.setBounds(150, 60, 640, 60);
 
         jLabel13.setFont(new java.awt.Font("Marker Felt", 0, 25)); // NOI18N
         jLabel13.setText("Escolha uma das opções entre parênteses para completar a frase:");
         getContentPane().add(jLabel13);
-        jLabel13.setBounds(150, 40, 670, 30);
+        jLabel13.setBounds(150, 20, 670, 30);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Quiz/quizdef.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
@@ -342,10 +342,10 @@ public class TheAntQuiz extends javax.swing.JFrame {
             Logger.getLogger(TheAntQuiz.class.getName()).log(Level.SEVERE, null, ex);
         } } else{
                                 jLabel8.setText(c1);
-                                jLabel10.setText(c2);
-                                jLabel11.setText(c3);
-                                jLabel12.setText(c4);
-                                jLabel9.setText(c5);           
+                                jLabel9.setText(c2);
+                                jLabel10.setText(c3);
+                                jLabel11.setText(c4);
+                                jLabel12.setText(c5);           
                                 jButton1.setText("Fechar ");
                  cont++;                  
            // Historico                    

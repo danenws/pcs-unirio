@@ -1,4 +1,5 @@
 <html><body>
 <p>Write the word to complete the sentence:</p>
 <p>1 - Once _____ a time, ...</p>
-</html></body> (on, is, was, upon)
+<p>(on, is, was, upon)</p>
+</html></body> 

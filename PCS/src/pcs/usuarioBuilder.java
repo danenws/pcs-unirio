@@ -92,7 +92,7 @@ public class usuarioBuilder {
         
     }
      
-    public int contarUsers() throws FileNotFoundException{//Ver quantas paginas tera o conto
+    public int contarUsers() throws FileNotFoundException{
         int flag = 0;
         
          Scanner scanner = new Scanner(new FileReader("usuarios.txt"))

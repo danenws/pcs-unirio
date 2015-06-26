@@ -243,22 +243,22 @@ public class TheFoxy extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 51, 51));
         getContentPane().add(jLabel11);
-        jLabel11.setBounds(390, 490, 210, 30);
+        jLabel11.setBounds(400, 500, 210, 30);
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 51, 51));
         getContentPane().add(jLabel10);
-        jLabel10.setBounds(390, 380, 210, 30);
+        jLabel10.setBounds(400, 390, 210, 30);
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 51, 51));
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(380, 280, 200, 40);
+        jLabel9.setBounds(390, 280, 200, 40);
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 51, 51));
         getContentPane().add(jLabel12);
-        jLabel12.setBounds(390, 610, 210, 30);
+        jLabel12.setBounds(400, 620, 210, 30);
 
         jTextField5.setAlignmentX(100.0F);
         jTextField5.addActionListener(new java.awt.event.ActionListener() {
@@ -298,11 +298,11 @@ public class TheFoxy extends javax.swing.JFrame {
                     resp4 = jTextField4.getText();
                     resp5 = jTextField5.getText();
                     RespostaBuilder r1 = new RespostaBuilder();
-                    c1 = r1.getResposta("Quiz/respostaPrefacio/1.txt");
-                    c2 = r1.getResposta("Quiz/respostaPrefacio/2.txt");
-                    c3 = r1.getResposta("Quiz/respostaPrefacio/3.txt");
-                    c4 = r1.getResposta("Quiz/respostaPrefacio/4.txt");
-                    c5 = r1.getResposta("Quiz/respostaPrefacio/5.txt");
+                    c1 = r1.getResposta("Quiz/respostaNivel2/1.txt");
+                    c2 = r1.getResposta("Quiz/respostaNivel2/2.txt");
+                    c3 = r1.getResposta("Quiz/respostaNivel2/3.txt");
+                    c4 = r1.getResposta("Quiz/respostaNivel2/4.txt");
+                    c5 = r1.getResposta("Quiz/respostaNivel2/5.txt");
                     Quiz q = new Quiz(resp1, c1, resp2, c2, resp3, c3, resp4, c4, resp5, c5);
 
                     this.nota = q.Corrigir();
@@ -348,10 +348,10 @@ public class TheFoxy extends javax.swing.JFrame {
                     Logger.getLogger(TheAntQuiz.class.getName()).log(Level.SEVERE, null, ex);
                 } } else{
                     jLabel8.setText(c1);
-                    jLabel10.setText(c2);
-                    jLabel11.setText(c3);
-                    jLabel12.setText(c4);
-                    jLabel9.setText(c5);
+                    jLabel9.setText(c2);
+                    jLabel10.setText(c3);
+                    jLabel11.setText(c4);
+                    jLabel12.setText(c5);
                     jButton1.setText("Fechar ");
                     cont++;
                     // Historico
