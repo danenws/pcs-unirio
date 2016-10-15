@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_45" class="java.beans.XMLDecoder">
+ <object class="pcs.historicoBuilder">
+  <void property="data">
+   <string>25/06/2015</string>
+  </void>
+  <void property="quiz">
+   <string>The Lion&apos;s Share
+</string>
+  </void>
+  <void property="usuario">
+   <string>﻿Daiane</string>
+  </void>
+ </object>
+</java>
